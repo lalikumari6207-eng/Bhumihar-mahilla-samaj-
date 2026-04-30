@@ -1,103 +1,123 @@
 <!DOCTYPE html><html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bhumihar Mahilla Samaj</title>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-        <style>
-            *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-            body{scroll-behavior:smooth;background:#0f172a;color:#fff}/* Header */ header{position:fixed;width:100%;top:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(10px);display:flex;justify-content:space-between;align-items:center;padding:10px 20px;z-index:1000} .logo{font-weight:600} .menu-btn{font-size:24px;cursor:pointer}
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhumihar Mahilla Samaj</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"><style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#020617;color:#fff;scroll-behavior:smooth}
 
-            /* Sidebar Menu */ .sidebar{position:fixed;right:-260px;top:0;width:260px;height:100%;background:#020617;padding:20px;transition:0.4s} .sidebar.active{right:0} .close-btn{font-size:22px;cursor:pointer;margin-bottom:20px} .sidebar a{display:block;color:#fff;margin:15px 0;text-decoration:none}
+/* HEADER */
+header{position:fixed;width:100%;top:0;left:0;padding:15px 25px;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,0.5);backdrop-filter:blur(15px);z-index:1000}
+.logo{font-size:18px;font-weight:700;letter-spacing:1px}
+.menu-btn{font-size:26px;cursor:pointer}
 
-            /* Hero */ .hero{height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;font-size:48px;font-weight:600; background: linear-gradient(-45deg,#00f,#0f0,#ff0,#f00,#000); background-size:400% 400%;animation:gradient 8s ease infinite} @keyframes gradient{ 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+/* SIDEBAR MENU */
+.sidebar{position:fixed;top:0;right:-100%;width:300px;height:100%;background:linear-gradient(180deg,#020617,#0f172a);padding:25px;transition:0.5s ease;z-index:2000}
+.sidebar.active{right:0}
+.close-btn{font-size:28px;cursor:pointer;display:block;text-align:right;margin-bottom:30px}
+.sidebar a{display:block;font-size:18px;margin:15px 0;text-decoration:none;color:#fff;transition:0.3s}
+.sidebar a:hover{color:#38bdf8;transform:translateX(8px)}
 
-            section{padding:80px 20px;text-align:center} h2{margin-bottom:20px}
+/* HERO */
+.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px}
+.hero h1{font-size:55px;font-weight:700;background:linear-gradient(90deg,#38bdf8,#22c55e,#facc15,#ef4444);-webkit-background-clip:text;color:transparent;animation:glow 3s infinite alternate}
+.hero p{margin-top:10px;opacity:0.8}
+@keyframes glow{from{text-shadow:0 0 10px #38bdf8}to{text-shadow:0 0 25px #facc15}}
 
-            .scroll-img{height:300px;overflow-y:auto;border-radius:10px} .scroll-img img{width:100%;margin-bottom:10px;border-radius:10px}
+section{padding:100px 20px;text-align:center}
+h2{font-size:30px;margin-bottom:20px}
 
-            .card{background:rgba(255,255,255,0.05);padding:20px;border-radius:15px;margin:10px}
+/* CARDS */
+.card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:25px;border-radius:20px;backdrop-filter:blur(10px);transition:0.4s}
+.card:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 10px 30px rgba(0,0,0,0.5)}
 
-            button{padding:10px 20px;border:none;border-radius:20px;background:#22c55e;color:#fff;cursor:pointer}
+/* SCROLL IMAGE */
+.scroll-img{height:320px;overflow-y:auto;border-radius:15px;padding-right:5px}
+.scroll-img img{width:100%;margin-bottom:10px;border-radius:15px;transition:0.4s}
+.scroll-img img:hover{transform:scale(1.05)}
 
-            .footer{background:#020617;padding:30px;text-align:center}
+/* BUTTON */
+button{padding:12px 25px;border:none;border-radius:30px;background:linear-gradient(90deg,#22c55e,#38bdf8);color:#fff;font-size:16px;cursor:pointer;transition:0.3s}
+button:hover{transform:scale(1.1)}
 
-            /* Scroll Animations */ .fade-in{opacity:0;transform:translateY(40px);transition:all 1s ease} .fade-in.show{opacity:1;transform:translateY(0)}
+/* LINKS */
+#links a{display:block;margin:8px 0;color:#38bdf8;text-decoration:none}
 
-        </style>
-    </head>
-    <body><header>
-        <div class="logo">Bhumihar Mahilla Samaj</div>
-        <div class="menu-btn" onclick="openMenu()">☰</div>
-    </header><div class="sidebar" id="menu">
-        <div class="close-btn" onclick="closeMenu()">✖</div>
-        <a href="#about">About</a>
-        <a href="#story">Our Story</a>
-        <a href="#work">Our Work</a>
-        <a href="#donation">Donation</a>
-        <a href="#links">Links</a>
-        <a href="#privacy">Privacy Policy</a>
-    </div><div class="hero">Bhumihar Mahilla Samaj</div><section class="fade-in">
-        <h2>Where We Live</h2>
-        <div class="scroll-img">
-            <img src="image1.jpg">
-            <img src="image2.jpg">
-            <img src="image3.jpg">
-        </div>
-    </section><section id="about" class="fade-in">
-        <h2>About</h2>
-        <div class="card">Professional modern about content here</div>
-    </section><section id="story" class="fade-in">
-        <h2>Our Story</h2>
-        <div class="card">Inspirational story content here</div>
-    </section><section id="work" class="fade-in">
-        <h2>Our Work</h2>
-        <div class="scroll-img">
-            <img src="work1.jpg">
-            <p>Work detail 1</p>
-            <img src="work2.jpg">
-            <p>Work detail 2</p>
-        </div>
-    </section><section id="donation" class="fade-in">
-        <h2>Donate</h2>
-        <img src="qr.png" width="200"><br><br>
-        <button>Support Us</button>
-    </section><section class="fade-in">
-        <h2>Who Built BMS</h2>
-        <div class="card">
-            <p>Founder & MD</p>
-            <img src="founder.jpg" width="120"><p>Email: founder@email.com</p>
-            <p>Co-Founder</p>
-            <img src="cofounder.jpg" width="120"><p>Email: cofounder@email.com</p>
-        </div>
-    </section><section id="links" class="fade-in">
-        <h2>Connect With Us</h2>
-        <a href="#">Facebook</a><br>
-        <a href="#">Instagram</a><br>
-        <a href="#">YouTube</a><br>
-        <a href="mailto:test@email.com">Email</a><br>
-        <a href="tel:1234567890">Contact</a>
-    </section><div class="footer" id="privacy">
-        <p>Privacy Policy</p>
-        <p>© Bhumihar Mahilla Samaj</p>
-    </div><script>
-        function openMenu(){document.getElementById('menu').classList.add('active')}
-        function closeMenu(){document.getElementById('menu').classList.remove('active')}
+/* FOOTER */
+.footer{background:#020617;padding:40px;text-align:center;border-top:1px solid rgba(255,255,255,0.1)}
 
+/* SCROLL ANIMATION */
+.fade{opacity:0;transform:translateY(60px);transition:1s}
+.fade.show{opacity:1;transform:translateY(0)}
 
-        // Scroll Animation Trigger
-        const observer = new IntersectionObserver(entries => {
-              entries.forEach(entry => {
-                    if(entry.isIntersecting){
-                              entry.target.classList.add('show');
-                    }
-                });
-            });
+</style></head><body><header>
+<div class="logo">Bhumihar Mahilla Samaj</div>
+<div class="menu-btn" onclick="openMenu()">☰</div>
+</header><div class="sidebar" id="menu">
+<div class="close-btn" onclick="closeMenu()">✖</div>
+<a href="#about">About</a>
+<a href="#story">Our Story</a>
+<a href="#work">Our Work</a>
+<a href="#donation">Donation</a>
+<a href="#links">Links</a>
+<a href="#privacy">Privacy Policy</a>
+</div><div class="hero">
+<h1>Bhumihar Mahilla Samaj</h1>
+<p>Empowering Women • Building Society</p>
+</div><section class="fade">
+<h2>Where We Live</h2>
+<div class="scroll-img">
+<img src="image1.jpg">
+<img src="image2.jpg">
+<img src="image3.jpg">
+</div>
+</section><section id="about" class="fade">
+<h2>About</h2>
+<div class="card">We are dedicated to empowering women and uplifting society.</div>
+</section><section id="story" class="fade">
+<h2>Our Story</h2>
+<div class="card">Our journey started with a mission to create impact.</div>
+</section><section id="work" class="fade">
+<h2>Our Work</h2>
+<div class="scroll-img">
+<img src="work1.jpg">
+<p>Helping community</p>
+<img src="work2.jpg">
+<p>Supporting education</p>
+</div>
+</section><section id="donation" class="fade">
+<h2>Donate</h2>
+<img src="qr.png" width="200"><br><br>
+<button>Support Us</button>
+</section><section class="fade">
+<h2>Who Built BMS</h2>
+<div class="card">
+<p><b>Founder & MD</b></p>
+<img src="founder.jpg" width="120"><p>Email: founder@email.com</p>
+<p><b>Co-Founder</b></p>
+<img src="cofounder.jpg" width="120"><p>Email: cofounder@email.com</p>
+</div>
+</section><section id="links" class="fade">
+<h2>Connect With Us</h2>
+<a href="#">Facebook</a>
+<a href="#">Instagram</a>
+<a href="#">YouTube</a>
+<a href="mailto:test@email.com">Email</a>
+<a href="tel:1234567890">Contact</a>
+</section><div class="footer" id="privacy">
+<p>Privacy Policy</p>
+<p>© Bhumihar Mahilla Samaj</p>
+</div><script>
+function openMenu(){document.getElementById('menu').classList.add('active')}
+function closeMenu(){document.getElementById('menu').classList.remove('active')}
 
-            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){entry.target.classList.add('show')}
+})
+})
 
-        </script></body>
-        </html>
-                    }
-              })
-        })
+document.querySelectorAll('.fade').forEach(el=>observer.observe(el))
+</script></body>
+</html>
