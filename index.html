@@ -7,63 +7,54 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 body{background:#020617;color:#fff;overflow-x:hidden}
 
-/* Animated background */
-body::before{
-content:"";
-position:fixed;width:100%;height:100%;
-background:radial-gradient(circle at 20% 20%,rgba(56,189,248,0.2),transparent),
-radial-gradient(circle at 80% 80%,rgba(34,197,94,0.2),transparent);
-animation:bgMove 12s infinite alternate;z-index:-2}
-@keyframes bgMove{from{transform:translateY(0)}to{transform:translateY(-50px)}}
+/* VIDEO BACKGROUND */
+.video-bg{position:fixed;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-3;opacity:0.25}
 
-/* Header */
+/* HEADER */
 header{position:fixed;width:100%;top:0;padding:15px 25px;display:flex;justify-content:space-between;background:rgba(0,0,0,0.6);backdrop-filter:blur(15px);z-index:1000}
 .menu-btn{font-size:26px;cursor:pointer}
 
-/* Sidebar */
+/* SIDEBAR */
 .sidebar{position:fixed;top:0;right:-100%;width:280px;height:100%;background:#020617;padding:25px;transition:.5s;z-index:2000}
 .sidebar.active{right:0}
 .close-btn{font-size:28px;text-align:right;cursor:pointer;margin-bottom:20px}
-.sidebar a{display:block;margin:12px 0;color:#fff;text-decoration:none;transition:.3s}
-.sidebar a:hover{color:#38bdf8;transform:translateX(8px)}
+.sidebar a{display:block;margin:12px 0;color:#fff;text-decoration:none}
 
-/* Hero */
-.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative}
-.hero h1{font-size:55px;background:linear-gradient(90deg,#38bdf8,#22c55e,#facc15,#ef4444);-webkit-background-clip:text;color:transparent;animation:glow 3s infinite alternate}
-@keyframes glow{from{text-shadow:0 0 10px #38bdf8}to{text-shadow:0 0 30px #facc15}}
+/* HERO */
+.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.hero h1{font-size:55px;background:linear-gradient(90deg,#38bdf8,#22c55e,#facc15,#ef4444);-webkit-background-clip:text;color:transparent}
 
-/* Globe */
-.earth{width:150px;height:150px;border-radius:50%;margin-top:20px;
+/* GLOBE */
+.earth{
+width:150px;height:150px;border-radius:50%;margin-top:20px;
 background:url('https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg');
-background-size:cover;animation:spin 25s linear infinite;box-shadow:0 0 40px #38bdf8}
+background-size:cover;animation:spin 25s linear infinite;box-shadow:0 0 40px #38bdf8;
+display:flex;align-items:center;justify-content:center;
+color:#fff;font-weight:700;font-size:20px;text-shadow:0 0 10px black;
+}
 @keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
 
-/* Wave */
-.wave{position:absolute;bottom:0;width:100%;height:180px;background:linear-gradient(transparent,rgba(56,189,248,0.3));animation:wave 5s infinite alternate}
-@keyframes wave{from{transform:translateY(0)}to{transform:translateY(30px)}}
+/* CARDS */
+.card{background:rgba(255,255,255,0.05);padding:25px;border-radius:20px;transition:.4s;transform-style:preserve-3d}
+.card:hover{transform:rotateY(8deg) rotateX(8deg) scale(1.05)}
 
-section{padding:80px 20px;text-align:center}
-h2{margin-bottom:20px}
-
-/* Cards */
-.card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:25px;border-radius:20px;backdrop-filter:blur(15px);transition:.4s}
-.card:hover{transform:translateY(-10px) scale(1.04);box-shadow:0 20px 50px rgba(0,0,0,0.7)}
-
-/* Scroll images */
 .scroll-img{height:260px;overflow-y:auto}
-.scroll-img img{width:100%;margin:10px 0;border-radius:10px;transition:.4s}
-.scroll-img img:hover{transform:scale(1.08)}
+.scroll-img img{width:100%;margin:10px 0;border-radius:10px}
 
-/* Light follow */
-.light{position:fixed;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,0.3),transparent);pointer-events:none;z-index:-1;transform:translate(-50%,-50%)}
+/* WHATSAPP BUTTON */
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:12px 18px;border-radius:50px;text-decoration:none;font-size:18px;z-index:999}
 
-/* Fade */
-.fade{opacity:0;transform:translateY(60px);transition:1s}
+/* LIGHT FOLLOW */
+.light{position:fixed;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,0.3),transparent);pointer-events:none;z-index:-1;transform:translate(-50%,-50%)}
+
+.fade{opacity:0;transform:translateY(50px);transition:1s}
 .fade.show{opacity:1;transform:translateY(0)}
 
-.footer{text-align:center;padding:30px;background:#020617;border-top:1px solid rgba(255,255,255,0.1)}
+.footer{text-align:center;padding:30px;background:#020617}
 
-</style></head><body><div class="light" id="light"></div><header>
+</style></head><body><video autoplay muted loop class="video-bg">
+<source src="your-video.mp4" type="video/mp4">
+</video><div class="light" id="light"></div><header>
 <div>Bhumihar Mahilla Samaj</div>
 <div class="menu-btn" onclick="openMenu()">☰</div>
 </header><div class="sidebar" id="menu">
@@ -73,32 +64,28 @@ h2{margin-bottom:20px}
 <a href="#donation">Donation</a>
 </div><div class="hero">
 <h1>Bhumihar Mahilla Samaj</h1>
-<div class="earth"></div>
+<div class="earth">BMS</div>
 <h2 style="margin-top:20px">Where We Live</h2>
-<div class="wave"></div>
 </div><section class="fade">
 <div class="scroll-img">
 <img src="image1.jpg">
 <img src="image2.jpg">
-<img src="image3.jpg">
 </div>
 </section><section id="about" class="fade">
 <h2>About</h2>
-<div class="card">Helping children with education, food, and care.</div>
+<div class="card">Helping children with food and education.</div>
 </section><section id="work" class="fade">
 <h2>Our Work</h2>
 <div class="scroll-img">
-<img src="work1.jpg">
-<p>Food support</p>
-<img src="work2.jpg">
-<p>Education support</p>
+<img src="work1.jpg"><p>Food support</p>
+<img src="work2.jpg"><p>Education support</p>
 </div>
 </section><section id="donation" class="fade">
 <h2>Donate</h2>
 <img src="qr.png" width="200">
-</section><div class="footer">
-<p>© Bhumihar Mahilla Samaj</p>
-</div><script>
+</section><a href="https://wa.me/1234567890" class="whatsapp">WhatsApp</a>
+
+<div class="footer">© Bhumihar Mahilla Samaj</div><script>
 function openMenu(){document.getElementById('menu').classList.add('active')}
 function closeMenu(){document.getElementById('menu').classList.remove('active')}
 
