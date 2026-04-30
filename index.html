@@ -100,6 +100,25 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   margin-right:15px;
   border-radius:10px;
 }
+  .scroll-img{
+  display:flex;
+  overflow-x:auto;   /* ✅ horizontal scroll allow */
+  scroll-behavior:smooth;
+  gap:15px;
+  padding:10px;
+}
+
+/* scrollbar hide (optional) */
+.scroll-img::-webkit-scrollbar{
+  display:none;
+}
+
+.scroll-img img{
+  min-width:300px;
+  height:200px;
+  object-fit:cover;
+  border-radius:10px;
+}
 
 /* infinite sliding */
 @keyframes slide{
@@ -197,8 +216,8 @@ margin:5px 0;
      <div class="scroll-track">
 <img src="Screenshot_20260430-115641~2.png"><p> Education</p>
      <img src ="Screenshot_20260430-115631~2.png"><p> education support </p>
-     <img sec ="Screenshot_20260430-115623~2.png"><p>education </p>
-       <img sec ="Screenshot_20260430-115618~2.png"><p> education</p>
+     <img src ="Screenshot_20260430-115623~2.png"><p>education </p>
+       <img src ="Screenshot_20260430-115618~2.png"><p> education</p>
    </div>
 
   <section id="founder" class="fade">
@@ -245,5 +264,22 @@ document.addEventListener('mousemove',e=>{
 light.style.left=e.clientX+'px'
 light.style.top=e.clientY+'px'
 })
+
+const container = document.querySelector('.scroll-img');
+
+let scrollAmount = 0;
+
+setInterval(() => {
+  container.scrollBy({
+    left: 320,
+    behavior: 'smooth'
+  });
+
+  // reset to start
+  if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+    container.scrollTo({ left: 0, behavior: 'smooth' });
+  }
+}, 3000);
+  
 </script></body>
 </html>
