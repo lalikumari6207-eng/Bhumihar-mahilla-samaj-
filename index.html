@@ -67,6 +67,31 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
 .scroll-img{height:260px;overflow-y:auto}
 .scroll-img img{width:100%;margin:10px 0;border-radius:10px}
 
+  .founder-box{
+display:flex;
+align-items:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.founder-img img{
+width:140px;
+height:140px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid #38bdf8;
+box-shadow:0 0 20px #38bdf8;
+}
+
+.founder-info h3{
+margin-bottom:10px;
+color:#38bdf8;
+}
+
+.founder-info p{
+margin:5px 0;
+}
+
 /* WHATSAPP BUTTON */
 .whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:12px 18px;border-radius:50px;text-decoration:none;font-size:18px;z-index:999}
 
@@ -130,6 +155,25 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
      <img src ="Screenshot_20260430-115631~2.png"><p> education support </p>
      <img sec ="Screenshot_20260430-115623~2.pngScreenshot_20260430-115618~2.png"><p> education support </p>
    </div>
+
+  <section id="founder" class="fade">
+  <h2>Who Built This</h2>
+
+  <div class="card founder-box">
+
+    <div class="founder-img">
+      <img src="founder.jpg" alt="MD & Founder">
+    </div>
+
+    <div class="founder-info">
+      <h3>MD & Founder</h3>
+      <p><b>Name:</b> priti </p>
+      <p><b>Email:</b> example@gmail.com</p>
+      <p><b>Contact:</b> +91 5555555555</p>
+    </div>
+
+  </div>
+  </section>
 </section><section id="donation" class="fade">
 <h2>Donate</h2>
 </section><section id ="link" class="fade">
