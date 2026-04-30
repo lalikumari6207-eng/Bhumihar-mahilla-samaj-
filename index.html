@@ -64,8 +64,31 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
 .card{background:rgba(255,255,255,0.05);padding:25px;border-radius:20px;transition:.4s;transform-style:preserve-3d}
 .card:hover{transform:rotateY(8deg) rotateX(8deg) scale(1.05)}
 
-.scroll-img{height:260px;overflow-y:auto}
-.scroll-img img{width:100%;margin:10px 0;border-radius:10px}
+.scroll-img{
+  display:flex;
+  overflow:hidden;
+  width:100%;
+  position:relative;
+}
+
+.scroll-track{
+  display:flex;
+  animation:slide 15s linear infinite;
+}
+
+.scroll-track img{
+  width:300px;
+  height:200px;
+  object-fit:cover;
+  margin-right:15px;
+  border-radius:10px;
+}
+
+/* infinite sliding */
+@keyframes slide{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
 
   .founder-box{
 display:flex;
@@ -124,6 +147,7 @@ margin:5px 0;
 <h2 style="margin-top:20px">Where We Live</h2>
 </div><section class="fade">
 <div class="scroll-img">
+  <div class="scroll-track">
 <img src="WA_1777528019542.jpeg">
 <img src="WA_1777528005174.jpeg">
   <img src="WA_1777527976436.jpeg">
