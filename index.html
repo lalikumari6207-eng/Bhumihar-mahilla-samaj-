@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bhumihar Mahilla Samaj</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        <style>
+            *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+            body{scroll-behavior:smooth;background:#0f172a;color:#fff}/* Header */ header{position:fixed;width:100%;top:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(10px);display:flex;justify-content:space-between;align-items:center;padding:10px 20px;z-index:1000} .logo{font-weight:600} .menu-btn{font-size:24px;cursor:pointer}
+
+            /* Sidebar Menu */ .sidebar{position:fixed;right:-260px;top:0;width:260px;height:100%;background:#020617;padding:20px;transition:0.4s} .sidebar.active{right:0} .close-btn{font-size:22px;cursor:pointer;margin-bottom:20px} .sidebar a{display:block;color:#fff;margin:15px 0;text-decoration:none}
+
+            /* Hero */ .hero{height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;font-size:48px;font-weight:600; background: linear-gradient(-45deg,#00f,#0f0,#ff0,#f00,#000); background-size:400% 400%;animation:gradient 8s ease infinite} @keyframes gradient{ 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+
+            section{padding:80px 20px;text-align:center} h2{margin-bottom:20px}
+
+            .scroll-img{height:300px;overflow-y:auto;border-radius:10px} .scroll-img img{width:100%;margin-bottom:10px;border-radius:10px}
+
+            .card{background:rgba(255,255,255,0.05);padding:20px;border-radius:15px;margin:10px}
+
+            button{padding:10px 20px;border:none;border-radius:20px;background:#22c55e;color:#fff;cursor:pointer}
+
+            .footer{background:#020617;padding:30px;text-align:center}
+
+            /* Scroll Animations */ .fade-in{opacity:0;transform:translateY(40px);transition:all 1s ease} .fade-in.show{opacity:1;transform:translateY(0)}
+
+        </style>
+    </head>
+    <body><header>
+        <div class="logo">Bhumihar Mahilla Samaj</div>
+        <div class="menu-btn" onclick="openMenu()">☰</div>
+    </header><div class="sidebar" id="menu">
+        <div class="close-btn" onclick="closeMenu()">✖</div>
+        <a href="#about">About</a>
+        <a href="#story">Our Story</a>
+        <a href="#work">Our Work</a>
+        <a href="#donation">Donation</a>
+        <a href="#links">Links</a>
+        <a href="#privacy">Privacy Policy</a>
+    </div><div class="hero">Bhumihar Mahilla Samaj</div><section class="fade-in">
+        <h2>Where We Live</h2>
+        <div class="scroll-img">
+            <img src="image1.jpg">
+            <img src="image2.jpg">
+            <img src="image3.jpg">
+        </div>
+    </section><section id="about" class="fade-in">
+        <h2>About</h2>
+        <div class="card">Professional modern about content here</div>
+    </section><section id="story" class="fade-in">
+        <h2>Our Story</h2>
+        <div class="card">Inspirational story content here</div>
+    </section><section id="work" class="fade-in">
+        <h2>Our Work</h2>
+        <div class="scroll-img">
+            <img src="work1.jpg">
+            <p>Work detail 1</p>
+            <img src="work2.jpg">
+            <p>Work detail 2</p>
+        </div>
+    </section><section id="donation" class="fade-in">
+        <h2>Donate</h2>
+        <img src="qr.png" width="200"><br><br>
+        <button>Support Us</button>
+    </section><section class="fade-in">
+        <h2>Who Built BMS</h2>
+        <div class="card">
+            <p>Founder & MD</p>
+            <img src="founder.jpg" width="120"><p>Email: founder@email.com</p>
+            <p>Co-Founder</p>
+            <img src="cofounder.jpg" width="120"><p>Email: cofounder@email.com</p>
+        </div>
+    </section><section id="links" class="fade-in">
+        <h2>Connect With Us</h2>
+        <a href="#">Facebook</a><br>
+        <a href="#">Instagram</a><br>
+        <a href="#">YouTube</a><br>
+        <a href="mailto:test@email.com">Email</a><br>
+        <a href="tel:1234567890">Contact</a>
+    </section><div class="footer" id="privacy">
+        <p>Privacy Policy</p>
+        <p>© Bhumihar Mahilla Samaj</p>
+    </div><script>
+        function openMenu(){document.getElementById('menu').classList.add('active')}
+        function closeMenu(){document.getElementById('menu').classList.remove('active')}
+
+
+        // Scroll Animation Trigger
+        const observer = new IntersectionObserver(entries => {
+              entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                              entry.target.classList.add('show');
+                    }
+                });
+            });
+
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        </script></body>
+        </html>
+                    }
+              })
+        })
