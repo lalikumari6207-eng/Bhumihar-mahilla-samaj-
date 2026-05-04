@@ -167,7 +167,52 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   align-items:center;
   gap:20px;
   }
+/* row for founder + team */
+.founder-row{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:40px;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
 
+/* common style */
+.founder-box{
+  text-align:center;
+}
+
+/* small image (Founder) */
+.founder-box.small img{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid #38bdf8;
+}
+
+/* big image (Team Member) */
+.founder-box.big img{
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid #22c55e;
+}
+
+/* committee center */
+.committee-box{
+  text-align:center;
+  margin-top:20px;
+}
+
+.committee-box img{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid #facc15;
+}
 /* image fixed size */
 .founder-img img{
   width:130px;
