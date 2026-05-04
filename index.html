@@ -258,6 +258,42 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   border-radius:50%;
 }
 
+    .slider-box{
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+
+.img-row{
+  display:flex;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  gap:15px;
+  padding:10px;
+}
+
+.img-row::-webkit-scrollbar{
+  display:none;
+}
+
+/* arrows */
+.arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,0.6);
+  color:white;
+  border:none;
+  font-size:20px;
+  padding:8px 12px;
+  border-radius:50%;
+  cursor:pointer;
+  z-index:5;
+}
+
+.arrow.left{ left:0; }
+.arrow.right{ right:0; }
+
 /* WHATSAPP BUTTON */
 .whatsapp{
   position:fixed;
@@ -271,19 +307,7 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   font-size:18px;
   z-index:999;
 }
-  .img-row{
-  display:flex;
-  gap:10px;
-  overflow-x:auto;
-}
 
-.img-row img{
-  width:200px;
-  height:150px;
-  object-fit:cover;
-  border-radius:10px;
-  flex-shrink:0;
-}
 
 /* LIGHT FOLLOW */
 .light{position:fixed;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,0.3),transparent);pointer-events:none;z-index:-1;transform:translate(-50%,-50%)}
@@ -386,6 +410,7 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   <h3 style="color:#38bdf8;">Education Support</h3>
 
   <div class="img-row">
+    <div class="scroll-img">
     <img src="Screenshot_20260430-115641~2.png">
     <video src="VID_1777891860964.mp4" controls></video>
     <img src="Screenshot_20260430-115631~2.png">
@@ -401,6 +426,7 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   <h3 style="color:#38bdf8;">Mahila Silai Machine Yojna</h3>
 
   <div class="img-row">
+    <div class="scroll-img">
     <img src="FB_IMG_1777895338003.jpg">
     <img src="FB_IMG_1777895314238.jpg">
     <img src="FB_IMG_1777894595003.jpg">
@@ -415,6 +441,7 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
     <div class="card" style="min-width:300px;">
       <h3 style="color:#38bdf8;">Beautician Course</h3>
         <div class="img-row">
+          <div class="scroll-img">
       <img src="IMG-20260504-WA0056.jpg">
           <img src="IMG-20260504-WA0047(1).jpg">
           <img src="IMG-20260504-WA0054.jpg">
@@ -505,6 +532,7 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   <div class="card founder-box">
     <div class="side-card">
     <div class="founder-img">
+      <div class="scroll-img">
       <img src="Screenshot_20260504-172534~2.png" alt="MD & Founder">
     </div>
     </div>
@@ -522,6 +550,7 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   <div class="card founder-box">
     <div class="founder-img">
       <div class="side-card">
+        <div class="scroll-img">
       <img src="Screenshot_20260504-172525~2.png" alt="Team Members">
     </div>
     <div class="founder-info">
