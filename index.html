@@ -157,6 +157,23 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   background:rgba(255,255,255,0.05);
   padding:20px;
   border-radius:15px;
+  transform:none !important;
+}
+
+/* image normal rakho */
+.founder-img img{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid #38bdf8;
+  box-shadow:none;   /* ❌ glow hata diya */
+  transition:none;
+}
+
+/* hover effect disable for founder */
+.founder-box:hover{
+  transform:none !important;
 }
 
 /* mobile */
