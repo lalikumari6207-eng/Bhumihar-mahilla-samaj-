@@ -353,6 +353,55 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   z-index:999;
 }
 
+    /* circle base */
+.circle{
+  border-radius:50%;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: radial-gradient(circle at 30% 30%, #38bdf8, #0f172a 70%);
+  box-shadow:0 0 30px #38bdf8;
+}
+
+/* small circle (Founder) */
+.circle.small{
+  width:320px;
+  height:320px;
+}
+
+/* big circle (Team Member) */
+.circle.big{
+  width:520px;
+  height:520px;
+}
+
+/* image fit inside circle */
+.circle img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:50%;
+}
+
+/* text spacing */
+.founder-box p{
+  font-size:14px;
+  margin-top:10px;
+  max-width:300px;
+}
+
+/* mobile responsive */
+@media(max-width:768px){
+  .circle.big{
+    width:300px;
+    height:300px;
+  }
+  .circle.small{
+    width:220px;
+    height:220px;
+  }
+}
 
 /* LIGHT FOLLOW */
 .light{position:fixed;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,0.3),transparent);pointer-events:none;z-index:-1;transform:translate(-50%,-50%)}
@@ -582,13 +631,16 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
 
     <!-- Founder (Small) -->
     <div class="founder-box small">
+        <div class="circle small">
       <img src="Screenshot_20260504-172534~2.png">
       <h3>Founder</h3>
-      <p>Preeti Priya</p>
+      <p>email:- preetipriya@gmail.com</p>
+          <p> contact:-9934634400</p>
     </div>
 
     <!-- Team Member (Big) -->
     <div class="founder-box big">
+        <div class="circle big">
       <img src="Screenshot_20260504-172525~2.png">
       <h3>Founder Member</h3>
       <p>Working Committee</p>
@@ -601,6 +653,7 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   <h2 style="margin-top:40px;">Committee Member</h2>
 
   <div class="committee-box">
+      <div class="circle">
     <img src="Screenshot_20260504-172529~2.png">
     <h3>Committee Member</h3>
     <p>Advisory Board</p>
