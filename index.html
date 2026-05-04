@@ -86,6 +86,26 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   width:100%;
   position:relative;
 }
+  .scroll-img video{
+  min-width:300px;
+  height:200px;
+  object-fit:cover;
+  border-radius:10px;
+  }
+  .scroll-img{
+  display:flex;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  gap:15px;
+  padding:10px;
+}
+
+.scroll-img img{
+  min-width:300px;
+  height:200px;
+  object-fit:cover;
+  border-radius:10px;
+}
 
 .scroll-track{
   display:flex;
@@ -278,31 +298,42 @@ margin:5px 0;
   <h2>Who Built This</h2>
 
   <div class="card founder-box">
-
     <div class="founder-img">
       <img src="Screenshot_20260504-172534~2.png" alt="MD & Founder">
     </div>
 
     <div class="founder-info">
       <h3>MD & Founder</h3>
-      <p><b>Name:</b> priti priya </p>
+      <p><b>Name:</b> Priti Priya</p>
       <p><b>Email:</b> pritipriya@gmail.com</p>
       <p><b>Contact:</b> +91 9934634400</p>
     </div>
-  <div>
-  <h2>team members</h2>
-
-  <div class="card team members-box">
-
-    <div class="Screenshot_20260504-172525~2.png">
-      <img src="Screenshot_20260504-172525~2.png" alt="team members">
-    </div>
-<h3> wroking commitee </h3>
-    <div class="card working-committee-box">
-      <div class="Screenshot_20260504-172529~2.png">
-      <img src="Screenshot_20260504-172529~2.png" alt="team members">
-      </div>
   </div>
+
+  <!-- TEAM MEMBERS -->
+  <h2 style="margin-top:40px;">Team Members</h2>
+
+  <div class="card founder-box">
+    <div class="founder-img">
+      <img src="Screenshot_20260504-172525~2.png" alt="Team Members">
+    </div>
+    <div class="founder-info">
+      <h3>Working Committee</h3>
+      <p>Main team members of the organization</p>
+    </div>
+  </div>
+
+  <!-- WORKING COMMITTEE -->
+  <div class="card founder-box" style="margin-top:20px;">
+    <div class="founder-img">
+      <img src="Screenshot_20260504-172529~2.png" alt="Working Committee">
+    </div>
+    <div class="founder-info">
+      <h3>Committee Group</h3>
+      <p>Supporting members of the organization</p>
+    </div>
+  </div>
+
   </section>
     
 <section id="donation" class="fade">
