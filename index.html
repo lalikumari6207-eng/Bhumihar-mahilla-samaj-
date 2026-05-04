@@ -338,9 +338,14 @@ margin:5px 0;
     
 <section id="donation" class="fade">
 <h2>Donate</h2>
-    <a href="upi://pay?pa=yourupiid@upi&pn=BhumiharSamaj&am=&cu=INR">
-  <img src="file_00000000f0e872078f9cadd06cabe5c3.png" width="200">
-    </a>
+
+  <img src="Screenshot_20260504-180046~2.png" width="200">
+<p>Scan & Pay</p>
+
+  <button onclick="payNow()" 
+style="padding:12px 20px;border-radius:10px;background:#22c55e;color:#fff;border:none;">
+  Click to Donate
+  </button>
   
 
 </section><a href="https://wa.me/9934634400" class="whatsapp">WhatsApp</a>
@@ -382,5 +387,8 @@ setInterval(() => {
   }
 }, 3000);
   
+  function payNow(){
+  window.location.href = "upi://pay?pa=pritipriya@upi&pn=BhumiharSamaj&am=10&cu=INR";
+  }
 </script></body>
 </html>
