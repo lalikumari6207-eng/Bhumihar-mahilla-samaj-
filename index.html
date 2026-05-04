@@ -152,28 +152,38 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   /* founder clean */
 .founder-box{
   display:flex;
+  flex-direction:row;
   align-items:center;
+  justify-content:flex-start;
   gap:20px;
+  flex-wrap:nowrap;
   background:rgba(255,255,255,0.05);
   padding:20px;
   border-radius:15px;
-  transform:none !important;
 }
 
-/* image normal rakho */
+/* image fixed size */
 .founder-img img{
-  width:120px;
-  height:120px;
+  width:130px;
+  height:130px;
   border-radius:50%;
   object-fit:cover;
   border:2px solid #38bdf8;
-  box-shadow:none;   /* ❌ glow hata diya */
-  transition:none;
 }
 
-/* hover effect disable for founder */
-.founder-box:hover{
-  transform:none !important;
+/* text */
+.founder-info{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+/* mobile fix */
+@media(max-width:768px){
+  .founder-box{
+    flex-direction:column;
+    text-align:center;
+  }
 }
 
 /* mobile */
@@ -189,14 +199,45 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   display:flex;
   gap:10px;
   overflow-x:auto;
+  scroll-behavior:smooth;
+  padding:10px 30px;   /* space for arrows */
+  position:relative;
 }
 
-.img-row img{
+.img-row img, .img-row video{
   width:200px;
   height:150px;
   object-fit:cover;
   border-radius:10px;
   flex-shrink:0;
+}
+
+/* LEFT ARROW */
+.img-row::before{
+  content:"❮";
+  position:absolute;
+  left:5px;
+  top:50%;
+  transform:translateY(-50%);
+  color:white;
+  font-size:22px;
+  background:rgba(0,0,0,0.5);
+  padding:5px 8px;
+  border-radius:50%;
+}
+
+/* RIGHT ARROW */
+.img-row::after{
+  content:"❯";
+  position:absolute;
+  right:5px;
+  top:50%;
+  transform:translateY(-50%);
+  color:white;
+  font-size:22px;
+  background:rgba(0,0,0,0.5);
+  padding:5px 8px;
+  border-radius:50%;
 }
 
 /* WHATSAPP BUTTON */
@@ -482,27 +523,34 @@ entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('sho
 })
 document.querySelectorAll('.fade').forEach(el=>observer.observe(el))
 
-const light=document.getElementById('light')
-document.addEventListener('mousemove',e=>{
-light.style.left=e.clientX+'px'
-light.style.top=e.clientY+'px'
-})
+document.querySelectorAll('.scroll-img').forEach((container) => {
+  
+  let isHovered = false;
 
-const container = document.querySelector('.scroll-img');
-
-let scrollAmount = 0;
-
-setInterval(() => {
-  container.scrollBy({
-    left: 320,
-    behavior: 'smooth'
+  container.addEventListener('mouseenter', () => {
+    isHovered = true;   // stop auto scroll when user touches
   });
 
-  // reset to start
-  if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
-    container.scrollTo({ left: 0, behavior: 'smooth' });
-  }
-}, 3000);
+  container.addEventListener('mouseleave', () => {
+    isHovered = false;
+  });
+
+  setInterval(() => {
+    if (isHovered) return;
+
+    container.scrollBy({
+      left: 320,
+      behavior: 'smooth'
+    });
+
+    // reset when end reached
+    if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+      container.scrollTo({ left: 0, behavior: 'smooth' });
+    }
+
+  }, 3000);
+
+});
   
   function payNow(){
   window.open("upi://pay?pa=BHUMISAFN.09@idfcbank&pn=BhumiharMahilaSamaj&cu=INR");
