@@ -184,20 +184,25 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
 
 /* small image (Founder) */
 .founder-box.small img{
-  width:110px;
-  height:110px;
+  width:220px;
+  height:220px;
   border-radius:50%;
   object-fit:cover;
   border:2px solid #38bdf8;
 }
 
 /* big image (Team Member) */
-.founder-box.big img{
-  width:160px;
-  height:160px;
-  border-radius:50%;
-  object-fit:cover;
-  border:2px solid #22c55e;
+.founder-row{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:50px;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
+
+.founder-box{
+  text-align:center;
 }
 
 /* committee center */
@@ -205,6 +210,8 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   text-align:center;
   margin-top:20px;
 }
+  
+
 
 .committee-box img{
   width:180px;
@@ -213,26 +220,7 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   object-fit:cover;
   border:2px solid #facc15;
 }
-/* image fixed size */
-.founder-img img{
-  width:130px;
-  height:130px;
-  border-radius:50%;
-  object-fit:cover;
-  border:2px solid #38bdf8;
-}
-
-  .founder-wrapper{
-  display:flex;
-  gap:20px;
-  flex-wrap:wrap;
-  justify-content:space-between;
-
-
-#founder .founder-box{
-  flex:1;
-  min-width:280px;
-}
+  
 
 /* text */
 .founder-info{
@@ -384,12 +372,6 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   border-radius:50%;
 }
 
-/* text spacing */
-.founder-box p{
-  font-size:14px;
-  margin-top:10px;
-  max-width:300px;
-}
 
 /* mobile responsive */
 @media(max-width:768px){
@@ -624,37 +606,39 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
     </div>
   <section id="founder" class="fade">
 
-  <!-- TOP: Founder + Team -->
+  <!-- TOP -->
   <h2>Founder & Founder Member</h2>
 
   <div class="founder-row">
 
-    <!-- Founder (Small) -->
-    <div class="founder-box small">
-        <div class="circle small">
-      <img src="Screenshot_20260504-172534~2.png">
+    <!-- Founder SMALL -->
+    <div class="founder-box">
+      <div class="circle small">
+        <img src="Screenshot_20260504-172534~2.png">
+      </div>
       <h3>Founder</h3>
-      <p>email:- preetipriya@gmail.com</p>
-          <p> contact:-9934634400</p>
+      <p>Email: preetipriya@gmail.com</p>
+      <p>Contact: 9934634400</p>
     </div>
 
-    <!-- Team Member (Big) -->
-    <div class="founder-box big">
-        <div class="circle big">
-      <img src="Screenshot_20260504-172525~2.png">
+    <!-- Team BIG -->
+    <div class="founder-box">
+      <div class="circle big">
+        <img src="Screenshot_20260504-172525~2.png">
+      </div>
       <h3>Founder Member</h3>
       <p>Working Committee</p>
     </div>
 
   </div>
 
-
-  <!-- BOTTOM: Committee Member -->
+  <!-- BOTTOM -->
   <h2 style="margin-top:40px;">Committee Member</h2>
 
   <div class="committee-box">
-      <div class="circle">
-    <img src="Screenshot_20260504-172529~2.png">
+    <div class="circle small">
+      <img src="Screenshot_20260504-172529~2.png">
+    </div>
     <h3>Committee Member</h3>
     <p>Advisory Board</p>
   </div>
