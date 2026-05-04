@@ -108,19 +108,10 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   object-fit:cover;
   border-radius:10px;
 }
+  .scroll-img::-webkit-scrollbar{
+  display:none;
+  }
 
-.scroll-track{
-  display:flex;
-  animation:slide 15s linear infinite;
-}
-
-.scroll-track img{
-  width:300px;
-  height:200px;
-  object-fit:cover;
-  margin-right:15px;
-  border-radius:10px;
-}
   .scroll-img{
   display:flex;
   overflow-x:auto;   /* ✅ horizontal scroll allow */
@@ -129,17 +120,6 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   padding:10px;
 }
 
-/* scrollbar hide (optional) */
-.scroll-img::-webkit-scrollbar{
-  display:none;
-}
-
-.scroll-img img{
-  min-width:300px;
-  height:200px;
-  object-fit:cover;
-  border-radius:10px;
-}
 
   /* LINK SECTION DESIGN FIX */
 #link{
@@ -169,81 +149,38 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   transform:scale(1.05);
 }
 
-/* infinite sliding */
-@keyframes slide{
-  0%{transform:translateX(0)}
-  100%{transform:translateX(-50%)
-    .founder-box{
-  display:flex;
-  flex-direction:row;
-  align-items:center;
-  justify-content:flex-start;
-  gap:20px;
-  flex-wrap:nowrap;
-}
-  @media(max-width:768px){
-  .founder-box{
-    flex-direction:column;
-    text-align:center;
-  }
-  }
-
-/* image + info side by side fix */
-.founder-img{
-  flex-shrink:0;
-}
-
-.founder-info{
-  display:flex;
-  flex-direction:column;
-}
-
-.founder-img img{
-width:140px;
-height:140px;
-border-radius:50%;
-object-fit:cover;
-border:3px solid #38bdf8;
-box-shadow:0 0 20px #38bdf8;
-}
-
-.founder-info h3{
-margin-bottom:10px;
-color:#38bdf8;
-}
-
-.founder-info p{
-margin:5px 0;
-}
-
-  /* WHO BUILT THIS SECTION - HORIZONTAL LAYOUT */
-#founder{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
-
-/* container for cards */
+  /* founder clean */
 .founder-box{
   display:flex;
-  flex-direction:row;
   align-items:center;
-  justify-content:flex-start;
   gap:20px;
-  flex-wrap:nowrap;
   background:rgba(255,255,255,0.05);
   padding:20px;
   border-radius:15px;
 }
 
-/* mobile fix */
+/* mobile */
 @media(max-width:768px){
   .founder-box{
     flex-direction:column;
     text-align:center;
   }
 }
-  
+
+/* image row */
+.img-row{
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
+}
+
+.img-row img{
+  width:200px;
+  height:150px;
+  object-fit:cover;
+  border-radius:10px;
+  flex-shrink:0;
+}
 
 /* WHATSAPP BUTTON */
 .whatsapp{
@@ -352,9 +289,7 @@ margin:5px 0;
 
   <div class="img-row">
     <img src="Screenshot_20260430-115641~2.png">
-    <video 
-         src="VID_1777891860964.mp4" controls></video>
-     <img 
+    <video src="VID_1777891860964.mp4" controls></video>
     <img src="Screenshot_20260430-115631~2.png">
     <img src="Screenshot_20260430-115623~2.png">
     <img src="Screenshot_20260430-115618~2.png">
