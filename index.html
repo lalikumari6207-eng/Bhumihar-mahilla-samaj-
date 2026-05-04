@@ -667,6 +667,7 @@ function closeMenu(){document.getElementById('menu').classList.remove('active')}
 const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show')}})
 })
+  document.querySelectorAll('.fade').forEach(el => observer.observe(el));
 function scrollLeft(btn){
   const row = btn.parentElement.querySelector('.img-row');
   row.scrollBy({ left: -300, behavior: 'smooth' });
