@@ -198,6 +198,33 @@ color:#38bdf8;
 margin:5px 0;
 }
 
+  /* WHO BUILT THIS SECTION - HORIZONTAL LAYOUT */
+#founder{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* container for cards */
+.founder-box{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;   /* mobile me wrap ho jayega */
+}
+
+/* each card ko equal width */
+#founder .card{
+  flex:1;
+  min-width:280px;
+}
+  @media(min-width:768px){
+  #founder{
+    flex-direction:row;
+    gap:20px;
+  }
+  }
 /* WHATSAPP BUTTON */
 .whatsapp{
   position:fixed;
@@ -343,7 +370,6 @@ margin:5px 0;
 
     <div class="founder-info">
       <h3>MD & Founder</h3>
-      <p><b>Name:</b> Preeti Priya</p>
       <p><b>Email:</b> preetipriya@gmail.com</p>
       <p><b>Contact:</b> +91 9934634400</p>
     </div>
@@ -358,7 +384,7 @@ margin:5px 0;
     </div>
     <div class="founder-info">
       <h3>Working Committee</h3>
-      <p>Main team members of the organization</p>
+      <p>Working committee advisori board member </p>
     </div>
   </div>
 
@@ -369,7 +395,7 @@ margin:5px 0;
     </div>
     <div class="founder-info">
       <h3>Committee Group</h3>
-      <p>Supporting members of the organization</p>
+      <p>Working committee advisori board member aise</p>
     </div>
   </div>
 
