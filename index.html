@@ -279,8 +279,8 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
 <source src="VID-20251215-WA0021.mp4" type="video/mp4">
 </video><div class="light" id="light"></div><header>
 <div>Bhumihar Mahilla Samaj 
-  <span> email:- bhumihamqhilasamaj@gmail</span>
-  <span> contact :- 012345678</span> </div>
+<a href="mailto:bhumihamqhilasamaj@gmail.com">email</a>
+  <a href="tel:9934634400">contact</a> </div>
 <div class="menu-btn" onclick="openMenu()">☰</div>
 </header><div class="sidebar" id="menu">
 <div class="close-btn" onclick="closeMenu()">✖</div>
@@ -402,7 +402,6 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
     <img src="FB_IMG_1777892229949.jpg">
   </div>
 </section>
-  <section id="pankhhaat" class="fade">
 
     
 <section id="news" class="fade">
@@ -551,6 +550,17 @@ document.querySelectorAll('.scroll-img').forEach((container) => {
   }, 3000);
 
 });
+
+  function scrollLeft(btn){
+  const row = btn.parentElement.querySelector('.img-row');
+  row.scrollBy({ left: -320, behavior: 'smooth' });
+}
+
+function scrollRight(btn){
+  const row = btn.parentElement.querySelector('.img-row');
+  row.scrollBy({ left: 320, behavior: 'smooth' });
+}
+
   
   function payNow(){
   window.open("upi://pay?pa=BHUMISAFN.09@idfcbank&pn=BhumiharMahilaSamaj&cu=INR");
