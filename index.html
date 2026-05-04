@@ -78,6 +78,14 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   width:100%;
   position:relative;
 }
+  .img-row img,
+.img-row video{
+  width:260px;   /* पहले 200px था */
+  height:180px;  /* थोड़ा बड़ा किया */
+  object-fit:cover;
+  border-radius:12px;
+  flex-shrink:0;
+}
   .scroll-img video{
   min-width:300px;
   height:200px;
@@ -154,11 +162,34 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
 /* row for founder + team */
 .founder-row{
   display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:40px;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:60px;
   flex-wrap:wrap;
   margin-top:20px;
+}
+
+/* left side founder */
+.founder-box{
+  flex:1;
+  text-align:center;
+}
+
+/* right side team */
+.founder-box.team{
+  flex:1;
+  text-align:center;
+}
+
+/* circles same but neat */
+.circle.small{
+  width:260px;
+  height:260px;
+}
+
+.circle.big{
+  width:320px;
+  height:320px;
 }
 
 /* common style */
@@ -605,12 +636,12 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
     </div>
 
     <!-- Team BIG -->
-    <div class="founder-box">
+    <div class="founder-box team">
       <div class="circle big">
         <img src="Screenshot_20260504-172525~2.png">
       </div>
       <h3>Founder Member</h3>
-      <p>Working Committee</p>
+      <p>team member</p>
     </div>
 
   </div>
@@ -623,7 +654,7 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
       <img src="Screenshot_20260504-172529~2.png">
     </div>
     <h3>Committee Member</h3>
-    <p>Advisory Board</p>
+    <p>Working committee advisori board members</p>
   </div>
 
   </section>
