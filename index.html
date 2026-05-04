@@ -435,17 +435,6 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   <section id="founder" class="fade">
   <h2>Founder & Team Members</h2>
 
-<div class="founder-wrapper">
-
-  <div class="card founder-box">
-    ...
-  </div>
-
-  <div class="card founder-box">
-    ...
-  </div>
-
-</div>
     <div class="card">
   <h3>Our Journey</h3>
 
@@ -473,7 +462,7 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
 
   <b>“सेवा, शिक्षा और सशक्तिकरण – यही हमारा संकल्प है।”</b>
     </div>
-
+<div class="founder-wrapper">
   <div class="card founder-box">
     <div class="founder-img">
       <img src="Screenshot_20260504-172534~2.png" alt="MD & Founder">
@@ -488,7 +477,6 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
 
   <!-- TEAM MEMBERS -->
   <h2 style="margin-top:40px;">Team Members</h2>
-
   <div class="card founder-box">
     <div class="founder-img">
       <img src="Screenshot_20260504-172525~2.png" alt="Team Members">
@@ -499,7 +487,7 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
     </div>
   </div>
 
-  <!-- WORKING COMMITTEE -->
+  <!-- WORKING -->
   <div class="card founder-box" style="margin-top:20px;">
     <div class="founder-img">
       <img src="Screenshot_20260504-172529~2.png" alt="Working Committee">
@@ -544,45 +532,14 @@ function closeMenu(){document.getElementById('menu').classList.remove('active')}
 const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show')}})
 })
-document.querySelectorAll('.fade').forEach(el=>observer.observe(el))
-
-document.querySelectorAll('.scroll-img').forEach((container) => {
-  
-  let isHovered = false;
-
-  container.addEventListener('mouseenter', () => {
-    isHovered = true;   // stop auto scroll when user touches
-  });
-
-  container.addEventListener('mouseleave', () => {
-    isHovered = false;
-  });
-
-  setInterval(() => {
-    if (isHovered) return;
-
-    container.scrollBy({
-      left: 320,
-      behavior: 'smooth'
-    });
-
-    // reset when end reached
-    if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
-      container.scrollTo({ left: 0, behavior: 'smooth' });
-    }
-
-  }, 3000);
-
-});
-
-  function scrollLeft(btn){
+function scrollLeft(btn){
   const row = btn.parentElement.querySelector('.img-row');
-  row.scrollBy({ left: -320, behavior: 'smooth' });
+  row.scrollBy({ left: -300, behavior: 'smooth' });
 }
 
 function scrollRight(btn){
   const row = btn.parentElement.querySelector('.img-row');
-  row.scrollBy({ left: 320, behavior: 'smooth' });
+  row.scrollBy({ left: 300, behavior: 'smooth' });
 }
 
   
