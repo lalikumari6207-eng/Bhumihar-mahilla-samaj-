@@ -78,7 +78,9 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
 
 /* CARDS */
 .card{background:rgba(255,255,255,0.05);padding:25px;border-radius:20px;transition:.4s;transform-style:preserve-3d}
-.card:hover{transform:rotateY(8deg) rotateX(8deg) scale(1.05)}
+.card:hover{
+  transform:scale(1.02);
+}
 
 .scroll-img{
   display:flex;
@@ -224,11 +226,24 @@ margin:5px 0;
 /* container for cards */
 .founder-box{
   display:flex;
+  flex-direction:row;
   align-items:center;
-  justify-content:space-between;
+  justify-content:flex-start;
   gap:20px;
-  flex-wrap:wrap;   /* mobile me wrap ho jayega */
+  flex-wrap:nowrap;
+  background:rgba(255,255,255,0.05);
+  padding:20px;
+  border-radius:15px;
 }
+
+/* mobile fix */
+@media(max-width:768px){
+  .founder-box{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+  
 
 /* WHATSAPP BUTTON */
 .whatsapp{
@@ -333,40 +348,32 @@ margin:5px 0;
 
     <!-- EDUCATION SUPPORT -->
     <div class="card" style="min-width:300px;">
-      <h3 style="color:#38bdf8;">Education Support</h3>
-<div class="img-row">
-    <img
-      src="Screenshot_20260430-115641~2.png">
-     <img 
-       src ="Screenshot_20260430-115631~2.png"><p> education support </p>
-       <video 
+  <h3 style="color:#38bdf8;">Education Support</h3>
+
+  <div class="img-row">
+    <img src="Screenshot_20260430-115641~2.png">
+    <video 
          src="VID_1777891860964.mp4" controls></video>
      <img 
-       src ="Screenshot_20260430-115623~2.png">
-       <img 
-         src ="Screenshot_20260430-115618~2.png">
-     <img 
-       src ="FB_IMG_1777891821714.jpg">
-     <img 
-       src ="FB_IMG_1777892515629.jpg">
-     <img 
-       src ="FB_IMG_1777891832097.jpg">
-      <style="width:100%;height:180px;object-fit:cover;border-radius:10px;">
-      <p>विद्यार्थियों को छात्रवृत्ति, मार्गदर्शन और करियर सपोर्ट प्रदान किया जाता है , गरीब बच्चों को गोद लेके शिक्षा दिया जाता है।</p>
+    <img src="Screenshot_20260430-115631~2.png">
+    <img src="Screenshot_20260430-115623~2.png">
+    <img src="Screenshot_20260430-115618~2.png">
+  </div>
+
+  <p>विद्यार्थियों को छात्रवृत्ति और शिक्षा सहायता दी जाती है गरीब बच्चों को गोद लेके शिक्षा दिया जाता है।</p>
     </div>
 
     <!-- SILAI MACHINE YOJNA -->
     <div class="card" style="min-width:300px;">
-      <h3 style="color:#38bdf8;">Mahila Silai Machine Yojna</h3>
-   <div class="img-row">
-        <img
-        src ="FB_IMG_1777895338003.jpg">
-     <img 
-        src ="FB_IMG_1777895314238.jpg">
-     <img 
-        src ="FB_IMG_1777894595003.jpg"> 
-      style="width:100%;height:180px;object-fit:cover;border-radius:10px;">
-      <p>महिलाओं को सिलाई मशीन देकर आत्मनिर्भर बनाया जाता है।</p>
+  <h3 style="color:#38bdf8;">Mahila Silai Machine Yojna</h3>
+
+  <div class="img-row">
+    <img src="FB_IMG_1777895338003.jpg">
+    <img src="FB_IMG_1777895314238.jpg">
+    <img src="FB_IMG_1777894595003.jpg">
+  </div>
+
+  <p>महिलाओं को आत्मनिर्भर बनाया जाता है।</p>
     </div>
 
     <!-- BEAUTICIAN COURSE -->
