@@ -118,7 +118,38 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   padding:10px;
 }
 
+.scroll-img{
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;      /* 👈 only horizontal scroll */
+  scroll-behavior: smooth;
+  padding: 10px;
+  -webkit-overflow-scrolling: touch;
+}
 
+/* image fix */
+.scroll-img img,
+.scroll-img video{
+  min-width: 260px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+/* scrollbar hide */
+.scroll-img::-webkit-scrollbar{
+  display: none;
+}
+
+  .scroll-img{
+  scroll-snap-type: x mandatory;
+}
+
+.scroll-img img{
+  scroll-snap-align: center;
+}
+  
   /* LINK SECTION DESIGN FIX */
 #link{
   margin-top:80px;        /* donation se gap */
@@ -834,8 +865,6 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
 </div>
   </section>
 
-  <div class="committee-box">
-    <div class="circle small">
 
   <!-- BOTTOM -->
     
