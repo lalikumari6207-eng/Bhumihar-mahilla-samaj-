@@ -275,6 +275,33 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   justify-content:center;
 }
 
+/* COMMITTEE SLIDER FIX FINAL */
+.committee-slider{
+  display:flex;
+  overflow-x:auto;
+  gap:15px;
+  padding:10px;
+  scroll-behavior:smooth;
+}
+
+.committee-slider::-webkit-scrollbar{
+  display:none;
+}
+
+.committee-item{
+  min-width:120px;
+  flex-shrink:0;
+  text-align:center;
+}
+
+.committee-item img{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid #facc15;
+}
+  
 /* mobile fix */
 @media(max-width:768px){
   .founder-box{
@@ -779,43 +806,36 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
 
 <div class="scroll-img committee-slider">
 
-  
-  <div class="committee-box">
-    <div class="circle small">
-      <img src="IMG-20260505-WA0181~2.jpg">
-    </div>
-    <h3>Advisor</h3>
+  <div class="committee-item">
+    <img src="IMG-20260505-WA0181~2.jpg">
+    <p>Advisor</p>
   </div>
 
-  <div class="committee-box">
-    <div class="circle small">
-      <img src="IMG-20260505-WA0177.jpg">
-    </div>
-    <h3>Advisor</h3>
+  <div class="committee-item">
+    <img src="IMG-20260505-WA0177.jpg">
+    <p>Advisor</p>
   </div>
 
-  <div class="committee-box">
-    <div class="circle small">
-      <img src="IMG-20260505-WA0178~2.jpg">
-    </div>
-    <h3>Advisor</h3>
+  <div class="committee-item">
+    <img src="IMG-20260505-WA0178~2.jpg">
+    <p>Advisor</p>
   </div>
 
-  <div class="committee-box">
-    <div class="circle small">
-      <img src="IMG-20260505-WA0180.jpg">
-    </div>
-    <h3>Advisor</h3>
+  <div class="committee-item">
+    <img src="IMG-20260505-WA0180.jpg">
+    <p>Advisor</p>
   </div>
 
-  <div class="committee-box">
-    <div class="circle small">
-      <img src="IMG-20260505-WA0176.jpg">
-    </div>
-    <h3>Advisor</h3>
+  <div class="committee-item">
+    <img src="IMG-20260505-WA0176.jpg">
+    <p>Advisor</p>
   </div>
 
 </div>
+
+  <div class="committee-box">
+    <div class="circle small">
+
   <!-- BOTTOM -->
     
   <h2 style="margin-top:40px;">Committee Member</h2>
