@@ -282,7 +282,30 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
     text-align:center;
   }
 }
+/* COMMITTEE SLIDER */
+.committee-slider{
+  display:flex;
+  overflow-x:auto;
+  gap:15px;
+  padding:10px;
+  scroll-behavior:smooth;
+}
 
+.committee-slider::-webkit-scrollbar{
+  display:none;
+}
+
+.committee-slider .circle.small{
+  width:140px;
+  height:140px;
+}
+
+.committee-slider .committee-box{
+  min-width:140px;   /* ek line me rakhega */
+  flex-shrink:0;
+  text-align:center;
+}
+  
 /* mobile */
 @media(max-width:768px){
   .founder-box{
@@ -309,6 +332,14 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   object-fit:cover;
   border-radius:12px;
   flex-shrink:0;
+}
+
+  /* SMALL SLIDER FIX */
+.small-slider img{
+  min-width:150px;   /* small size */
+  height:120px;
+  object-fit:cover;
+  border-radius:10px;
 }
 
 /* LEFT ARROW */
@@ -728,13 +759,25 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
         <img src="Screenshot_20260504-172529~2.png">
       </div>
       <h3>Founder Member</h>
+      <!-- NEW IMAGE SLIDER -->
+<div class="card">
+  <h3 style="color:#38bdf8;">Team Moments</h3>
+
+  <div class="scroll-img small-slider">
+    <img src="IMG-20260505-WA0208.jpg">
+    <img src="IMG-20260505-WA0209.jpg">
+    <img src="IMG-20260505-WA0210.jpg">
+    <img src="IMG-20260505-WA0211.jpg">
+    <img src="IMG-20260505-WA0212.jpg">
+  </div>
+</div>
     </div>
 
   </div>
 
     <h2 style="margin-top:40px;">सलाहकार समिति</h2>
 
-<div class="committee-row">
+<div class="scroll-img committee-slider">
 
   
   <div class="committee-box">
