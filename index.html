@@ -91,34 +91,33 @@ z-index:2;
    2. COMMITTEE MEMBERS (HORIZONTAL BIG)
 ========================= */
 #committee:last-of-type .committee-slider{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-  flex-wrap: wrap;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:30px;   /* 👈 proper spacing */
 }
 
-/* big circle */
-#committee:last-of-type .committee-box .circle.small{
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  overflow: hidden;
+#committee:last-of-type .committee-box{
+  text-align:center;
 }
 
-/* full image */
-#committee:last-of-type .committee-box img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+#committee:last-of-type .circle.small{
+  width:280px;
+  height:280px;
+  border-radius:50%;
+  overflow:hidden;
 }
 
-/* text */
+#committee:last-of-type img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
 #committee:last-of-type h3{
-  text-align: center;
-  margin-top: 10px;
-  font-size: 18px;
+  margin-top:10px;
 }
 
 /* optional soft shine */
