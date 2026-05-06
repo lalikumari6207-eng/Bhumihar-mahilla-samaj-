@@ -118,9 +118,6 @@ z-index:2;
   display:block;   /* 👈 IMPORTANT FIX */
 }
 
-#committee:last-of-type h3{
-  margin-top:10px;
-}
 /* optional soft shine */
 .earth::before{
 content:"";
@@ -290,17 +287,6 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   text-align:center;
 }
 
-  /* SALAHKAR COMMITTEE IMAGE SMALL FIX */
-.committee-slider .circle.small{
-  width: 90px;   /* 👈 pehle 180/220 tha, ab small */
-  height: 90px;
-}
-
-.committee-slider .circle.small img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
   
 
 /* left side founder */
@@ -718,38 +704,7 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
     height:220px;
   }
 }
-/* सलाहकारी समिति */
-  #committee .committee-slider{
-  display: flex;
-  flex-direction: row;   /* side by side */
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;      /* mobile me wrap ho jaye */
-  margin-top: 20px;
-}
 
-#committee .committee-item{
-  text-align: center;
-}
-
-#committee .circle.small{
-  width: 80px;   /* chhota size */
-  height: 80px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-#committee .circle.small img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-#committee .committee-item p{
-  margin-top: 5px;
-  font-size: 14px;
-}
 
 /* LIGHT FOLLOW */
 .light{position:fixed;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,0.3),transparent);pointer-events:none;z-index:-1;transform:translate(-50%,-50%)}
