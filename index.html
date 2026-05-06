@@ -57,47 +57,68 @@ z-index:2;
 }
 
   /* =========================
-   COMMITTEE + ADVISORY FIX
+   1. SALAHKAR SAMITI (VERTICAL)
 ========================= */
-
-/* dono section images common fix */
-#committee .circle.small,
-#advisory .circle.small{
-  width: 160px;
-  height: 160px;
+#committee:first-of-type .committee-slider{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
-/* image fit clean */
-#committee .circle.small img,
-#advisory .circle.small img{
+#committee:first-of-type .committee-item .circle.small{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#committee:first-of-type .committee-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* full face crop */
+  object-position: top;
+}
+
+/* text */
+#committee:first-of-type p{
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
+/* =========================
+   2. COMMITTEE MEMBERS (HORIZONTAL BIG)
+========================= */
+#committee:last-of-type .committee-slider{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* big circle */
+#committee:last-of-type .committee-box .circle.small{
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* full image */
+#committee:last-of-type .committee-box img{
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* spacing clean */
-#committee .committee-slider,
-#advisory .committee-slider{
-  gap: 20px;
-}
-  
-  /* COMMITTEE MEMBER IMAGE BIG SIZE FIX */
-#committee .committee-item img{
-  width:380px;     /* 👈 size bada */
-  height:380px;    /* 👈 size bada */
-  border-radius:50%;
-  object-fit:cover;
-  object-position:center;
-  border:3px solid #facc15;
-}
-  /* FINAL OVERRIDE - COMMITTEE IMAGE SIZE */
-#committee .committee-item img{
-  width:280px !important;
-  height:280px !important;
-  border-radius:50%;
-  object-fit:cover;
-  object-position:center;
-  border:3px solid #facc15;
+/* text */
+#committee:last-of-type h3{
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
 }
 
 /* optional soft shine */
