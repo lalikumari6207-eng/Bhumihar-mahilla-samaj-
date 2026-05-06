@@ -388,6 +388,28 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   object-position:center;
   border:2px solid #facc15;
 }
+  /* COMMITTEE HORIZONTAL FIX */
+.committee-row{
+  display: flex;
+  flex-wrap: wrap;        /* next line me aa jayega if space kam ho */
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.committee-box{
+  width: 140px;
+  text-align: center;
+}
+
+/* IMAGE PERFECT CIRCLE */
+.committee-box img{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #facc15;
+}
   
 /* mobile fix */
 @media(max-width:768px){
@@ -901,6 +923,9 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   </div>
   <section id="committee" class="fade">
     <h2 style="margin-top:30px;">सलाहकार समिति</h2>
+    <div class="committee-row">
+
+ 
 
 <div class="scroll-img committee-slider">
 
