@@ -92,34 +92,35 @@ z-index:2;
 ========================= */
 #committee:last-of-type .committee-slider{
   display:flex;
-  flex-direction:row;
-  justify-content:center;
-  align-items:center;
   flex-wrap:wrap;
-  gap:30px;   /* 👈 proper spacing */
+  justify-content:center;
+  gap:35px;   /* 👈 THIS FIXES GAP */
+  padding:20px;
 }
 
 #committee:last-of-type .committee-box{
   text-align:center;
+  width:280px;   /* keeps spacing stable */
 }
 
 #committee:last-of-type .circle.small{
-  width:200px;
-  height:200px;
+  width:280px;
+  height:280px;
   border-radius:50%;
   overflow:hidden;
+  margin:auto;
 }
 
 #committee:last-of-type img{
   width:100%;
   height:100%;
   object-fit:cover;
+  display:block;   /* 👈 IMPORTANT FIX */
 }
 
 #committee:last-of-type h3{
-  margin-top:15px;
+  margin-top:10px;
 }
-
 /* optional soft shine */
 .earth::before{
 content:"";
