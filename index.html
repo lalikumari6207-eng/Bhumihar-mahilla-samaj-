@@ -1044,24 +1044,7 @@ function scrollRight(btn){
   window.open("upi://pay?pa=BHUMISAFN.09@idfcbank&pn=BhumiharMahilaSamaj&cu=INR");
   }
 
-<script>
-const sliders = document.querySelectorAll('.scroll-img, .committee-slider');
 
-sliders.forEach(slider => {
-  let scrollAmount = 0;
-
-  setInterval(() => {
-    slider.scrollBy({
-      left: 200,
-      behavior: "smooth"
-    });
-
-    if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
-      slider.scrollTo({ left: 0, behavior: "smooth" });
-    }
-  }, 2500);
-});
-</script>
 </script>
   </body>
 </html>
