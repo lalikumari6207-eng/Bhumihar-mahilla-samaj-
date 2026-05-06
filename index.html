@@ -923,7 +923,7 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   </div>
     
 
-    <h2 style="margin-top:40px;">सलाहकार समिति</h2>
+    <h2 style="margin-top:30px;">सलाहकार समिति</h2>
 
 <div class="scroll-img committee-slider">
 
@@ -963,7 +963,6 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
 
 
   <!-- BOTTOM -->
-    
   <h2 style="margin-top:40px;">Committee Member</h2>
 <div class="committee-row">  
     <div class="committee-slider" id="committeeSlider">
@@ -1068,6 +1067,14 @@ function scrollRight(btn){
   function payNow(){
   window.open("upi://pay?pa=BHUMISAFN.09@idfcbank&pn=BhumiharMahilaSamaj&cu=INR");
   }
+
+  <script>
+const slider = document.querySelector(".committee-slider");
+
+setInterval(() => {
+  slider.scrollBy({ left: 160, behavior: "smooth" });
+}, 2500);
+</script>
 </script></body>
 </html>
 
