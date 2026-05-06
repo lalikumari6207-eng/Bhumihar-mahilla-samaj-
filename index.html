@@ -57,6 +57,32 @@ object-fit:contain;
 z-index:2;
 }
 
+  /* =========================
+   COMMITTEE + ADVISORY FIX
+========================= */
+
+/* dono section images common fix */
+#committee .circle.small,
+#advisory .circle.small{
+  width: 160px;
+  height: 160px;
+}
+
+/* image fit clean */
+#committee .circle.small img,
+#advisory .circle.small img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* spacing clean */
+#committee .committee-slider,
+#advisory .committee-slider{
+  gap: 20px;
+}
+  
+
 /* optional soft shine */
 .earth::before{
 content:"";
