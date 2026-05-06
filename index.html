@@ -301,30 +301,42 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   
 /* small image (Founder) */
 .founder-box.small img{
-  width:220px;
-  height:220px;
+  width:320px;
+  height:320px;
   border-radius:50%;
   object-fit:cover;
   border:2px solid #38bdf8;
 }
 
-.committee-slider{
-  display:flex;
-  overflow-x:auto;
-  gap:20px;
-  padding:15px;
-  scroll-behavior:smooth;
+#committee .committee-slider{
+  display: flex;
+  flex-direction: column;   /* vertical */
+  align-items: center;      /* center alignment */
+  gap: 25px;
+  margin-top: 20px;
 }
 
-.committee-slider::-webkit-scrollbar{
-  display:none;
+#committee .committee-box{
+  text-align: center;
 }
 
-.committee-item{
-  min-width:160px;
-  text-align:center;
-  flex-shrink:0;
+#committee .circle.small{
+  width: 200px;   /* bigger size */
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
 }
+
+#committee .circle.small img{
+  width: 200%;
+  height: 200%;
+  object-fit: cover;
+}
+
+#committee .committee-box h3{
+  margin-top: 10px;
+  font-size: 18px;
+  }
 
 /* IMAGE FIX (IMPORTANT) */
 .committee-item img{
