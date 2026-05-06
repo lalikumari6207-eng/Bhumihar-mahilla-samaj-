@@ -133,7 +133,7 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
 .scroll-img video{
   min-width: 260px;
   height: 180px;
-  object-fit: contain;   /* 👈 FULL IMAGE SHOW */
+  object-fit: cover;   /* 👈 FULL IMAGE SHOW */
   background: #000;      /* empty space black */
 }
 
@@ -385,6 +385,7 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   height:100px;
   border-radius:50%;
   object-fit:cover;
+  object-position:center;
   border:2px solid #facc15;
 }
   
@@ -394,29 +395,6 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
     flex-direction:column;
     text-align:center;
   }
-}
-/* COMMITTEE SLIDER */
-.committee-slider{
-  display:flex;
-  overflow-x:auto;
-  gap:15px;
-  padding:10px;
-  scroll-behavior:smooth;
-}
-
-.committee-slider::-webkit-scrollbar{
-  display:none;
-}
-
-.committee-slider .circle.small{
-  width:140px;
-  height:140px;
-}
-
-.committee-slider .committee-box{
-  min-width:140px;   /* ek line me rakhega */
-  flex-shrink:0;
-  text-align:center;
 }
   
 /* mobile */
