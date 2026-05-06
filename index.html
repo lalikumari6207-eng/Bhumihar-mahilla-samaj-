@@ -62,15 +62,29 @@ z-index:2;
 
 /* dono section images common fix */
 #committee .circle.small,
-#advisory .circle.big{
+#advisory .circle.small{
   width: 160px;
   height: 160px;
+}
+
+/* image fit clean */
+#committee .circle.small img,
+#advisory .circle.small img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* spacing clean */
+#committee .committee-slider,
+#advisory .committee-slider{
+  gap: 20px;
 }
   
   /* COMMITTEE MEMBER IMAGE BIG SIZE FIX */
 #committee .committee-item img{
-  width:280px;     /* 👈 size bada */
-  height:280px;    /* 👈 size bada */
+  width:380px;     /* 👈 size bada */
+  height:380px;    /* 👈 size bada */
   border-radius:50%;
   object-fit:cover;
   object-position:center;
@@ -350,15 +364,15 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
 }
 
 #committee .circle.small{
-  width: 200px;   /* bigger size */
-  height: 200px;
+  width: 380px;   /* bigger size */
+  height: 380px;
   border-radius: 50%;
   overflow: hidden;
 }
 
 #committee .circle.small img{
-  width: 200%;
-  height: 200%;
+  width: 380%;
+  height: 380%;
   object-fit: cover;
 }
 
@@ -369,8 +383,8 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
 
 /* IMAGE FIX (IMPORTANT) */
 .committee-item img{
-  width:140px;
-  height:140px;
+  width:300px;
+  height:300px;
   border-radius:50%;
   object-fit:cover;   /* 👈 FACE CLEAR */
   object-position: top; /* 👈 face center fix */
