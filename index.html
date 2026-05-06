@@ -295,6 +295,34 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
   border:2px solid #38bdf8;
 }
 
+.committee-slider{
+  display:flex;
+  overflow-x:auto;
+  gap:20px;
+  padding:15px;
+  scroll-behavior:smooth;
+}
+
+.committee-slider::-webkit-scrollbar{
+  display:none;
+}
+
+.committee-item{
+  min-width:160px;
+  text-align:center;
+  flex-shrink:0;
+}
+
+/* IMAGE FIX (IMPORTANT) */
+.committee-item img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  object-fit:cover;   /* 👈 FACE CLEAR */
+  object-position: top; /* 👈 face center fix */
+  border:3px solid #facc15;
+}
+  
 /* big image (Team Member) */
 .founder-row{
   display:flex;
@@ -938,7 +966,7 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
     
   <h2 style="margin-top:40px;">Committee Member</h2>
 <div class="committee-row">  
-    
+    <div class="committee-slider" id="committeeSlider">
   <div class="committee-box">
     <div class="circle small">
       <img src="IMG-20260505-WA0188.jpg">
@@ -984,6 +1012,12 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
     <h3>Committee Member</h3>
     <p>Working committee advisori board members</p>
     </div>
+</div>
+</div>
+  </div>
+  </div>
+  </div>
+  </div>
 </div>
   </section>
     
