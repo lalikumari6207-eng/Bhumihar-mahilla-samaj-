@@ -62,29 +62,24 @@ z-index:2;
 
 /* dono section images common fix */
 #committee .circle.small,
-#advisory .circle.small{
+#advisory .circle.big{
   width: 160px;
   height: 160px;
 }
-
-/* image fit clean */
-#committee .circle.small img,
-#advisory .circle.small img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* spacing clean */
-#committee .committee-slider,
-#advisory .committee-slider{
-  gap: 20px;
-}
-
+  
   /* COMMITTEE MEMBER IMAGE BIG SIZE FIX */
 #committee .committee-item img{
-  width:200px;     /* 👈 size bada */
-  height:200px;    /* 👈 size bada */
+  width:280px;     /* 👈 size bada */
+  height:280px;    /* 👈 size bada */
+  border-radius:50%;
+  object-fit:cover;
+  object-position:center;
+  border:3px solid #facc15;
+}
+  /* FINAL OVERRIDE - COMMITTEE IMAGE SIZE */
+#committee .committee-item img{
+  width:280px !important;
+  height:280px !important;
   border-radius:50%;
   object-fit:cover;
   object-position:center;
