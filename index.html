@@ -785,8 +785,28 @@ background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparen
 .fade{opacity:0;transform:translateY(50px);transition:1s}
 .fade.show{opacity:1;transform:translateY(0)}
 
-.footer{text-align:center;padding:30px;background:#020617;margin-bottom:80px}
 
+.footer-content{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
+  font-size:14px;
+  color:#94a3b8;
+  padding:20px;
+}
+
+.footer-content a{
+  color:#38bdf8;
+  text-decoration:none;
+  font-weight:500;
+}
+
+.footer-content a:hover{
+  text-decoration:underline;
+}
+  
     /* WORK SECTION GRID */
 .work-grid{
   display:grid;
@@ -1266,7 +1286,22 @@ style="padding:12px 20px;border-radius:10px;background:#22c55e;color:#fff;border
 </section>
     
 
-<div class="footer">© 2025 Bhumihar Mahilla Samaj || founder :-preeti priya</div>
+<div class="footer">
+  <div class="footer-content">
+    
+    <div class="left">
+      Copyright ©️ Bhumihar Mahilla Samaj
+    </div>
+
+    <div class="right">
+      Developed by:- 
+      <a href="https://share.google/gUn3tnuVbrIErQx7D" target="_blank">
+        Lyzonix Technologies
+      </a>
+    </div>
+
+  </div>
+</div>
     <script>
 function openMenu(){document.getElementById('menu').classList.add('active')}
 function closeMenu(){document.getElementById('menu').classList.remove('active')}
