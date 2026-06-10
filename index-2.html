@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhumihar Mahila Samaj</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta name="google-site-verification" content="wyPJCq7rLL8e9uipEopt-ItztYq84U0DS2bgwVMjCx8" />
+<link rel="icon" href="FB_IMG_1777997582817.jpg" type="image/png">
+<link rel="shortcut icon" href="FB_IMG_1777997582817.jpg">
+
+<style>
+/* ===== TOKENS ===== */
+:root{
+  --bg:       #0a0c10;
+  --surface:  #111318;
+  --card:     #161a22;
+  --border:   rgba(255,255,255,0.07);
+  --gold:     #c9a84c;
+  --gold-lt:  #e8c97a;
+  --green:    #3ec97e;
+  --sky:      #5bc4f0;
+  --rose:     #e07fa0;
+  --rose-lt:  #f5a8c0;
+  --text:     #e8e8e8;
+  --muted:    #8a8f9a;
+  --white:    #ffffff;
+  --radius:   16px;
+  --font-h:   'Playfair Display', Georgia, serif;
+  --font-b:   'Inter', sans-serif;
+}
+
+/* ===== RESET ===== */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-b);
+  overflow-x:hidden;
+  line-height:1.7;
+}
+
+/* ===== BG IMAGE ===== */
+.video-bg{
+  position:fixed;top:0;left:0;
+  width:100%;height:100%;
+  object-fit:cover;
+  z-index:-3;
+  opacity:0.07;
+  filter:grayscale(60%);
+}
+
+/* ===== LIGHT FOLLOW ===== */
+.light{
+  position:fixed;
+  width:350px;height:350px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(201,168,76,0.12),transparent 70%);
+  pointer-events:none;
+  z-index:-1;
+  transform:translate(-50%,-50%);
+  transition:left .1s,top .1s;
+}
+
+/* ===== HEADER ===== */
+header{
+  position:fixed;top:0;width:100%;
+  padding:14px 32px;
+  display:flex;justify-content:space-between;align-items:center;
+  background:rgba(10,12,16,0.85);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);
+  z-index:1000;
+}
+.header-left{
+  display:flex;align-items:center;gap:14px;
+}
+.header-logo{
+  width:40px;height:40px;border-radius:50%;
+  object-fit:cover;
+  border:2px solid var(--gold);
+}
+.header-brand{
+  font-family:var(--font-h);
+  font-size:16px;
+  font-weight:600;
+  color:var(--white);
+  letter-spacing:0.3px;
+}
+.header-brand span{
+  display:block;
+  font-family:var(--font-b);
+  font-size:11px;
+  font-weight:400;
+  color:var(--gold);
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+.header-right{
+  display:flex;align-items:center;gap:20px;
+}
+.header-right a{
+  color:var(--muted);
+  text-decoration:none;
+  font-size:13px;
+  font-weight:500;
+  transition:.2s;
+}
+.header-right a:hover{color:var(--gold)}
+.menu-btn{
+  font-size:22px;cursor:pointer;color:var(--text);
+  background:none;border:none;
+  padding:4px 8px;
+  border-radius:6px;
+}
+.menu-btn:hover{background:var(--card)}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+  position:fixed;top:0;right:-320px;width:300px;height:100%;
+  background:var(--surface);
+  border-left:1px solid var(--border);
+  padding:30px 24px;
+  transition:.4s cubic-bezier(.4,0,.2,1);
+  z-index:2000;
+}
+.sidebar.active{right:0}
+.close-btn{font-size:24px;text-align:right;cursor:pointer;margin-bottom:32px;color:var(--muted)}
+.sidebar-title{
+  font-family:var(--font-h);
+  font-size:13px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:20px;
+}
+.sidebar a{
+  display:block;
+  margin:4px 0;
+  color:var(--text);
+  text-decoration:none;
+  font-size:15px;
+  font-weight:500;
+  padding:11px 16px;
+  border-radius:10px;
+  transition:.2s;
+}
+.sidebar a:hover{background:var(--card);color:var(--gold-lt)}
+
+/* ===== HERO ===== */
+.hero{
+  min-height:100vh;
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+  text-align:center;
+  padding:100px 24px 60px;
+  position:relative;
+}
+.hero-eyebrow{
+  font-size:11px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:var(--rose-lt);
+  font-weight:600;
+  margin-bottom:18px;
+}
+.hero h1{
+  font-family:var(--font-h);
+  font-size:clamp(38px,7vw,80px);
+  font-weight:900;
+  line-height:1.08;
+  color:var(--white);
+  max-width:800px;
+  margin-bottom:8px;
+}
+.hero h1 em{
+  font-style:italic;
+  background:linear-gradient(135deg,var(--gold),var(--gold-lt));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.hero-sub{
+  font-size:15px;
+  color:var(--muted);
+  margin-top:16px;
+  max-width:480px;
+  letter-spacing:0.2px;
+}
+
+/* GLOBE */
+.earth{
+  width:260px;height:260px;
+  border-radius:50%;
+  margin:36px auto;
+  position:relative;
+  overflow:hidden;
+  border:3px solid var(--gold);
+  box-shadow:0 0 60px rgba(201,168,76,0.3),0 0 120px rgba(201,168,76,0.1);
+  transition:box-shadow .4s;
+}
+.earth:hover{
+  box-shadow:0 0 80px rgba(201,168,76,0.5),0 0 140px rgba(201,168,76,0.2);
+}
+.earth img{width:100%;height:100%;object-fit:contain;z-index:2;background:#050710}
+.earth::before{
+  content:"";position:absolute;
+  width:100%;height:100%;
+  background:radial-gradient(circle at 25% 25%,rgba(255,255,255,0.18),transparent 55%);
+  z-index:3;pointer-events:none;
+}
+
+/* hero stats strip */
+.hero-stats{
+  display:flex;gap:40px;justify-content:center;flex-wrap:wrap;
+  margin-top:40px;
+  padding:28px 40px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+}
+.stat{text-align:center}
+.stat-num{
+  font-family:var(--font-h);
+  font-size:32px;font-weight:700;
+  color:var(--gold-lt);
+}
+.stat-label{
+  font-size:12px;color:var(--muted);
+  letter-spacing:1px;text-transform:uppercase;
+  margin-top:4px;
+}
+
+/* ===== SECTIONS ===== */
+section{
+  padding:80px 20px;
+  max-width:1100px;
+  margin:0 auto;
+}
+section h2{
+  font-family:var(--font-h);
+  font-size:clamp(26px,4vw,42px);
+  font-weight:700;
+  color:var(--white);
+  margin-bottom:8px;
+}
+.section-rule{
+  width:60px;height:3px;
+  background:linear-gradient(90deg,var(--gold),transparent);
+  border-radius:2px;
+  margin-bottom:32px;
+}
+.section-eyebrow{
+  font-size:11px;letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--gold);font-weight:600;
+  margin-bottom:12px;
+}
+
+/* ===== CARDS ===== */
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:28px 32px;
+  margin-bottom:20px;
+  transition:.3s;
+}
+.card:hover{
+  border-color:rgba(201,168,76,0.25);
+  box-shadow:0 8px 40px rgba(0,0,0,0.4);
+}
+.card h3{
+  font-family:var(--font-h);
+  font-size:20px;color:var(--sky);
+  margin-bottom:14px;
+}
+.card p{color:var(--muted);font-size:14.5px;line-height:1.85}
+.card b{color:var(--text)}
+
+/* ===== IMAGE SCROLL ===== */
+.scroll-wrap{position:relative}
+.scroll-img{
+  display:flex;
+  gap:14px;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  padding:12px 4px 16px;
+  -webkit-overflow-scrolling:touch;
+  scroll-snap-type:x mandatory;
+}
+.scroll-img::-webkit-scrollbar{height:4px}
+.scroll-img::-webkit-scrollbar-track{background:var(--card);border-radius:4px}
+.scroll-img::-webkit-scrollbar-thumb{background:var(--gold);border-radius:4px}
+.scroll-img img,
+.scroll-img video{
+  min-width:280px;
+  height:190px;
+  object-fit:cover;
+  border-radius:12px;
+  flex-shrink:0;
+  scroll-snap-align:center;
+  border:1px solid var(--border);
+  transition:.3s;
+}
+.scroll-img img:hover{border-color:var(--gold);transform:scale(1.02)}
+
+/* ===== WORK LIST ===== */
+.work-list{
+  list-style:none;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:16px;
+  margin-bottom:36px;
+}
+.work-list li{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-left:3px solid var(--green);
+  border-radius:var(--radius);
+  padding:18px 20px;
+  font-size:14px;
+  color:var(--muted);
+  transition:.3s;
+}
+.work-list li:hover{border-left-color:var(--gold);color:var(--text)}
+.work-list li b{color:var(--text);display:block;margin-bottom:4px;font-size:15px}
+
+/* ===== FOUNDER SECTION ===== */
+.founder-row{
+  display:flex;justify-content:center;align-items:flex-start;
+  gap:50px;flex-wrap:wrap;margin-top:30px;
+}
+.founder-box{text-align:center}
+.circle{
+  border-radius:50%;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto;
+  background:var(--surface);
+}
+.circle.small{
+  width:200px;height:200px;
+  border:3px solid var(--gold);
+  box-shadow:0 0 30px rgba(201,168,76,0.25);
+}
+.circle.big{
+  width:300px;height:300px;
+  border:3px solid var(--sky);
+  box-shadow:0 0 40px rgba(91,196,240,0.2);
+}
+.circle img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.founder-box h3{
+  font-family:var(--font-h);
+  font-size:17px;margin-top:14px;color:var(--white)
+}
+.founder-box p{font-size:13px;color:var(--muted);margin-top:4px}
+
+/* MEMBER ROW */
+.member-row{
+  display:flex;gap:14px;flex-wrap:wrap;
+  justify-content:center;margin-top:20px;
+}
+.member{
+  width:90px;height:90px;
+  border-radius:50%;overflow:hidden;
+  border:2px solid var(--sky);
+  transition:.3s;
+}
+.member:hover{border-color:var(--gold);transform:scale(1.08)}
+.member img{width:100%;height:100%;object-fit:contain;background:#000}
+
+/* ===== COMMITTEE ===== */
+.committee-grid{
+  display:flex;flex-wrap:wrap;
+  justify-content:center;
+  gap:28px;
+  margin-top:28px;
+}
+.committee-item{text-align:center;width:130px}
+.committee-item .circle.medium{
+  width:110px;height:110px;
+  border:2px solid var(--gold);
+  box-shadow:0 0 20px rgba(201,168,76,0.15);
+}
+.committee-item p{font-size:12px;color:var(--muted);margin-top:8px}
+
+/* committee members big */
+.committee-members-grid{
+  display:flex;flex-wrap:wrap;
+  justify-content:center;
+  gap:32px;
+  margin-top:28px;
+}
+.committee-box{
+  text-align:center;width:160px;
+}
+.committee-box .circle.medium{
+  width:140px;height:140px;
+  border:2px solid var(--sky);
+  box-shadow:0 0 20px rgba(91,196,240,0.12);
+  margin:0 auto;
+}
+.committee-box h3{
+  font-size:12px;color:var(--muted);
+  margin-top:10px;font-weight:500;
+}
+
+/* ===== DONATION SECTION ===== */
+#donation{text-align:center}
+.donate-card{
+  display:inline-block;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:40px 50px;
+  margin-top:24px;
+  transition:.3s;
+}
+.donate-card:hover{
+  border-color:rgba(62,201,126,0.4);
+  box-shadow:0 12px 50px rgba(62,201,126,0.12);
+}
+.donate-qr{
+  width:180px;border-radius:12px;
+  border:2px solid var(--gold);
+  cursor:pointer;
+  transition:.3s;
+}
+.donate-qr:hover{transform:scale(1.04)}
+.donate-label{
+  font-size:13px;color:var(--muted);
+  margin-top:10px;letter-spacing:1px;text-transform:uppercase;
+}
+.btn-donate{
+  display:inline-block;
+  margin-top:24px;
+  padding:14px 42px;
+  background:linear-gradient(135deg,var(--green),#2aad68);
+  color:#fff;
+  border:none;
+  border-radius:50px;
+  font-size:15px;font-weight:600;
+  cursor:pointer;
+  letter-spacing:0.5px;
+  transition:.3s;
+  font-family:var(--font-b);
+  text-transform:uppercase;
+}
+.btn-donate:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 30px rgba(62,201,126,0.4);
+}
+
+/* ===== SOCIAL LINKS ===== */
+#link{padding:60px 20px;text-align:center;max-width:700px;margin:0 auto}
+.social-grid{
+  display:flex;gap:16px;flex-wrap:wrap;
+  justify-content:center;margin-top:28px;
+}
+.social-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 24px;
+  border:1px solid var(--border);
+  border-radius:50px;
+  color:var(--text);
+  text-decoration:none;
+  font-size:14px;font-weight:500;
+  background:var(--card);
+  transition:.3s;
+}
+.social-btn:hover{
+  border-color:var(--gold);
+  color:var(--gold-lt);
+  transform:translateY(-2px);
+  box-shadow:0 6px 20px rgba(0,0,0,0.4);
+}
+.social-icon{font-size:16px}
+
+/* ===== JOURNEY CARD ===== */
+.journey-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:36px 40px;
+  position:relative;
+  overflow:hidden;
+}
+.journey-card::before{
+  content:"";
+  position:absolute;top:0;left:0;
+  width:4px;height:100%;
+  background:linear-gradient(180deg,var(--gold),var(--green));
+}
+.journey-card p{
+  color:var(--muted);font-size:14.5px;
+  line-height:1.9;margin-bottom:16px;
+}
+.journey-card b{color:var(--text)}
+.journey-quote{
+  font-family:var(--font-h);
+  font-size:18px;font-style:italic;
+  color:var(--gold-lt);
+  border-top:1px solid var(--border);
+  padding-top:20px;margin-top:10px;
+}
+
+/* ===== AWARDS ===== */
+#award h2{margin-bottom:8px}
+
+/* ===== SECTION DIVIDER ===== */
+.divider{
+  max-width:1100px;margin:0 auto;
+  border:none;border-top:1px solid var(--border);
+}
+
+/* ===== WHATSAPP ===== */
+.whatsapp{
+  position:fixed;bottom:90px;right:20px;
+  background:#25D366;
+  color:white;
+  padding:12px 18px;
+  border-radius:50px;
+  text-decoration:none;
+  font-size:14px;font-weight:600;
+  z-index:999;
+  box-shadow:0 4px 20px rgba(37,211,102,0.4);
+  transition:.3s;
+  letter-spacing:0.3px;
+}
+.whatsapp:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(37,211,102,0.5)}
+
+/* ===== FOOTER ===== */
+.footer{
+  border-top:1px solid var(--border);
+  margin-top:80px;
+  padding:28px 32px;
+}
+.footer-content{
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:10px;
+  font-size:13px;color:var(--muted);
+  max-width:1100px;margin:0 auto;
+}
+.footer-content a{color:var(--gold);text-decoration:none;font-weight:500}
+.footer-content a:hover{text-decoration:underline}
+
+/* ===== FADE ===== */
+.fade{opacity:0;transform:translateY(40px);transition:.8s cubic-bezier(.4,0,.2,1)}
+.fade.show{opacity:1;transform:translateY(0)}
+
+/* ===== GALLERY CARDS ===== */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+  margin-top:32px;
+}
+.gallery-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:36px 24px 28px;
+  text-align:center;
+  cursor:pointer;
+  text-decoration:none;
+  display:block;
+  position:relative;
+  overflow:hidden;
+  transition:.35s cubic-bezier(.4,0,.2,1);
+}
+.gallery-card::before{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(201,168,76,0.07),rgba(224,127,160,0.07));
+  opacity:0;transition:.35s;
+}
+.gallery-card:hover::before{opacity:1}
+.gallery-card:hover{
+  border-color:rgba(201,168,76,0.4);
+  transform:translateY(-7px);
+  box-shadow:0 24px 60px rgba(0,0,0,0.5),0 0 30px rgba(201,168,76,0.12);
+}
+.gallery-card:nth-child(even):hover{
+  border-color:rgba(224,127,160,0.35);
+  box-shadow:0 24px 60px rgba(0,0,0,0.5),0 0 30px rgba(224,127,160,0.1);
+}
+.gallery-icon{
+  font-size:46px;margin-bottom:16px;display:block;
+  filter:drop-shadow(0 4px 14px rgba(201,168,76,0.3));
+  transition:.3s;
+}
+.gallery-card:hover .gallery-icon{transform:scale(1.13)}
+.gallery-card h3{
+  font-family:var(--font-h);font-size:18px;font-weight:700;
+  color:var(--white);margin-bottom:8px;
+}
+.gallery-card p{font-size:12.5px;color:var(--muted);line-height:1.7}
+.gallery-arrow{
+  display:inline-flex;align-items:center;gap:6px;
+  margin-top:16px;font-size:11px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;
+  color:var(--gold);transition:.3s;
+}
+.gallery-card:hover .gallery-arrow{gap:11px}
+.gallery-card:nth-child(even) .gallery-arrow{color:#e07fa0}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  header{padding:12px 16px}
+  .header-brand{font-size:14px}
+  .header-right{display:none}
+  .hero h1{font-size:36px}
+  .hero-stats{gap:24px;padding:20px 24px}
+  .stat-num{font-size:26px}
+  .circle.big{width:220px;height:220px}
+  .circle.small{width:160px;height:160px}
+  .founder-row{gap:30px}
+  .journey-card{padding:24px 20px}
+  .donate-card{padding:28px 24px}
+  section{padding:60px 16px}
+}
+</style>
+</head>
+<body>
+
+<img class="video-bg" src="IMG-20260504-WA0105.jpg" alt="background">
+<div class="light" id="light"></div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-left">
+    <img class="header-logo" src="FB_IMG_1777997582817.jpg" alt="BMS Logo">
+    <div class="header-brand">
+      Bhumihar Mahila Samaj
+      <span>Est. 2020 · Foundation</span>
+    </div>
+  </div>
+  <div class="header-right">
+    <a href="#gallery">Gallery</a>
+    <a href="mailto:bhumiharmahilasamaj@gmail.com">Email</a>
+    <a href="tel:9934634400">+91 99346 34400</a>
+  </div>
+  <button class="menu-btn" onclick="openMenu()">☰</button>
+</header>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="menu">
+  <div class="close-btn" onclick="closeMenu()">✕</div>
+  <div class="sidebar-title">Navigation</div>
+  <a href="#about" onclick="closeMenu()">About Us</a>
+  <a href="#work" onclick="closeMenu()">Our Work</a>
+  <a href="#gallery" onclick="closeMenu()">🖼️ Gallery</a>
+  <a href="#pankhhaat" onclick="closeMenu()">Pankh Haat</a>
+  <a href="#award" onclick="closeMenu()">Awards</a>
+  <a href="#news" onclick="closeMenu()">News Feed</a>
+  <a href="#founder" onclick="closeMenu()">Founders</a>
+  <a href="#donation" onclick="closeMenu()">Donate</a>
+  <a href="#link" onclick="closeMenu()">Connect</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">नारी शक्ति · Mahila Sashaktikaran · Since 2020</div>
+  <h1>Bhumihar<br><em>Mahila Samaj</em></h1>
+  <p class="hero-sub">महिलाओं को सशक्त बनाना, भविष्य संवारना — भारत के 32+ शहरों में।</p>
+
+  <div class="earth">
+    <img src="Screenshot_20260430-120438~2.png" alt="BMS Logo">
+  </div>
+
+  <div class="hero-stats fade show">
+    <div class="stat">
+      <div class="stat-num">32+</div>
+      <div class="stat-label">Cities Active</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">100+</div>
+      <div class="stat-label">Students Adopted</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">100+</div>
+      <div class="stat-label">Sewing Machines</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">2020</div>
+      <div class="stat-label">Year Founded</div>
+    </div>
+  </div>
+</div>
+
+<!-- TOP IMAGE SCROLL -->
+<section class="fade" style="padding-top:20px">
+  <div class="scroll-img">
+    <img src="WA_1777528019542.jpeg">
+    <img src="WA_1777528005174.jpeg">
+    <img src="WA_1777527976436.jpeg">
+    <img src="FB_IMG_1777891944238~2.jpg">
+    <img src="FB_IMG_1777892055272~2.jpg">
+    <img src="FB_IMG_1777891936229~2.jpg">
+    <img src="FB_IMG_1777891926325~2.jpg">
+    <img src="FB_IMG_1777891914726~2.jpg">
+    <img src="WA_1777917945941.jpeg">
+    <img src="WA_1777917739373.jpeg">
+    <img src="WA_1777917518668.jpeg">
+    <img src="WA_1777917772785.jpeg">
+    <img src="WA_1777917550654.jpeg">
+    <img src="WA_1781067686115.jpeg">
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ABOUT -->
+<section id="about" class="fade">
+  <div class="section-eyebrow">Who We Are</div>
+  <h2>About Us</h2>
+  <div class="section-rule"></div>
+  <div class="card">
+    <p>भूमिहार महिला समाज एक प्रतिष्ठित और सांस्कृतिक रूप से समृद्ध समुदाय है, जो अपनी ऐतिहासिक विरासत, सामाजिक मूल्यों और परंपराओं के लिए जाना जाता है। यह समाज शिक्षा, नैतिकता और सामाजिक समरसता को प्राथमिकता देता है तथा समय के साथ आधुनिकता को अपनाते हुए अपनी जड़ों से जुड़ा हुआ है।</p>
+    <p>इस समाज के लोग विभिन्न क्षेत्रों जैसे शिक्षा, प्रशासन, व्यवसाय, कृषि एवं सामाजिक सेवा में महत्वपूर्ण योगदान दे रहे हैं। भूमिहार महिला समाज का मुख्य उद्देश्य अपने सदस्यों के बीच एकता, सहयोग और विकास को बढ़ावा देना है।</p>
+    <p>सामाजिक उत्थान, सांस्कृतिक संरक्षण और पारस्परिक सहयोग की भावना इस समाज की प्रमुख विशेषताएं हैं। भूमिहार महिला समाज न केवल अपनी परंपराओं को सहेजने में विश्वास रखता है, बल्कि एक प्रगतिशील और समावेशी भविष्य की दिशा में भी सक्रिय रूप से कार्य कर रहा है।</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- WORK -->
+<section id="work" class="fade">
+  <div class="section-eyebrow">What We Do</div>
+  <h2>Our Work</h2>
+  <div class="section-rule"></div>
+
+  <ol class="work-list">
+    <li><b>शैक्षिक विकास</b>विद्यार्थियों को छात्रवृत्ति, मार्गदर्शन कार्यक्रम, करियर काउंसलिंग आदि दी जाती है।</li>
+    <li><b>सामाजिक सहयोग</b>जरूरतमंद परिवारों की आर्थिक एवं सामाजिक सहायता की जाती है।</li>
+    <li><b>युवा सशक्तिकरण</b>युवाओं के लिए कौशल विकास और रोजगार मार्गदर्शन कार्यक्रम।</li>
+    <li><b>सांस्कृतिक संरक्षण</b>परंपराओं और संस्कृति को बचाने के लिए कार्यक्रम आयोजित।</li>
+    <li><b>सामुदायिक एकता</b>समाज में एकता और सहयोग को बढ़ावा दिया जाता है।</li>
+    <li><b>सामाजिक जागरूकता</b>स्वास्थ्य, शिक्षा और पर्यावरण से जुड़े अभियान।</li>
+    <li><b>महिला सशक्तिकरण</b>महिलाओं को आत्मनिर्भर बनाने के लिए प्रशिक्षण और सहायता।</li>
+  </ol>
+
+  <h3 style="font-family:var(--font-h);font-size:22px;color:var(--white);margin-bottom:24px;">हमारा योगदान</h3>
+
+  <div class="card">
+    <h3>Education Support</h3>
+    <div class="scroll-img">
+      <img src="IMG-20260505-WA0086.jpg">
+      <img src="IMG-20260505-WA0091.jpg">
+      <img src="IMG-20260505-WA0092.jpg">
+      <img src="IMG-20260505-WA0093.jpg">
+      <img src="IMG-20260505-WA0094.jpg">
+      <img src="IMG-20260505-WA0101.jpg">
+      <img src="Screenshot_20260430-115641~2.png">
+      <img src="Screenshot_20260430-115631~2.png">
+      <img src="Screenshot_20260430-115623~2.png">
+      <img src="Screenshot_20260430-115618~2.png">
+      <video src="VID_1777891860964.mp4" controls></video>
+    </div>
+    <p style="margin-top:14px">विद्यार्थियों को छात्रवृत्ति और शिक्षा सहायता दी जाती है।</p>
+  </div>
+
+  <div class="card">
+    <h3>Health Support</h3>
+    <div class="scroll-img">
+      <img src="IMG-20260505-WA0198.jpg">
+      <img src="IMG-20260505-WA0220.jpg">
+      <img src="IMG-20260505-WA0215.jpg">
+      <img src="IMG-20260505-WA0203.jpg">
+      <img src="IMG-20260505-WA0201.jpg">
+      <img src="IMG-20260505-WA0216.jpg">
+      <img src="IMG-20260505-WA0218.jpg">
+      <img src="IMG-20260505-WA0200.jpg">
+      <img src="IMG-20260505-WA0199.jpg">
+      <video src="VID-20260505-WA0207.mp4" controls></video>
+    </div>
+    <p style="margin-top:14px">स्वास्थ्य सहायता के माध्यम से जरूरतमंद लोगों को चिकित्सा सहयोग और जागरूकता प्रदान की जाती है।</p>
+  </div>
+
+  <div class="card">
+    <h3>Mahila Silai Machine Yojna</h3>
+    <div class="scroll-img">
+      <img src="FB_IMG_1777895338003.jpg">
+      <img src="FB_IMG_1777895314238.jpg">
+      <img src="IMG-20260505-WA0074.jpg">
+      <img src="IMG-20260505-WA0080.jpg">
+      <img src="IMG-20260505-WA0070.jpg">
+      <img src="IMG-20260505-WA0078.jpg">
+      <img src="IMG-20260505-WA0076.jpg">
+      <img src="FB_IMG_1777894595003.jpg">
+      <img src="IMG-20260504-WA0062(1).jpg">
+      <img src="IMG-20260504-WA0065(1).jpg">
+    </div>
+    <p style="margin-top:14px">महिलाओं को आत्मनिर्भर बनाया जाता है।</p>
+  </div>
+
+  <div class="card">
+    <h3>Beautician Course</h3>
+    <div class="scroll-img">
+      <img src="IMG-20260505-WA0084.jpg">
+      <img src="IMG-20260504-WA0081.jpg">
+      <img src="IMG-20260504-WA0047(1).jpg">
+      <img src="IMG-20260504-WA0054.jpg">
+      <img src="IMG-20260504-WA0046.jpg">
+      <img src="IMG-20260504-WA0105.jpg">
+      <img src="IMG-20260504-WA0077.jpg">
+    </div>
+    <p style="margin-top:14px">महिलाओं को ब्यूटीशियन ट्रेनिंग देकर रोजगार दिया जाता है।</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- GALLERY -->
+<section id="gallery" class="fade">
+  <div class="section-eyebrow">Our Activities</div>
+  <h2>Gallery</h2>
+  <div class="section-rule"></div>
+  <p style="color:var(--muted);font-size:14px;margin-bottom:4px;">हमारी प्रमुख गतिविधियों और महोत्सवों की झलकियाँ — हर कार्यक्रम की विस्तृत जानकारी और तस्वीरों के लिए क्लिक करें।</p>
+
+  <div class="gallery-grid">
+
+    <a href="pankh-haat.html" class="gallery-card">
+      <span class="gallery-icon">🪁</span>
+      <h3>पंख हाट</h3>
+      <p>महिला उद्यमियों का निःशुल्क मंच — हस्तनिर्मित उत्पाद, खाद्य सामग्री व बहुत कुछ</p>
+      <span class="gallery-arrow">देखें →</span>
+    </a>
+
+    <a href="savan-mahotsav.html" class="gallery-card">
+      <span class="gallery-icon">🌧️</span>
+      <h3>सावन महोत्सव</h3>
+      <p>सावन के पावन अवसर पर महिलाओं व बच्चों के साथ मनाया जाने वाला विशेष उत्सव</p>
+      <span class="gallery-arrow">देखें →</span>
+    </a>
+
+    <a href="holi-mahotsav.html" class="gallery-card">
+      <span class="gallery-icon">🎨</span>
+      <h3>होली महोत्सव</h3>
+      <p>रंगों के त्यौहार पर समाज के साथ मिलकर मनाया जाने वाला सामूहिक होली उत्सव</p>
+      <span class="gallery-arrow">देखें →</span>
+    </a>
+
+    <a href="navratri-mahotsav.html" class="gallery-card">
+      <span class="gallery-icon">🪔</span>
+      <h3>नवरात्रि महोत्सव</h3>
+      <p>शक्ति की उपासना — नवरात्रि पर आयोजित भव्य सांस्कृतिक कार्यक्रम</p>
+      <span class="gallery-arrow">देखें →</span>
+    </a>
+
+    <a href="beautician.html" class="gallery-card">
+      <span class="gallery-icon">💄</span>
+      <h3>Beautician</h3>
+      <p>महिलाओं को ब्यूटीशियन प्रशिक्षण देकर आत्मनिर्भर बनाने की पहल</p>
+      <span class="gallery-arrow">देखें →</span>
+    </a>
+
+    <a href="health-care.html" class="gallery-card">
+      <span class="gallery-icon">🏥</span>
+      <h3>Health Care</h3>
+      <p>जरूरतमंद लोगों के लिए स्वास्थ्य शिविर, जागरूकता अभियान और चिकित्सा सहयोग</p>
+      <span class="gallery-arrow">देखें →</span>
+    </a>
+
+    <a href="child-education.html" class="gallery-card">
+      <span class="gallery-icon">📚</span>
+      <h3>Child Education</h3>
+      <p>गरीब बच्चों को शिक्षा, छात्रवृत्ति और जरूरी संसाधन उपलब्ध कराने की मुहिम</p>
+      <span class="gallery-arrow">देखें →</span>
+    </a>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- PANKH HAAT -->
+<section id="pankhhaat" class="fade">
+  <div class="section-eyebrow">Special Initiative</div>
+  <h2>Pankh Haat</h2>
+  <div class="section-rule"></div>
+  <div class="card">
+    <p><b>पंख हाट</b> भूमिहार महिला समाज (BMS) की एक विशेष पहल है, जिसका उद्देश्य हर धर्म और जाति की महिला उद्यमियों को एक सशक्त मंच प्रदान करना है।</p>
+    <p>इस कार्यक्रम के अंतर्गत महिलाओं को <b>निःशुल्क स्टॉल</b> उपलब्ध कराया जाता है, जहाँ वे अपने हाथों से बनाए गए हस्तनिर्मित उत्पादों, घरेलू सामान, सजावटी वस्तुएँ, खाद्य सामग्री एवं अन्य उपयोगी चीजों का प्रदर्शन और बिक्री कर सकती हैं।</p>
+    <p>BMS के माध्यम से यह सुनिश्चित किया जाता है कि हर महिला को समान अवसर मिले और वे अपने व्यवसाय को आगे बढ़ा सकें।</p>
+  </div>
+  <div class="scroll-img">
+    <img src="IMG-20260505-WA0039(4).jpg">
+    <img src="IMG-20260505-WA0025.jpg">
+    <img src="IMG-20260505-WA0026.jpg">
+    <img src="IMG-20260505-WA0027.jpg">
+    <img src="IMG-20260505-WA0028.jpg">
+    <img src="IMG-20260505-WA0029.jpg">
+    <img src="FB_IMG_1777892251819.jpg">
+    <img src="FB_IMG_1777892220421.jpg">
+    <img src="FB_IMG_1777892264139.jpg">
+    <img src="FB_IMG_1777892229949.jpg">
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- AWARDS -->
+<section id="award" class="fade">
+  <div class="section-eyebrow">Recognition</div>
+  <h2>Awards &amp; Achievements</h2>
+  <div class="section-rule"></div>
+  <div class="card">
+    <p><b>Bhumihar Mahila Samaj</b> को समाज सेवा, महिला सशक्तिकरण और गरीब बच्चों की सहायता के क्षेत्र में कई सम्मान प्राप्त हुए हैं।</p>
+    <p>संस्था द्वारा <b>पंख हाट</b> के माध्यम से महिला उद्यमियों को मंच देना, गरीब बच्चों की शिक्षा में सहयोग करना, और महिलाओं को आत्मनिर्भर बनाना — इन सभी कार्यों के लिए समाज को विभिन्न पुरस्कारों से सम्मानित किया गया है।</p>
+    <p>यह उपलब्धियाँ हमारी टीम की मेहनत और समाज के सहयोग का परिणाम हैं।</p>
+  </div>
+  <div class="scroll-img">
+    <img src="IMG-20260505-WA0102.jpg">
+    <img src="IMG-20260505-WA0111.jpg">
+    <img src="IMG-20260505-WA0115.jpg">
+    <img src="IMG-20260505-WA0112.jpg">
+    <img src="IMG-20260505-WA0104.jpg">
+    <img src="IMG-20260505-WA0107.jpg">
+    <img src="IMG-20260505-WA0108.jpg">
+    <img src="IMG-20260505-WA0113.jpg">
+    <img src="IMG-20260505-WA0114.jpg">
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- NEWS -->
+<section id="news" class="fade">
+  <div class="section-eyebrow">Latest Updates</div>
+  <h2>News Feed</h2>
+  <div class="section-rule"></div>
+  <div class="card">
+    <p>यहाँ Bhumihar Mahila Samaj से जुड़ी सभी नई गतिविधियाँ, कार्यक्रम, और अपडेट साझा किए जाते हैं।</p>
+  </div>
+  <div class="scroll-img">
+    <img src="FB_IMG_1777892521825.jpg">
+    <img src="FB_IMG_1777892299229.jpg">
+    <img src="FB_IMG_1777892286617.jpg">
+    <img src="FB_IMG_1777892301940.jpg">
+    <img src="FB_IMG_1777892294276.jpg">
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- JOURNEY -->
+<section class="fade" style="padding-bottom:20px">
+  <div class="section-eyebrow">Our Story</div>
+  <h2>Our Journey</h2>
+  <div class="section-rule"></div>
+  <div class="journey-card">
+    <p>Bhumihar Mahila Samaj की स्थापना <b>25 मार्च 2020</b> को <b>Preeti Priya</b> और उनकी समर्पित टीम द्वारा की गई थी। यह सिर्फ एक संगठन नहीं, बल्कि एक सोच और मिशन है — समाज की महिलाओं और जरूरतमंद बच्चों के जीवन में सकारात्मक बदलाव लाना।</p>
+    <p>आज यह संस्था <b>32+ शहरों</b> में सक्रिय रूप से कार्य कर रही है। अब तक संस्था द्वारा <b>100+ विद्यार्थियों</b> को गोद लेकर उनकी शिक्षा और देखभाल की जिम्मेदारी निभाई गई है। <b>100+ महिलाओं</b> को सिलाई मशीन देकर आत्मनिर्भर बनाया गया है और <b>100+ महिलाओं</b> को ब्यूटीशियन कोर्स कराकर रोजगार के अवसर दिए गए हैं।</p>
+    <p>Bhumihar Mahila Samaj का उद्देश्य केवल सहायता देना नहीं, बल्कि लोगों को <b>आत्मनिर्भर और सशक्त बनाना</b> है।</p>
+    <div class="journey-quote">"सेवा, शिक्षा और सशक्तिकरण – यही हमारा संकल्प है।"</div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- FOUNDER -->
+<section id="founder" class="fade">
+  <div class="section-eyebrow">Leadership</div>
+  <h2>Founder &amp; Founder Members</h2>
+  <div class="section-rule"></div>
+
+  <div class="founder-row">
+    <div class="founder-box">
+      <div class="circle small">
+        <img src="Screenshot_20260504-172534~2.png" alt="Founder">
+      </div>
+      <h3>Founder</h3>
+      <p>preetipriya@gmail.com</p>
+      <p>9934634400</p>
+    </div>
+
+    <div class="founder-box">
+      <div class="circle big">
+        <img src="Screenshot_20260504-172529~2.png" alt="Founder Member">
+      </div>
+      <h3>Founder Member</h3>
+      <div class="member-row">
+        <div class="member"><img src="IMG-20260505-WA0211.jpg"></div>
+        <div class="member"><img src="IMG-20260505-WA0213.jpg"></div>
+        <div class="member"><img src="WA_1778305284649.jpeg"></div>
+        <div class="member"><img src="WA_1778305316837.jpeg"></div>
+        <div class="member"><img src="WA_1778305344233.jpeg"></div>
+        <div class="member"><img src="IMG-20260505-WA0208.jpg"></div>
+        <div class="member"><img src="IMG-20260505-WA0209.jpg"></div>
+        <div class="member"><img src="WA_1778306065534.jpeg"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- SALAHKAR SAMITI -->
+<section id="salahkar" class="fade">
+  <div class="section-eyebrow">Advisory Board</div>
+  <h2>सलाहकार समिति</h2>
+  <div class="section-rule"></div>
+  <div class="committee-grid">
+    <div class="committee-item">
+      <div class="circle medium"><img src="IMG-20260505-WA0181~2.jpg" alt="Advisor"></div>
+      <p>Advisor</p>
+    </div>
+    <div class="committee-item">
+      <div class="circle medium"><img src="IMG-20260505-WA0177.jpg" alt="Advisor"></div>
+      <p>Advisor</p>
+    </div>
+    <div class="committee-item">
+      <div class="circle medium"><img src="IMG-20260505-WA0178~2.jpg" alt="Advisor"></div>
+      <p>Advisor</p>
+    </div>
+    <div class="committee-item">
+      <div class="circle medium"><img src="IMG-20260505-WA0180.jpg" alt="Advisor"></div>
+      <p>Advisor</p>
+    </div>
+    <div class="committee-item">
+      <div class="circle medium"><img src="IMG-20260505-WA0176.jpg" alt="Advisor"></div>
+      <p>Advisor</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- COMMITTEE MEMBERS -->
+<section id="committee" class="fade">
+  <div class="section-eyebrow">Core Team</div>
+  <h2>Committee Members</h2>
+  <div class="section-rule"></div>
+  <div class="committee-members-grid">
+    <div class="committee-box">
+      <div class="circle medium"><img src="IMG-20260505-WA0188.jpg" alt="Member"></div>
+      <h3>Committee Member</h3>
+    </div>
+    <div class="committee-box">
+      <div class="circle medium"><img src="IMG-20260505-WA0187.jpg" alt="Member"></div>
+      <h3>Committee Member</h3>
+    </div>
+    <div class="committee-box">
+      <div class="circle medium"><img src="IMG-20260505-WA0222.jpg" alt="Member"></div>
+      <h3>Committee Member</h3>
+    </div>
+    <div class="committee-box">
+      <div class="circle medium"><img src="IMG-20260505-WA0118.jpg" alt="Member"></div>
+      <h3>Committee Member</h3>
+    </div>
+    <div class="committee-box">
+      <div class="circle medium"><img src="IMG-20260505-WA0018.jpg" alt="Member"></div>
+      <h3>Committee Member</h3>
+    </div>
+    <div class="committee-box">
+      <div class="circle medium"><img src="IMG-20260505-WA0013.jpg" alt="Member"></div>
+      <h3>Committee Member</h3>
+    </div>
+    <div class="committee-box">
+      <div class="circle medium"><img src="IMG-20260505-WA0012.jpg" alt="Member"></div>
+      <h3>Committee Member</h3>
+    </div>
+    <div class="committee-box">
+      <div class="circle medium"><img src="IMG-20260505-WA0168.jpg" alt="Member"></div>
+      <h3>Committee Member</h3>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- DONATION -->
+<section id="donation" class="fade">
+  <div class="section-eyebrow">Support the Cause</div>
+  <h2>Donate</h2>
+  <div class="section-rule"></div>
+  <p style="color:var(--muted);font-size:14px;margin-bottom:24px">आपका एक छोटा कदम किसी की जिंदगी बदल सकता है।</p>
+  <div class="donate-card">
+    <img class="donate-qr" src="Screenshot_20260504-180046~2.png" onclick="payNow()" alt="QR Code">
+    <div class="donate-label">Scan &amp; Pay via UPI</div>
+    <br>
+    <button class="btn-donate" onclick="payNow()">Click to Donate</button>
+  </div>
+</section>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/9934634400" class="whatsapp">💬 WhatsApp</a>
+
+<hr class="divider">
+
+<!-- SOCIAL LINKS -->
+<section id="link" class="fade">
+  <div class="section-eyebrow">Follow Us</div>
+  <h2>Connect With Us</h2>
+  <div class="section-rule"></div>
+  <div class="social-grid">
+    <a href="https://www.facebook.com/share/1CWU41fojY/?mibextid=wwXIfr" class="social-btn" target="_blank">
+      <span class="social-icon">📘</span> Facebook
+    </a>
+    <a href="mailto:Bhumiharmahillasamaj@gmail.com" class="social-btn">
+      <span class="social-icon">✉️</span> Email
+    </a>
+    <a href="#" class="social-btn">
+      <span class="social-icon">📸</span> Instagram
+    </a>
+    <a href="#" class="social-btn">
+      <span class="social-icon">▶️</span> YouTube
+    </a>
+    <a href="tel:9934634400" class="social-btn">
+      <span class="social-icon">📞</span> +91 99346 34400
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-content">
+    <div>Copyright ©️ Bhumihar Mahila Samaj · All Rights Reserved</div>
+    <div>Developed by <a href="https://share.google/gUn3tnuVbrIErQx7D" target="_blank">Lyzonix Technologies</a></div>
+  </div>
+</div>
+
+<script>
+// Menu
+function openMenu(){document.getElementById('menu').classList.add('active')}
+function closeMenu(){document.getElementById('menu').classList.remove('active')}
+
+// Light follow
+const light=document.getElementById('light');
+document.addEventListener('mousemove',e=>{
+  light.style.left=e.clientX+'px';
+  light.style.top=e.clientY+'px';
+});
+
+// Fade on scroll
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting) entry.target.classList.add('show');
+  });
+},{threshold:0.1});
+document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
+
+// Payment
+function payNow(){
+  window.open("upi://pay?pa=BHUMISAFN.09@idfcbank&pn=BhumiharMahilaSamaj&cu=INR");
+}
+</script>
+</body>
+</html>
