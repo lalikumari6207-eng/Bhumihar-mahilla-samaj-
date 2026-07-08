@@ -1752,13 +1752,6 @@ function compressImage(file, maxSize, quality){
   }
   return false;
 };
-  function toggleLang(){
-  const isEn = document.body.classList.contains('lang-en');
-  document.body.classList.toggle('lang-en', !isEn);
-  document.body.classList.toggle('lang-hi', isEn);
-  document.getElementById('langBtn').textContent = isEn ? 'EN' : 'हिं';
-}
-document.body.classList.add('lang-hi'); // default Hindi
 </script>
 </body>
 </html>
