@@ -745,6 +745,7 @@ footer ul li a:hover{color:var(--gold-lt)}
   </div>
 </header>
   <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
 <div class="mobile-panel" id="mpanel">
   <div class="mobile-close" onclick="closeMenu()">✕</div>
   <a href="#home" onclick="closeMenu()">होम</a>
@@ -753,13 +754,17 @@ footer ul li a:hover{color:var(--gold-lt)}
   <a href="#activities" onclick="closeMenu()">हमारे कार्य</a>
   <a href="#presence" onclick="closeMenu()">हमारी उपस्थिति</a>
   <a href="#events" onclick="closeMenu()">कार्यक्रम</a>
-  <a href="#gallery" onclick="closeMenu()">गैलरी</a>
-  <a href="#membership" onclick="closeMenu()">सदस्यता</a>
+  <a href="#gallery" onclick="closeMenu()">फोटो/वीडियो गैलरी</a>
+  <a href="#membership" onclick="closeMenu()">सदस्यता फॉर्म</a>
+  <a href="#beautician-form" onclick="closeMenu()">ब्यूटीशियन कोर्स फॉर्म</a>
+  <a href="#pankh-form" onclick="closeMenu()">पंख हाट फॉर्म</a>
+  <a href="#downloads" onclick="closeMenu()">छात्रवृत्ति फॉर्म</a>
+  <a href="#volunteer" onclick="closeMenu()">स्वयंसेवक बनें</a>
   <a href="#donate" onclick="closeMenu()">दान करें</a>
   <a href="#contact" onclick="closeMenu()">संपर्क करें</a>
   <a href="#adminpanel" onclick="closeMenu()">🔐 Admin Panel</a>
 </div>
-
+  
 <!-- ============ HOME / HERO ============ -->
 <div id="home" class="hero2">
   <div class="hero2-left">
@@ -1112,35 +1117,45 @@ footer ul li a:hover{color:var(--gold-lt)}
   <div class="rule-center"></div>
   <div class="section-sub">फॉर्म भरें — आपकी जानकारी सीधे हमारे एडमिन पैनल में सुरक्षित रूप से पहुँच जाएगी।</div>
   <form class="form-card" style="max-width:640px;margin:0 auto" id="beauticianForm" onsubmit="return submitForm(event,'beautician',this)">
-    <div class="form-row">
-      <input type="text" name="name" placeholder="नाम" required>
-      <input type="tel" name="mobile" placeholder="मोबाइल नंबर" required>
-    </div>
-    <div class="form-row">
-      <input type="number" name="age" placeholder="उम्र">
-      <input type="email" name="email" placeholder="ईमेल">
-    </div>
-    <div class="form-row full"><input type="text" name="address" placeholder="पता / शहर"></div>
-    <div class="form-row">
-      <select name="course">
-        <option value="">कोर्स चुनें</option>
-        <option>बेसिक ब्यूटीशियन कोर्स</option>
-        <option>एडवांस मेकअप कोर्स</option>
-        <option>ब्राइडल मेकअप कोर्स</option>
-        <option>हेयर स्टाइलिंग कोर्स</option>
-        <option>स्किन केयर कोर्स</option>
-      </select>
-      <select name="batch">
-        <option value="">पसंदीदा बैच</option>
-        <option>सुबह</option>
-        <option>दोपहर</option>
-        <option>शाम</option>
-      </select>
-    </div>
-    <div class="form-row full"><textarea name="message" placeholder="कोई अतिरिक्त जानकारी (वैकल्पिक)"></textarea></div>
-    <button type="submit" class="btn btn-gold" style="width:100%">पंजीकरण करें</button>
-    <div class="form-msg"></div>
+  <div class="form-row">
+    <input type="text" name="name" placeholder="नाम" required>
+    <input type="tel" name="mobile" placeholder="मोबाइल नंबर" required>
+  </div>
+  <div class="form-row">
+    <input type="number" name="age" placeholder="उम्र">
+    <input type="email" name="email" placeholder="ईमेल">
+  </div>
+  <div class="form-row full"><input type="text" name="address" placeholder="पता / शहर"></div>
+  <div class="form-row">
+    <input type="text" name="aadhar" placeholder="आधार कार्ड नंबर (12 अंक)" maxlength="12" pattern="[0-9]{12}" title="कृपया 12 अंकों का सही आधार नंबर डालें">
+    <input type="number" name="income" placeholder="पारिवारिक वार्षिक आय (₹)">
+  </div>
+  <div class="form-row">
+    <select name="course">
+      <option value="">कोर्स चुनें</option>
+      <option>बेसिक ब्यूटीशियन कोर्स</option>
+      <option>एडवांस मेकअप कोर्स</option>
+      <option>ब्राइडल मेकअप कोर्स</option>
+      <option>हेयर स्टाइलिंग कोर्स</option>
+      <option>स्किन केयर कोर्स</option>
+    </select>
+    <select name="batch">
+      <option value="">पसंदीदा बैच</option>
+      <option>सुबह</option>
+      <option>दोपहर</option>
+      <option>शाम</option>
+    </select>
+  </div>
+  <div class="form-row full">
+    <label style="font-size:13.5px;font-weight:600;color:var(--muted);display:block;margin-bottom:6px">📷 अपनी फोटो अपलोड करें (गैलरी से चुनें)</label>
+    <input type="file" name="photo" accept="image/*" onchange="previewPhoto(event,'beauticianPreview')">
+    <img id="beauticianPreview" style="display:none;margin-top:10px;width:100px;height:100px;object-fit:cover;border-radius:10px;border:2px solid var(--gold)">
+  </div>
+  <div class="form-row full"><textarea name="message" placeholder="कोई अतिरिक्त जानकारी (वैकल्पिक)"></textarea></div>
+  <button type="submit" class="btn btn-gold" style="width:100%">पंजीकरण करें</button>
+  <div class="form-msg"></div>
   </form>
+</div>
 </section>
 
 <!-- ============ PANKH HAAT FORM ============ -->
@@ -1653,6 +1668,79 @@ function closeLightbox(){document.getElementById('lightbox').classList.remove('a
 function payNow(){
   window.open("upi://pay?pa=BHUMISAFN.09@idfcbank&pn=BhumiharMahilaSamaj&cu=INR");
 }
+  // ---- PHOTO PREVIEW ----
+window.previewPhoto = function(event, imgId){
+  const file = event.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e){
+    const img = document.getElementById(imgId);
+    img.src = e.target.result;
+    img.style.display = "block";
+  };
+  reader.readAsDataURL(file);
+};
+
+// ---- IMAGE COMPRESS (taaki Firestore me size limit na aaye) ----
+function compressImage(file, maxSize, quality){
+  return new Promise((resolve, reject)=>{
+    const reader = new FileReader();
+    reader.onload = function(e){
+      const img = new Image();
+      img.onload = function(){
+        let w = img.width, h = img.height;
+        if(w > h){ if(w > maxSize){ h = h*(maxSize/w); w = maxSize; } }
+        else { if(h > maxSize){ w = w*(maxSize/h); h = maxSize; } }
+        const canvas = document.createElement("canvas");
+        canvas.width = w; canvas.height = h;
+        canvas.getContext("2d").drawImage(img, 0, 0, w, h);
+        resolve(canvas.toDataURL("image/jpeg", quality));
+      };
+      img.onerror = reject;
+      img.src = e.target.result;
+    };
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
+
+// ---- FORM SUBMISSION (student / beautician / pankh / contact) ----
+window.submitForm = function(event, category, formEl){
+  event.preventDefault();
+  const msgBox = formEl.querySelector(".form-msg");
+  const data = {};
+  const fileInput = formEl.querySelector('input[type="file"][name="photo"]');
+
+  new FormData(formEl).forEach((val,key)=>{
+    if(key === "photo") return; // photo alag se handle hoga
+    if(val) data[key]=val;
+  });
+
+  function finalSubmit(){
+    data.timestamp = serverTimestamp();
+    addDoc(collection(db, COLLECTIONS[category]), data).then(()=>{
+      msgBox.className = "form-msg ok";
+      msgBox.textContent = "धन्यवाद! आपकी जानकारी सफलतापूर्वक जमा हो गई।";
+      formEl.reset();
+      const preview = formEl.querySelector('img[id$="Preview"]');
+      if(preview) preview.style.display = "none";
+    }).catch((err)=>{
+      msgBox.className = "form-msg err";
+      msgBox.textContent = "क्षमा करें, कुछ गड़बड़ हुई। कृपया पुनः प्रयास करें।";
+      console.error(err);
+    });
+  }
+
+  if(fileInput && fileInput.files && fileInput.files[0]){
+    compressImage(fileInput.files[0], 400, 0.6).then(base64=>{
+      data.photo = base64;
+      finalSubmit();
+    }).catch(()=>{ finalSubmit(); });
+  } else {
+    finalSubmit();
+  }
+  return false;
+};
 </script>
 </body>
 </html>
