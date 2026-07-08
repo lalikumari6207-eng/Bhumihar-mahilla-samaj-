@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>भूमिहार महिला समाज | Bhumihar Mahila Samaj</title>
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta name="google-site-verification" content="wyPJCq7rLL8e9uipEopt-ItztYq84U0DS2bgwVMjCx8" />
+<link rel="icon" href="FB_IMG_1777997582817.jpg" type="image/png">
+<link rel="shortcut icon" href="FB_IMG_1777997582817.jpg">
+
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --maroon-900:#5c0e26;
+  --maroon-800:#7a1533;
+  --maroon-700:#8f1a3c;
+  --maroon-600:#a3234a;
+  --gold:#cf9a3e;
+  --gold-lt:#e6bd66;
+  --gold-pale:#f6e9cc;
+  --cream:#fdf8f0;
+  --cream-2:#faf1e0;
+  --ink:#2c1a1f;
+  --muted:#7a6b66;
+  --white:#ffffff;
+  --line:#ecdfc8;
+  --radius:14px;
+  --font-h:'Rozha One', 'Hind', serif;
+  --font-b:'Hind', sans-serif;
+  --shadow:0 10px 30px rgba(92,14,38,0.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden;width:100%}
+body{
+  background:var(--cream);
+  color:var(--ink);
+  font-family:var(--font-b);
+  line-height:1.7;
+  overflow-x:hidden;
+  width:100%;
+  position:relative;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+table{max-width:100%}
+/* prevent iOS auto-zoom on form focus (needs >=16px font-size) */
+input,select,textarea{font-size:16px}
+@media(max-width:480px){
+  input,select,textarea{font-size:16px !important}
+}
+.dark body{background:#1a1012;color:#f1e6e6}
+
+/* ============ DARK MODE ============ */
+body.dark{background:#1c1215;color:#f2e7e4}
+body.dark .card,body.dark .exec-card,body.dark .act-card,body.dark .test-card,body.dark .dl-row{
+  background:#2a1a1e;border-color:#452530;color:#eee;
+}
+body.dark section h2{color:#f6e6c8}
+body.dark .stats-strip{background:#2a1a1e}
+body.dark header,body.dark .topbar{background:#241318}
+body.dark .nav-links a{color:#f1e6e6}
+
+/* ============ TOP UTILITY BAR ============ */
+.topbar{
+  background:var(--maroon-900);
+  color:#f4dfc0;
+  font-size:12.5px;
+}
+.topbar .wrap{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:7px 24px;flex-wrap:wrap;gap:6px;
+}
+.topbar-left{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.topbar-left span{display:inline-flex;align-items:center;gap:6px}
+.topbar-right{display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.topbar-right a{color:#f4dfc0;text-decoration:none;font-size:14px}
+.topbar-right a:hover{color:var(--gold-lt)}
+
+/* ============ ANNOUNCEMENT BAR ============ */
+.announce{
+  background:var(--gold);
+  color:var(--maroon-900);
+  font-weight:600;font-size:13px;
+  overflow:hidden;white-space:nowrap;
+  padding:7px 0;
+}
+.announce span{
+  display:inline-block;padding-left:100%;
+  animation:marquee 22s linear infinite;
+}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+
+/* ============ MAIN NAV ============ */
+header{
+  position:sticky;top:0;z-index:1000;
+  background:var(--white);
+  border-bottom:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
+.nav{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:12px 24px;
+}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
+.brand-text{line-height:1.25}
+.brand-text .hi{font-family:var(--font-h);font-size:19px;color:var(--maroon-800)}
+.brand-text .en{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{
+  text-decoration:none;font-weight:600;font-size:14.5px;color:var(--ink);
+  position:relative;padding:4px 0;
+}
+.nav-links a:hover{color:var(--maroon-700)}
+.nav-actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.btn{
+  display:inline-block;padding:11px 24px;border-radius:50px;
+  font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap;
+  cursor:pointer;border:none;transition:.25s;font-family:var(--font-b);
+}
+.btn-gold{background:linear-gradient(135deg,var(--gold-lt),var(--gold));color:var(--maroon-900);box-shadow:0 6px 18px rgba(207,154,62,0.35)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(207,154,62,0.45)}
+.btn-outline{background:transparent;border:2px solid var(--white);color:var(--white)}
+.btn-outline:hover{background:var(--white);color:var(--maroon-800)}
+.btn-maroon{background:var(--maroon-800);color:var(--white)}
+.btn-maroon:hover{background:var(--maroon-900)}
+.icon-btn{background:none;border:none;font-size:19px;cursor:pointer;color:var(--maroon-800)}
+.menu-toggle{display:none;font-size:24px;background:none;border:none;color:var(--maroon-800);cursor:pointer}
+
+/* mobile nav */
+.mobile-panel{
+  position:fixed;top:0;right:0;width:290px;max-width:80vw;height:100%;
+  background:var(--white);z-index:2000;padding:26px 22px;
+  transition:transform .35s ease;box-shadow:-10px 0 40px rgba(0,0,0,0.2);
+  transform:translateX(100%);
+}
+.mobile-panel.active{transform:translateX(0)}
+.mobile-panel a{display:block;padding:12px 4px;text-decoration:none;color:var(--ink);font-weight:600;border-bottom:1px solid var(--line)}
+.mobile-close{font-size:24px;text-align:right;cursor:pointer;margin-bottom:20px;color:var(--maroon-800)}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:1500;display:none}
+.overlay.active{display:block}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;
+  background:linear-gradient(120deg,var(--maroon-900) 0%,var(--maroon-700) 60%,var(--maroon-600) 100%);
+  color:var(--white);
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 85% 30%,rgba(207,154,62,0.25),transparent 55%);
+}
+.hero-grid{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:center;
+  padding:70px 24px 50px;max-width:1180px;margin:0 auto;
+}
+.hero-eyebrow{
+  font-size:12px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold-lt);font-weight:700;margin-bottom:16px;
+}
+.hero h1{
+  font-family:var(--font-h);
+  font-size:clamp(38px,5.5vw,58px);
+  line-height:1.12;
+  margin-bottom:16px;
+}
+.hero h1 .gold{color:var(--gold-lt)}
+.hero p{font-size:16px;color:#f2dfe4;max-width:480px;margin-bottom:28px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.hero-img{
+  position:relative;border-radius:20px;overflow:hidden;
+  border:5px solid rgba(255,255,255,0.15);
+  box-shadow:0 30px 70px rgba(0,0,0,0.35);
+}
+.hero-img img{width:100%;height:420px;object-fit:cover}
+
+/* stats strip - overlapping */
+.stats-strip{
+  position:relative;z-index:3;
+  max-width:1040px;margin:-46px auto 0;
+  background:var(--white);
+  border-radius:18px;
+  box-shadow:0 20px 50px rgba(92,14,38,0.18);
+  display:flex;flex-wrap:wrap;
+  padding:26px 10px;
+}
+.stat-item{flex:1;min-width:130px;text-align:center;padding:10px}
+.stat-num{font-family:var(--font-h);font-size:28px;color:var(--maroon-800)}
+.stat-lbl{font-size:12px;color:var(--muted);margin-top:4px;font-weight:600}
+
+/* quick work icons */
+.quickwork{padding:70px 24px 30px;text-align:center}
+.quickwork h3{font-family:var(--font-h);font-size:24px;color:var(--maroon-800);margin-bottom:36px}
+.qw-row{display:flex;justify-content:center;gap:34px;flex-wrap:wrap}
+.qw-item{width:120px}
+.qw-circle{
+  width:78px;height:78px;border-radius:50%;
+  background:var(--gold-pale);
+  display:flex;align-items:center;justify-content:center;
+  font-size:30px;margin:0 auto 10px;
+  border:2px solid var(--gold);
+  transition:.25s;
+}
+.qw-item:hover .qw-circle{background:var(--maroon-800);color:var(--white);transform:translateY(-4px)}
+.qw-item p{font-size:13.5px;font-weight:600;color:var(--ink)}
+
+/* ============ SECTION GENERIC ============ */
+section{padding:80px 24px;max-width:1180px;margin:0 auto}
+.section-eyebrow{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-dark,var(--gold));font-weight:700;margin-bottom:10px;text-align:center}
+section h2{font-family:var(--font-h);font-size:clamp(28px,4vw,40px);color:var(--maroon-800);text-align:center;margin-bottom:8px}
+.section-sub{text-align:center;color:var(--muted);max-width:600px;margin:0 auto 40px;font-size:15px}
+.rule-center{width:70px;height:3px;background:var(--gold);margin:0 auto 40px;border-radius:2px}
+.alt-bg{background:var(--cream-2)}
+
+/* CARD generic */
+.card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  padding:30px 32px;box-shadow:var(--shadow);
+}
+.card p{color:var(--muted);margin-bottom:14px;font-size:15px}
+.card b{color:var(--ink)}
+
+/* ABOUT layout */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about-img{border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+.about-img img{height:360px;object-fit:cover}
+.about-box h3{font-family:var(--font-h);color:var(--maroon-800);font-size:20px;margin-bottom:14px}
+.about-box p{color:var(--muted);margin-bottom:14px;font-size:15px}
+.vm-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+.vm-card{background:var(--cream-2);border-radius:12px;padding:18px 20px;border-left:4px solid var(--gold)}
+.vm-card h4{font-family:var(--font-h);color:var(--maroon-800);font-size:16px;margin-bottom:6px}
+.vm-card p{font-size:13.5px;color:var(--muted)}
+
+/* EXECUTIVE COMMITTEE */
+.exec-tabs{display:flex;justify-content:center;gap:12px;margin-bottom:36px;flex-wrap:wrap}
+.exec-tab{padding:9px 20px;border-radius:50px;background:var(--cream-2);color:var(--maroon-800);font-weight:600;font-size:13px;border:1px solid var(--line)}
+.exec-tab.active{background:var(--maroon-800);color:var(--white)}
+.exec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:26px}
+.exec-card{
+  background:var(--white);border-radius:16px;text-align:center;
+  padding:26px 16px;box-shadow:var(--shadow);border:1px solid var(--line);
+  transition:.25s;
+}
+.exec-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(92,14,38,0.15)}
+.exec-photo{width:110px;height:110px;border-radius:50%;overflow:hidden;margin:0 auto 14px;border:3px solid var(--gold)}
+.exec-photo img{width:100%;height:100%;object-fit:cover}
+.exec-card h4{font-family:var(--font-h);font-size:16px;color:var(--ink);margin-bottom:4px}
+.exec-role{font-size:12px;color:var(--gold-dark,#a67c25);font-weight:700;letter-spacing:0.5px;text-transform:uppercase}
+
+/* ACTIVITIES */
+.act-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+.act-card{
+  background:var(--white);border-radius:16px;overflow:hidden;
+  border:1px solid var(--line);box-shadow:var(--shadow);transition:.3s;
+}
+.act-card:hover{transform:translateY(-6px)}
+.act-card img{height:170px;width:100%;object-fit:cover}
+.act-body{padding:20px 22px}
+.act-body h4{font-family:var(--font-h);color:var(--maroon-800);font-size:17px;margin-bottom:8px}
+.act-body p{font-size:13.5px;color:var(--muted)}
+
+/* EVENTS */
+.events-grid{display:grid;grid-template-columns:0.8fr 1.2fr;gap:36px}
+.event-item{display:flex;gap:16px;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px;box-shadow:var(--shadow)}
+.event-date{
+  background:var(--maroon-800);color:var(--white);border-radius:10px;
+  width:64px;text-align:center;padding:10px 0;flex-shrink:0;
+}
+.event-date .d{font-family:var(--font-h);font-size:22px}
+.event-date .m{font-size:11px;text-transform:uppercase;letter-spacing:1px}
+.event-info h4{font-size:15px;color:var(--ink);margin-bottom:4px}
+.event-info p{font-size:12.5px;color:var(--muted)}
+.recent-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.recent-grid img{height:150px;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
+
+/* GALLERY */
+.gallery-filters{display:flex;justify-content:center;gap:10px;margin-bottom:30px;flex-wrap:wrap}
+.gallery-filters button{
+  padding:8px 20px;border-radius:50px;border:1px solid var(--line);
+  background:var(--white);font-weight:600;font-size:13px;color:var(--ink);cursor:pointer;
+}
+.gallery-filters button.active{background:var(--maroon-800);color:var(--white);border-color:var(--maroon-800)}
+/* horizontal scroll strip — single row, no column-breaks, no cropping mid-image */
+.scroll-img{
+  display:flex;gap:14px;overflow-x:auto;overflow-y:hidden;
+  scroll-behavior:smooth;padding:10px 4px 18px;
+  -webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;
+  max-width:100%;
+}
+.scroll-img::-webkit-scrollbar{height:5px}
+.scroll-img::-webkit-scrollbar-track{background:var(--cream-2);border-radius:4px}
+.scroll-img::-webkit-scrollbar-thumb{background:var(--gold);border-radius:4px}
+.scroll-img img{
+  min-width:230px;max-width:230px;height:175px;object-fit:cover;
+  border-radius:12px;flex-shrink:0;scroll-snap-align:start;
+  border:1px solid var(--line);transition:.25s;cursor:pointer;
+}
+.scroll-img img:hover{border-color:var(--gold);transform:scale(1.02)}
+@media(max-width:520px){
+  .scroll-img img{min-width:190px;max-width:190px;height:145px}
+}
+.scroll-title{font-family:var(--font-h);color:var(--maroon-800);font-size:17px;margin:26px 0 4px;text-align:left}
+.lightbox{position:fixed;inset:0;background:rgba(20,5,10,0.9);display:none;align-items:center;justify-content:center;z-index:3000;padding:30px}
+.lightbox.active{display:flex}
+.lightbox img{max-width:90%;max-height:85vh;border-radius:10px}
+.lightbox-close{position:absolute;top:24px;right:32px;font-size:32px;color:#fff;cursor:pointer}
+
+/* VIDEO GALLERY */
+.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.video-card{background:var(--white);border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+.video-card video{width:100%;height:180px;object-fit:cover;background:#000}
+.video-card p{padding:14px 18px;font-size:14px;font-weight:600;color:var(--maroon-800)}
+
+/* MEMBERSHIP */
+.member-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:40px}
+.benefit-list{list-style:none}
+.benefit-list li{padding:10px 0 10px 30px;position:relative;color:var(--muted);font-size:14.5px;border-bottom:1px dashed var(--line)}
+.benefit-list li::before{content:"✓";position:absolute;left:0;color:var(--gold-dark,#a67c25);font-weight:900}
+.form-card{background:var(--white);border-radius:16px;padding:30px;box-shadow:var(--shadow);border:1px solid var(--line)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.form-row.full{grid-template-columns:1fr}
+input,select,textarea{
+  width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:8px;
+  font-family:var(--font-b);font-size:16px;background:var(--cream-2);color:var(--ink);
+}
+textarea{resize:vertical;min-height:90px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold)}
+
+/* DONATE */
+.donate-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:40px;align-items:center}
+.donate-card{background:var(--white);border-radius:18px;padding:34px;text-align:center;box-shadow:var(--shadow);border:1px solid var(--line)}
+.donate-card img{width:170px;margin:0 auto 14px;border-radius:12px;border:2px solid var(--gold)}
+.bank-table{width:100%;border-collapse:collapse;margin-top:20px}
+.bank-table td{padding:8px 4px;font-size:13.5px;border-bottom:1px solid var(--line);color:var(--muted)}
+.bank-table td:first-child{color:var(--ink);font-weight:600;width:38%}
+
+/* VOLUNTEER */
+.vol-benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:20px}
+.vol-benefits div{background:var(--cream-2);border-radius:10px;padding:16px;text-align:center;font-size:13px;font-weight:600;color:var(--maroon-800);border:1px solid var(--line)}
+
+/* ACHIEVEMENTS counters */
+.achieve-strip{
+  background:linear-gradient(120deg,var(--maroon-900),var(--maroon-700));
+  border-radius:20px;padding:44px 30px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;
+}
+.achieve-item{flex:1;min-width:140px;text-align:center;color:var(--white)}
+.achieve-num{font-family:var(--font-h);font-size:36px;color:var(--gold-lt)}
+.achieve-lbl{font-size:12.5px;letter-spacing:1px;margin-top:6px;color:#f2dfe4}
+.achieve-photo{margin-top:40px;border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+.achieve-photo img{width:100%;height:280px;object-fit:cover}
+
+/* PRESENCE / AREA CHIPS */
+.area-chips{display:flex;flex-wrap:wrap;gap:10px}
+.area-chips span{
+  background:var(--cream-2);border:1px solid var(--gold);color:var(--maroon-800);
+  padding:8px 16px;border-radius:50px;font-size:13px;font-weight:600;
+}
+.section-div{max-width:1180px;margin:0 auto;border:none;border-top:1px solid var(--line)}
+body.dark .area-chips span{background:#2a1a1e;color:#f6e6c8}
+
+/* CITY PHOTO GRID */
+.city-scroll{display:flex;gap:14px;overflow-x:auto;overflow-y:hidden;padding:10px 4px 18px;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;scroll-behavior:smooth}
+.city-scroll::-webkit-scrollbar{height:5px}
+.city-scroll::-webkit-scrollbar-track{background:var(--cream-2);border-radius:4px}
+.city-scroll::-webkit-scrollbar-thumb{background:var(--gold);border-radius:4px}
+.city-card{position:relative;border-radius:12px;overflow:hidden;height:150px;min-width:170px;max-width:170px;flex-shrink:0;scroll-snap-align:start;box-shadow:var(--shadow);border:1px solid var(--line)}
+.city-card img{width:100%;height:100%;object-fit:cover;transition:.3s}
+.city-card:hover img{transform:scale(1.08)}
+.city-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(92,14,38,0.85));}
+.city-card span{position:absolute;bottom:8px;left:0;right:0;text-align:center;color:#fff;font-weight:700;font-size:13.5px;z-index:2}
+
+/* TESTIMONIALS */
+.test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.test-card{background:var(--white);border-radius:16px;padding:28px;box-shadow:var(--shadow);border:1px solid var(--line);position:relative}
+.test-quote{font-size:30px;color:var(--gold);font-family:var(--font-h);line-height:0.5;margin-bottom:14px}
+.test-card p{color:var(--muted);font-size:14px;margin-bottom:18px}
+.test-person{display:flex;align-items:center;gap:12px}
+.test-person img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
+.test-person h5{font-size:14px;color:var(--ink)}
+.test-person span{font-size:12px;color:var(--muted)}
+
+/* DOWNLOADS */
+.dl-tabs{display:flex;justify-content:center;gap:10px;margin-bottom:26px;flex-wrap:wrap}
+.dl-tabs button{padding:8px 18px;border-radius:50px;border:1px solid var(--line);background:var(--white);font-size:13px;font-weight:600;cursor:pointer}
+.dl-tabs button.active{background:var(--maroon-800);color:var(--white)}
+.dl-row{display:flex;justify-content:space-between;align-items:center;background:var(--white);border:1px solid var(--line);border-radius:10px;padding:16px 20px;margin-bottom:12px;box-shadow:var(--shadow)}
+.dl-row span{font-weight:600;font-size:14.5px;display:flex;align-items:center;gap:10px}
+.dl-btn{background:var(--maroon-800);color:var(--white);padding:8px 20px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:700}
+.dl-btn:hover{background:var(--maroon-900)}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:40px}
+.contact-info-item{display:flex;gap:14px;margin-bottom:22px}
+.contact-info-item .ic{
+  width:44px;height:44px;border-radius:50%;background:var(--gold-pale);
+  display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;
+}
+.contact-info-item h5{font-size:14.5px;color:var(--ink);margin-bottom:3px}
+.contact-info-item p{font-size:13.5px;color:var(--muted)}
+.map-embed{border-radius:14px;overflow:hidden;border:1px solid var(--line);margin-top:10px;height:200px}
+.map-embed iframe{width:100%;height:100%;border:0}
+.newsletter{
+  background:var(--cream-2);border-radius:16px;padding:26px;margin-top:20px;
+  border:1px solid var(--line);text-align:center;
+}
+.newsletter h4{font-family:var(--font-h);color:var(--maroon-800);margin-bottom:8px;font-size:17px}
+.newsletter p{font-size:13px;color:var(--muted);margin-bottom:16px}
+.newsletter form{display:flex;gap:10px;max-width:360px;margin:0 auto}
+.newsletter input{flex:1}
+
+/* FOOTER */
+footer{background:var(--maroon-900);color:#f2dfe4;padding:60px 24px 0}
+.footer-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:36px;padding-bottom:40px}
+.footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.footer-brand img{width:50px;height:50px;border-radius:50%;border:2px solid var(--gold)}
+.footer-brand .hi{font-family:var(--font-h);font-size:18px;color:var(--white)}
+footer p{font-size:13.5px;color:#e0c4cc;line-height:1.8}
+footer h5{font-family:var(--font-h);font-size:16px;color:var(--gold-lt);margin-bottom:16px}
+footer ul{list-style:none}
+footer ul li{margin-bottom:10px}
+footer ul li a{text-decoration:none;color:#e0c4cc;font-size:13.5px}
+footer ul li a:hover{color:var(--gold-lt)}
+.footer-social{display:flex;gap:10px;margin-top:16px}
+.footer-social a{
+  width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.08);
+  display:flex;align-items:center;justify-content:center;text-decoration:none;color:var(--white);font-size:15px;
+}
+.footer-social a:hover{background:var(--gold);color:var(--maroon-900)}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,0.12);padding:20px 24px;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+  font-size:12.5px;color:#d9b6c0;max-width:1180px;margin:0 auto;
+}
+.footer-bottom a{color:var(--gold-lt);text-decoration:none}
+
+/* ============ TOPBAR v2 ============ */
+.topbar-flex{align-items:center}
+.follow-label{font-weight:600;margin-right:4px;color:#f4dfc0}
+.soc-ic{
+  width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:800;text-decoration:none;color:#fff;margin-right:4px;
+}
+.soc-fb{background:#1877F2}
+.soc-ig{background:radial-gradient(circle at 30% 110%,#fdf497,#fd5949 45%,#d6249f 70%,#285AEB)}
+.soc-yt{background:#FF0000}
+.soc-tw{background:#000}
+.soc-li{background:#0A66C2;font-size:10px}
+.lang-switch{margin-left:12px;font-weight:600}
+.lang-switch a{color:#f4dfc0;text-decoration:none}
+.lang-switch a.active{color:var(--gold-lt)}
+
+/* ============ BRAND v2 ============ */
+.brand-badge{
+  width:64px;height:64px;border-radius:16px;
+  background:linear-gradient(160deg,#1a1a1a,#000);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;flex-shrink:0;
+  box-shadow:0 6px 16px rgba(0,0,0,0.25);
+}
+.brand-badge img{width:100%;height:100%;object-fit:contain;padding:6px}
+.brand-text .tag{font-size:11px;color:var(--maroon-700);font-weight:600;margin-top:1px}
+.brand-text .hi{font-size:21px}
+
+/* ============ NAV DROPDOWNS ============ */
+.nav-links{gap:6px}
+.dropdown{position:relative}
+.dropdown>a{display:inline-block;padding:10px 12px;font-size:14px}
+.dropdown-menu{
+  position:absolute;top:100%;left:0;background:var(--white);
+  min-width:200px;border-radius:10px;box-shadow:0 16px 40px rgba(92,14,38,0.18);
+  border:1px solid var(--line);padding:8px;opacity:0;visibility:hidden;transform:translateY(8px);
+  transition:.2s;z-index:50;
+}
+.dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.dropdown-menu a{display:block;padding:9px 12px;border-radius:6px;font-size:13.5px;font-weight:500}
+.dropdown-menu a:hover{background:var(--cream-2);color:var(--maroon-700)}
+.nav-links>a.active{color:var(--maroon-800);border-bottom:2px solid var(--gold)}
+
+/* ============ HERO v2 (split) ============ */
+.hero2{
+  position:relative;display:grid;grid-template-columns:1fr 1.3fr;
+  min-height:560px;background:var(--cream);overflow:hidden;
+}
+.hero2-left{
+  background:linear-gradient(160deg,var(--gold-pale) 0%,var(--cream) 60%);
+  display:flex;flex-direction:column;justify-content:center;
+  padding:60px 56px 90px 48px;position:relative;z-index:2;
+  border-radius:0 60px 0 0;
+}
+.hero2-left h1{font-family:var(--font-h);font-size:clamp(34px,4.2vw,50px);color:var(--maroon-800);line-height:1.15;margin-bottom:14px}
+.hero2-left h1 .gold{color:var(--gold-dark,#b8862c)}
+.hero2-tag{font-size:17px;font-weight:700;color:var(--ink);margin-bottom:16px}
+.hero2-desc{font-size:14.5px;color:var(--muted);max-width:430px;margin-bottom:26px}
+.hero2-right{position:relative;overflow:hidden}
+.hero2-right::before{
+  content:"";position:absolute;inset:0;z-index:3;pointer-events:none;
+  background:linear-gradient(90deg,var(--maroon-800) 0%,rgba(143,26,60,0.55) 8%,rgba(255,255,255,0.05) 26%,transparent 42%);
+}
+.hero2-slides{position:relative;width:100%;height:100%;min-height:560px}
+.hero-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s ease}
+.hero-slide.active{opacity:1}
+.carousel-arrow{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:5;
+  width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,0.9);
+  border:none;font-size:20px;color:var(--maroon-800);cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,0.2);
+}
+.carousel-arrow.left{left:16px}
+.carousel-arrow.right{right:16px}
+.hero-dots{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:5}
+.hero-dots span{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,0.55);cursor:pointer}
+.hero-dots span.active{background:var(--gold-lt);width:22px;border-radius:5px}
+
+/* stats overlap v2 */
+.hero2 .stats-strip{position:absolute;left:50%;bottom:0;transform:translate(-50%,50%);margin:0;max-width:1160px;width:92%}
+.stat-icon{font-size:24px;margin-bottom:6px}
+        
+
+/* ============ QUICK WORK v2 ============ */
+.quickwork{padding:110px 24px 60px;text-align:center;max-width:1180px;margin:0 auto}
+.qw-title{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:36px}
+.qw-line{width:50px;height:2px;background:var(--gold)}
+.qw-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px}
+.qw-card{
+  background:var(--white);border:1px solid var(--line);border-radius:14px;
+  padding:30px 22px;text-align:center;transition:.25s;
+}
+.qw-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--gold)}
+.qw-card .qw-circle2{
+  width:66px;height:66px;border-radius:50%;background:var(--maroon-800);color:var(--gold-lt);
+  display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 16px;
+}
+.qw-card h4{font-family:var(--font-h);color:var(--maroon-800);font-size:17px;margin-bottom:8px}
+.qw-card p{font-size:13px;color:var(--muted);margin-bottom:12px}
+.qw-card a{font-size:12.5px;font-weight:700;color:var(--gold-dark,#a67c25);text-decoration:none}
+.qw-card a:hover{text-decoration:underline}
+
+/* ============ NOTICE BAR ============ */
+.notice-bar{background:var(--maroon-900);padding:14px 0}
+.notice-flex{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;text-align:center}
+.notice-label{color:var(--gold-lt);font-weight:700;font-size:13.5px}
+.notice-text{color:#f2dfe4;font-size:13.5px}
+.notice-text a{color:var(--gold-lt);font-weight:700;text-decoration:none}
+.notice-text a:hover{text-decoration:underline}
+
+@media(max-width:600px){
+  .follow-label,.soc-ic{display:none}
+  .topbar .wrap{justify-content:center}
+  .brand-text .tag,.brand-text .en{display:none}
+  .brand-badge{width:48px;height:48px}
+  .brand-text .hi{font-size:16px}
+  .nav-actions .btn{padding:9px 16px;font-size:13px}
+  .float-btns{right:14px;bottom:18px}
+}
+@media(max-width:860px){
+  .hero2{grid-template-columns:1fr}
+  .hero2-left{border-radius:0;padding:40px 24px 70px}
+  .hero2-slides{min-height:340px}
+  .hero2 .stats-strip{position:static;transform:none;margin:-40px auto 0;width:94%}
+}
+
+/* FLOATING BUTTONS */
+.float-btns{position:fixed;bottom:24px;right:22px;z-index:900;display:flex;flex-direction:column;gap:12px;align-items:flex-end}
+.fab{
+  width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:22px;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,0.25);cursor:pointer;border:none;transition:.25s;
+}
+.fab-wa{background:#25D366;color:#fff}
+.fab-top{background:var(--maroon-800);color:#fff;opacity:0;pointer-events:none;transform:translateY(10px)}
+.fab-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+.fab-dark{background:var(--gold);color:var(--maroon-900)}
+.fab:hover{transform:translateY(-3px) scale(1.05)}
+
+.fade{opacity:0;transform:translateY(30px);transition:.7s cubic-bezier(.4,0,.2,1)}
+.fade.show{opacity:1;transform:translateY(0)}
+  @media(max-width:860px){
+  .nav-links,.nav-actions .btn-maroon{display:none}
+  .menu-toggle{display:block}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-img{order:-1}
+  .about-grid,.events-grid,.member-grid,.donate-grid,.contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .topbar-left span:nth-child(2){display:none}
+}
+@media(max-width:520px){
+  .footer-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP UTILITY BAR -->
+<div class="topbar">
+  <div class="wrap topbar-flex">
+    <div class="topbar-left">
+      <span>📍 पटना, बिहार, भारत</span>
+      <span>✉️ info@bhumiharmahilasamaj.org</span>
+    </div>
+    <div class="topbar-right">
+      <span class="follow-label">हमें फॉलो करें :</span>
+      <a class="soc-ic soc-fb" href="https://www.facebook.com/share/1CWU41fojY/?mibextid=wwXIfr" target="_blank">f</a>
+      <a class="soc-ic soc-ig" href="#">◎</a>
+      <a class="soc-ic soc-yt" href="#">▶</a>
+      <a class="soc-ic soc-tw" href="#">𝕏</a>
+      <a class="soc-ic soc-li" href="#">in</a>
+      <span class="lang-switch"><a href="#" class="active">हिंदी</a> | <a href="#">English</a></span>
+      <button class="icon-btn" onclick="toggleDark()" title="Dark Mode" style="margin-left:10px;color:#f4dfc0">🌙</button>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN NAV -->
+<header>
+  <div class="nav wrap">
+    <a href="#home" class="brand">
+      <div class="brand-badge"><img src="FB_IMG_1777997582817.jpg" alt="BMS Logo"></div>
+      <div class="brand-text">
+        <div class="hi">भूमिहार महिला समाज</div>
+        <div class="en">Bhumihar Mahila Samaj</div>
+        <div class="tag">नारी शक्ति, समाज शक्ति</div>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="#home" class="active">होम</a>
+      <div class="dropdown">
+        <a href="#about">हमारे बारे में ▾</a>
+        <div class="dropdown-menu">
+          <a href="#about">परिचय</a>
+          <a href="#committee">कार्यकारिणी समिति</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#activities">हमारे कार्य ▾</a>
+        <div class="dropdown-menu">
+          <a href="#activities">गतिविधियाँ</a>
+          <a href="#achievements">उपलब्धियाँ</a>
+          <a href="#presence">हमारी उपस्थिति</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#membership">सदस्यता ▾</a>
+        <div class="dropdown-menu">
+          <a href="#membership">सदस्यता फॉर्म</a>
+          <a href="#volunteer">स्वयंसेवक बनें</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#gallery">मीडिया ▾</a>
+        <div class="dropdown-menu">
+          <a href="#gallery">फोटो गैलरी</a>
+          <a href="#videos">वीडियो गैलरी</a>
+          <a href="#events">कार्यक्रम</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#testimonials">संस्थान ▾</a>
+        <div class="dropdown-menu">
+          <a href="#testimonials">प्रशंसापत्र</a>
+          <a href="#downloads">डाउनलोड</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#contact">संपर्क करें ▾</a>
+        <div class="dropdown-menu">
+          <a href="#contact">संपर्क विवरण</a>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-actions">
+      <a href="#donate" class="btn btn-gold">💗 दान करें</a>
+      <button class="menu-toggle" onclick="openMenu()">☰</button>
+    </div>
+  </div>
+</header>
+  <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+<div class="mobile-panel" id="mpanel">
+  <div class="mobile-close" onclick="closeMenu()">✕</div>
+  <a href="#home" onclick="closeMenu()">होम</a>
+  <a href="#about" onclick="closeMenu()">हमारे बारे में</a>
+  <a href="#committee" onclick="closeMenu()">कार्यकारिणी समिति</a>
+  <a href="#activities" onclick="closeMenu()">हमारे कार्य</a>
+  <a href="#presence" onclick="closeMenu()">हमारी उपस्थिति</a>
+  <a href="#events" onclick="closeMenu()">कार्यक्रम</a>
+  <a href="#gallery" onclick="closeMenu()">गैलरी</a>
+  <a href="#membership" onclick="closeMenu()">सदस्यता</a>
+  <a href="#donate" onclick="closeMenu()">दान करें</a>
+  <a href="#contact" onclick="closeMenu()">संपर्क करें</a>
+</div>
+
+<!-- ============ HOME / HERO ============ -->
+<div id="home" class="hero2">
+  <div class="hero2-left">
+    <h1>नारी शक्ति,<br><span class="gold">समाज शक्ति</span></h1>
+    <p class="hero2-tag">एक साथ, एक विश्वास, एक समाज</p>
+    <p class="hero2-desc">भूमिहार महिला समाज का उद्देश्य महिलाओं के उत्थान, शिक्षा, स्वास्थ्य, स्वावलंबन और सामाजिक विकास के लिए समर्पित है।</p>
+    <div class="hero-btns">
+      <a href="#membership" class="btn btn-maroon">👥 सदस्यता लें</a>
+      <a href="#donate" class="btn btn-gold">💗 दान करें</a>
+    </div>
+  </div>
+  <div class="hero2-right">
+    <button class="carousel-arrow left" onclick="heroPrev()">‹</button>
+    <div class="hero2-slides" id="heroSlides">
+      <img class="hero-slide active" src="IMG-20260504-WA0105.jpg" alt="Bhumihar Mahila Samaj">
+    </div>
+    <button class="carousel-arrow right" onclick="heroNext()">›</button>
+    <div class="hero-dots" id="heroDots"></div>
+  </div>
+
+  <div class="stats-strip fade show">
+    <div class="stat-item"><div class="stat-icon">👥</div><div class="stat-num counter" data-target="25000" data-suffix="+">0</div><div class="stat-lbl">सदस्य</div></div>
+    <div class="stat-item"><div class="stat-icon">📅</div><div class="stat-num counter" data-target="500" data-suffix="+">0</div><div class="stat-lbl">आयोजन</div></div>
+    <div class="stat-item"><div class="stat-icon">🏢</div><div class="stat-num counter" data-target="50" data-suffix="+">0</div><div class="stat-lbl">जिला इकाइयाँ</div></div>
+    <div class="stat-item"><div class="stat-icon">🗺️</div><div class="stat-num counter" data-target="10" data-suffix="+">0</div><div class="stat-lbl">राज्य इकाइयाँ</div></div>
+    <div class="stat-item"><div class="stat-icon">🏅</div><div class="stat-num counter" data-target="15" data-suffix="+">0</div><div class="stat-lbl">सेवा के वर्ष</div></div>
+  </div>
+</div>
+
+<!-- QUICK WORK CARDS -->
+<div class="quickwork">
+  <div class="qw-title"><span class="qw-line"></span><h3>हमारे प्रमुख कार्य</h3><span class="qw-line"></span></div>
+  <div class="qw-cards">
+    <div class="qw-card">
+      <div class="qw-circle2">📖</div>
+      <h4>शिक्षा</h4>
+      <p>बालिकाओं की शिक्षा और छात्रवृत्ति के माध्यम से उज्ज्वल भविष्य की ओर कदम।</p>
+      <a href="child-education.html">और पढ़ें →</a>
+    </div>
+    <div class="qw-card">
+      <div class="qw-circle2">👩</div>
+      <h4>महिला सशक्तिकरण</h4>
+      <p>महिलाओं को आत्मनिर्भर बनाने हेतु प्रशिक्षण और जागरूकता कार्यक्रम।</p>
+      <a href="pankh-haat.html">और पढ़ें →</a>
+    </div>
+    <div class="qw-card">
+      <div class="qw-circle2">🩺</div>
+      <h4>स्वास्थ्य सेवा</h4>
+      <p>स्वास्थ्य शिविर, जाँच और महिलाओं के लिए स्वास्थ्य जागरूकता अभियान।</p>
+      <a href="health-care.html">और पढ़ें →</a>
+    </div>
+    <div class="qw-card">
+      <div class="qw-circle2">💼</div>
+      <h4>रोजगार एवं प्रशिक्षण</h4>
+      <p>कौशल विकास और रोजगार प्रशिक्षण के कार्यक्रमों के माध्यम से स्वरोजगार को बढ़ावा।</p>
+      <a href="beautician.html">और पढ़ें →</a>
+    </div>
+    <div class="qw-card">
+      <div class="qw-circle2">🤝</div>
+      <h4>सामाजिक सेवा</h4>
+      <p>समाज के कमजोर वर्ग की सहायता और सामाजिक समरसता के लिए कार्यक्रम।</p>
+      <a href="#activities">और पढ़ें →</a>
+    </div>
+  </div>
+</div>
+
+<!-- SPECIAL INITIATIVES — links to dedicated pages -->
+<div class="quickwork" style="padding-top:10px">
+  <div class="qw-title"><span class="qw-line"></span><h3>हमारी विशेष पहलें</h3><span class="qw-line"></span></div>
+  <div class="qw-cards">
+    <a href="child-education.html" class="qw-card" style="text-decoration:none;display:block">
+      <div class="qw-circle2">📚</div>
+      <h4>Child Education</h4>
+      <p>बच्चों की शिक्षा हेतु विशेष कार्यक्रम एवं सहयोग।</p>
+      <span style="font-size:12.5px;font-weight:700;color:var(--gold-dark,#a67c25)">विस्तार से जानें →</span>
+    </a>
+    <a href="health-care.html" class="qw-card" style="text-decoration:none;display:block">
+      <div class="qw-circle2">🏥</div>
+      <h4>Health Care</h4>
+      <p>स्वास्थ्य जाँच शिविर एवं चिकित्सा सहायता कार्यक्रम।</p>
+      <span style="font-size:12.5px;font-weight:700;color:var(--gold-dark,#a67c25)">विस्तार से जानें →</span>
+    </a>
+    <a href="beautician.html" class="qw-card" style="text-decoration:none;display:block">
+      <div class="qw-circle2">💄</div>
+      <h4>Beautician Training</h4>
+      <p>महिलाओं के लिए ब्यूटीशियन कौशल प्रशिक्षण कार्यक्रम।</p>
+      <span style="font-size:12.5px;font-weight:700;color:var(--gold-dark,#a67c25)">विस्तार से जानें →</span>
+    </a>
+    <a href="pankh-haat.html" class="qw-card" style="text-decoration:none;display:block">
+      <div class="qw-circle2">🪁</div>
+      <h4>Pankh Haat</h4>
+      <p>महिला उद्यमिता को बढ़ावा देने वाला विशेष आयोजन।</p>
+      <span style="font-size:12.5px;font-weight:700;color:var(--gold-dark,#a67c25)">विस्तार से जानें →</span>
+    </a>
+    <a href="savan-mahotsav.html" class="qw-card" style="text-decoration:none;display:block">
+      <div class="qw-circle2">🌧️</div>
+      <h4>सावन महोत्सव</h4>
+      <p>सावन के अवसर पर आयोजित सांस्कृतिक कार्यक्रम।</p>
+      <span style="font-size:12.5px;font-weight:700;color:var(--gold-dark,#a67c25)">विस्तार से जानें →</span>
+    </a>
+    <a href="holi-mahotsav.html" class="qw-card" style="text-decoration:none;display:block">
+      <div class="qw-circle2">🎨</div>
+      <h4>होली महोत्सव</h4>
+      <p>रंगों के त्यौहार पर सामाजिक एकता का उत्सव।</p>
+      <span style="font-size:12.5px;font-weight:700;color:var(--gold-dark,#a67c25)">विस्तार से जानें →</span>
+    </a>
+    <a href="navratri-mahotsav.html" class="qw-card" style="text-decoration:none;display:block">
+      <div class="qw-circle2">🪔</div>
+      <h4>नवरात्रि महोत्सव</h4>
+      <p>नवरात्रि पर्व पर आयोजित विशेष सांस्कृतिक कार्यक्रम।</p>
+      <span style="font-size:12.5px;font-weight:700;color:var(--gold-dark,#a67c25)">विस्तार से जानें →</span>
+    </a>
+  </div>
+</div>
+  <!-- NOTICE BAR -->
+<div class="notice-bar">
+  <div class="wrap notice-flex">
+    <span class="notice-label">📢 सूचना :</span>
+    <span class="notice-text">आगामी स्वास्थ्य शिविर – 15 जून 2026 &nbsp;|&nbsp; स्थान: पटना, बिहार &nbsp;|&nbsp; अधिक जानकारी के लिए <a href="#events">क्लिक करें</a></span>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="fade">
+  <div class="section-eyebrow">परिचय</div>
+  <h2>हमारे बारे में</h2>
+  <div class="rule-center"></div>
+  <div class="about-grid">
+    <div class="about-img"><img src="FB_IMG_1777891944238~2.jpg" alt="About BMS"></div>
+    <div class="about-box">
+      <p>भूमिहार महिला समाज (BMS) की स्थापना <b>25 मार्च 2020</b> को हुई थी। यह संस्था शिक्षा, स्वास्थ्य, रोजगार और सामाजिक समरसता को बढ़ावा देते हुए महिलाओं और जरूरतमंद बच्चों के जीवन में सकारात्मक बदलाव लाने के लिए समर्पित है।</p>
+      <p>आज संस्था <b>भारत के 32+ शहरों</b> में सक्रिय है और पंजीकृत सामाजिक संगठन के रूप में कार्यरत है।</p>
+      <div class="vm-grid">
+        <div class="vm-card"><h4>हमारा उद्देश्य</h4><p>महिलाओं की शिक्षा, स्वास्थ्य, रोजगार और आत्मसम्मान के लिए एक सशक्त समाज बनाना।</p></div>
+        <div class="vm-card"><h4>हमारा विजन</h4><p>एक ऐसा समाज जहाँ हर महिला को समान अवसर, अधिकार, सम्मान और आत्मनिर्भरता प्राप्त हो।</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXECUTIVE COMMITTEE ============ -->
+<section id="committee" class="alt-bg fade">
+  <div class="section-eyebrow">नेतृत्व</div>
+  <h2>कार्यकारिणी समिति</h2>
+  <div class="rule-center"></div>
+  <div class="exec-tabs">
+    <div class="exec-tab active">राष्ट्रीय पदाधिकारी</div>
+    <div class="exec-tab">राज्य पदाधिकारी</div>
+    <div class="exec-tab">जिला पदाधिकारी</div>
+  </div>
+  <div class="exec-grid">
+    <div class="exec-card">
+      <div class="exec-photo"><img src="Screenshot_20260504-172534~2.png" alt="Founder"></div>
+      <h4>प्रीति प्रिया</h4>
+      <div class="exec-role">संस्थापिका</div>
+    </div>
+    <div class="exec-card">
+      <div class="exec-photo"><img src="IMG-20260505-WA0211.jpg" alt="President"></div>
+      <h4>राष्ट्रीय अध्यक्ष</h4>
+      <div class="exec-role">National President</div>
+    </div>
+    <div class="exec-card">
+      <div class="exec-photo"><img src="IMG-20260505-WA0213.jpg" alt="State President"></div>
+      <h4>राज्य अध्यक्ष</h4>
+      <div class="exec-role">State President</div>
+    </div>
+    <div class="exec-card">
+      <div class="exec-photo"><img src="WA_1778305284649.jpeg" alt="District President"></div>
+      <h4>जिला अध्यक्ष</h4>
+      <div class="exec-role">District President</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUR ACTIVITIES ============ -->
+<section id="activities" class="fade">
+  <div class="section-eyebrow">हमारा योगदान</div>
+  <h2>हमारी गतिविधियाँ</h2>
+  <div class="rule-center"></div>
+  <div class="act-grid">
+    <div class="act-card">
+      <img src="IMG-20260505-WA0086.jpg" alt="Education">
+      <div class="act-body"><h4>शिक्षा एवं छात्रवृत्ति</h4><p>गरीब विद्यार्थियों को छात्रवृत्ति, मार्गदर्शन एवं करियर काउंसलिंग दी जाती है।</p></div>
+    </div>
+    <div class="act-card">
+      <img src="IMG-20260505-WA0198.jpg" alt="Health">
+      <div class="act-body"><h4>स्वास्थ्य शिविर</h4><p>जरूरतमंद लोगों के लिए निःशुल्क स्वास्थ्य शिविर और चिकित्सा सहयोग आयोजित किया जाता है।</p></div>
+    </div>
+    <div class="act-card">
+      <img src="FB_IMG_1777895338003.jpg" alt="Silai">
+      <div class="act-body"><h4>महिला सिलाई मशीन योजना</h4><p>महिलाओं को सिलाई मशीन देकर आत्मनिर्भर और स्वावलंबी बनाया जाता है।</p></div>
+    </div>
+    <div class="act-card">
+      <img src="IMG-20260504-WA0081.jpg" alt="Beautician">
+      <div class="act-body"><h4>रोजगार प्रशिक्षण</h4><p>ब्यूटीशियन एवं कौशल विकास प्रशिक्षण देकर रोजगार के अवसर उपलब्ध कराए जाते हैं।</p></div>
+    </div>
+    <div class="act-card">
+      <img src="IMG-20260505-WA0091.jpg" alt="Women Empowerment">
+      <div class="act-body"><h4>महिला सशक्तिकरण</h4><p>महिलाओं को उनके अधिकारों के प्रति जागरूक कर आत्मनिर्भर बनाने के प्रयास किए जाते हैं।</p></div>
+    </div>
+    <div class="act-card">
+      <img src="FB_IMG_1777892521825.jpg" alt="Social Service">
+      <div class="act-body"><h4>सामाजिक सेवा</h4><p>समाज में एकता, सहयोग और सामाजिक जागरूकता को बढ़ावा देने वाले कार्यक्रम।</p></div>
+    </div>
+  </div>
+</section>
+  <!-- ============ EVENTS ============ -->
+<section id="events" class="alt-bg fade">
+  <div class="section-eyebrow">अपडेट्स</div>
+  <h2>कार्यक्रम</h2>
+  <div class="rule-center"></div>
+  <div class="events-grid">
+    <div>
+      <h3 style="font-family:var(--font-h);color:var(--maroon-800);font-size:19px;margin-bottom:16px">आगामी कार्यक्रम</h3>
+      <div class="event-item">
+        <div class="event-date"><div class="d">15</div><div class="m">जून</div></div>
+        <div class="event-info"><h4>महिला स्वावलंबन शिविर</h4><p>स्थान: पटना, बिहार</p></div>
+      </div>
+      <div class="event-item">
+        <div class="event-date"><div class="d">22</div><div class="m">जून</div></div>
+        <div class="event-info"><h4>कौशल विकास प्रशिक्षण कार्यक्रम</h4><p>स्थान: गया, बिहार</p></div>
+      </div>
+      <div class="event-item">
+        <div class="event-date"><div class="d">05</div><div class="m">जुलाई</div></div>
+        <div class="event-info"><h4>छात्रवृत्ति वितरण समारोह</h4><p>स्थान: पटना, बिहार</p></div>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-family:var(--font-h);color:var(--maroon-800);font-size:19px;margin-bottom:16px">हाल के कार्यक्रम</h3>
+      <div class="recent-grid">
+        <img src="IMG-20260505-WA0102.jpg" alt="Event">
+        <img src="IMG-20260505-WA0111.jpg" alt="Event">
+        <img src="IMG-20260505-WA0115.jpg" alt="Event">
+        <img src="IMG-20260505-WA0112.jpg" alt="Event">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="fade">
+  <div class="section-eyebrow">तस्वीरें</div>
+  <h2>फोटो गैलरी</h2>
+  <div class="rule-center"></div>
+
+  <h4 class="scroll-title">कार्यक्रम</h4>
+  <div class="scroll-img">
+    <img src="WA_1777528005174.jpeg" onclick="openLightbox(this)" alt="कार्यक्रम">
+    <img src="FB_IMG_1777892055272~2.jpg" onclick="openLightbox(this)" alt="कार्यक्रम">
+    <img src="IMG-20260505-WA0025.jpg" onclick="openLightbox(this)" alt="कार्यक्रम">
+    <img src="IMG-20260505-WA0026.jpg" onclick="openLightbox(this)" alt="कार्यक्रम">
+  </div>
+
+  <h4 class="scroll-title">गतिविधि</h4>
+  <div class="scroll-img">
+    <img src="IMG-20260505-WA0027.jpg" onclick="openLightbox(this)" alt="गतिविधि">
+    <img src="IMG-20260505-WA0028.jpg" onclick="openLightbox(this)" alt="गतिविधि">
+    <img src="FB_IMG_1777892251819.jpg" onclick="openLightbox(this)" alt="गतिविधि">
+    <img src="FB_IMG_1777892220421.jpg" onclick="openLightbox(this)" alt="गतिविधि">
+  </div>
+
+  <h4 class="scroll-title">प्रशिक्षण एवं समाज सम्मान</h4>
+  <div class="scroll-img">
+    <img src="FB_IMG_1777892264139.jpg" onclick="openLightbox(this)" alt="प्रशिक्षण">
+    <img src="IMG-20260505-WA0199.jpg" onclick="openLightbox(this)" alt="प्रशिक्षण">
+    <img src="IMG-20260505-WA0200.jpg" onclick="openLightbox(this)" alt="प्रशिक्षण">
+    <img src="IMG-20260504-WA0046.jpg" onclick="openLightbox(this)" alt="प्रशिक्षण">
+  </div>
+</section>
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close">✕</span>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<!-- ============ VIDEO GALLERY ============ -->
+<section id="videos" class="alt-bg fade">
+  <div class="section-eyebrow">देखें</div>
+  <h2>वीडियो गैलरी</h2>
+  <div class="rule-center"></div>
+  <div class="video-grid">
+    <div class="video-card">
+      <video src="VID_1777891860964.mp4" controls></video>
+      <p>महिला सशक्तिकरण कार्यक्रम</p>
+    </div>
+    <div class="video-card">
+      <video src="VID-20260505-WA0207.mp4" controls></video>
+      <p>स्वास्थ्य शिविर — एक झलक</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MEMBERSHIP ============ -->
+<section id="membership" class="fade">
+  <div class="section-eyebrow">जुड़ें</div>
+  <h2>सदस्यता</h2>
+  <div class="rule-center"></div>
+  <div class="member-grid">
+    <div>
+      <p style="color:var(--muted);margin-bottom:16px">सदस्य बनें और भूमिहार महिला समाज के साथ समाज सेवा के इस सफर में हिस्सा लें।</p>
+      <h4 style="font-family:var(--font-h);color:var(--maroon-800);margin-bottom:10px">सदस्यता के लाभ</h4>
+      <ul class="benefit-list">
+        <li>सामाजिक कार्यक्रमों में भागीदारी</li>
+        <li>प्रशिक्षण एवं विकास के अवसर</li>
+        <li>विशेष आयोजनों में आमंत्रण</li>
+        <li>नेटवर्किंग और सहयोग</li>
+        <li>समाज सेवा का अवसर</li>
+      </ul>
+    </div>
+    <div class="form-card">
+      <div class="form-row">
+        <input type="text" placeholder="नाम">
+        <input type="tel" placeholder="मोबाइल नंबर">
+      </div>
+      <div class="form-row">
+        <input type="text" placeholder="पिता / पति का नाम">
+        <input type="email" placeholder="ईमेल">
+      </div>
+      <div class="form-row">
+        <input type="text" placeholder="शहर">
+        <select><option>राज्य चुनें</option><option>बिहार</option><option>झारखंड</option><option>अन्य</option></select>
+      </div>
+      <button class="btn btn-gold" style="width:100%">आवेदन जमा करें</button>
+    </div>
+  </div>
+</section>
+  <!-- ============ DONATE ============ -->
+<section id="donate" class="alt-bg fade">
+  <div class="section-eyebrow">सहयोग करें</div>
+  <h2>दान करें</h2>
+  <div class="rule-center"></div>
+  <div class="donate-grid">
+    <div class="donate-card">
+      <img src="Screenshot_20260504-180046~2.png" onclick="payNow()" alt="UPI QR">
+      <p style="font-size:12px;color:var(--muted);letter-spacing:1px;text-transform:uppercase">Scan &amp; Pay via UPI</p>
+      <button class="btn btn-gold" style="margin-top:16px" onclick="payNow()">अभी दान करें</button>
+    </div>
+    <div>
+      <p style="color:var(--muted);margin-bottom:16px">आपका छोटा सा योगदान किसी की जिंदगी बदल सकता है। दान करके आप शिक्षा, स्वास्थ्य और महिला सशक्तिकरण के कार्यों में सहयोग कर सकते हैं।</p>
+      <div class="card">
+        <h4 style="font-family:var(--font-h);color:var(--maroon-800);margin-bottom:6px">बैंक विवरण</h4>
+        <table class="bank-table">
+          <tr><td>Bank Name</td><td>State Bank of India</td></tr>
+          <tr><td>A/C Name</td><td>Bhumihar Mahila Samaj</td></tr>
+          <tr><td>A/C No.</td><td>12345678901</td></tr>
+          <tr><td>IFSC Code</td><td>SBIN0001234</td></tr>
+          <tr><td>Branch</td><td>Patna, Bihar</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VOLUNTEER ============ -->
+<section id="volunteer" class="fade">
+  <div class="section-eyebrow">सहभागिता</div>
+  <h2>स्वयंसेवक बनें</h2>
+  <div class="rule-center"></div>
+  <div class="member-grid">
+    <div>
+      <p style="color:var(--muted)">हमारे साथ जुड़ें और समाज सेवा के इस मिशन का हिस्सा बनें।</p>
+      <h4 style="font-family:var(--font-h);color:var(--maroon-800);margin:18px 0 6px">स्वयंसेवक के लाभ</h4>
+      <div class="vol-benefits">
+        <div>समाज सेवा का अवसर</div>
+        <div>नए कौशल सीखने का मौका</div>
+        <div>नेटवर्किंग का प्लेटफॉर्म</div>
+        <div>प्रशस्ति पत्र</div>
+      </div>
+    </div>
+    <div class="form-card">
+      <div class="form-row full"><input type="text" placeholder="नाम"></div>
+      <div class="form-row full"><input type="tel" placeholder="मोबाइल नंबर"></div>
+      <div class="form-row full"><input type="email" placeholder="ईमेल"></div>
+      <div class="form-row full"><input type="text" placeholder="शहर"></div>
+      <button class="btn btn-gold" style="width:100%">पंजीकरण करें</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACHIEVEMENTS ============ -->
+<section id="achievements" class="alt-bg fade">
+  <div class="section-eyebrow">उपलब्धियाँ</div>
+  <h2>हमारी उपलब्धियाँ</h2>
+  <div class="rule-center"></div>
+  <div class="achieve-strip">
+    <div class="achieve-item"><div class="achieve-num counter" data-target="25000">0</div><div class="achieve-lbl">सदस्य</div></div>
+    <div class="achieve-item"><div class="achieve-num counter" data-target="500">0</div><div class="achieve-lbl">आयोजन</div></div>
+    <div class="achieve-item"><div class="achieve-num counter" data-target="50">0</div><div class="achieve-lbl">जिला इकाइयाँ</div></div>
+    <div class="achieve-item"><div class="achieve-num counter" data-target="10">0</div><div class="achieve-lbl">राज्य इकाइयाँ</div></div>
+    <div class="achieve-item"><div class="achieve-num counter" data-target="15">0</div><div class="achieve-lbl">वर्षों की सेवा</div></div>
+  </div>
+  <div class="achieve-photo"><img src="IMG-20260505-WA0102.jpg" alt="Achievements"></div>
+</section>
+
+<!-- ============ OUR PRESENCE / AREAS ============ -->
+<section id="presence" class="fade">
+  <div class="section-eyebrow">हम कहाँ-कहाँ सक्रिय हैं</div>
+  <h2>हमारी उपस्थिति</h2>
+  <div class="rule-center"></div>
+  <div class="contact-grid">
+    <div>
+      <p style="color:var(--muted);margin-bottom:20px">भूमिहार महिला समाज (BMS) वर्तमान में भारत के <b>32+ शहरों</b> और <b>10+ राज्यों</b> में सक्रिय रूप से कार्यरत है। नीचे हमारी प्रमुख जिला एवं राज्य इकाइयाँ दी गई हैं।</p>
+      <h4 style="font-family:var(--font-h);color:var(--maroon-800);margin-bottom:12px">सक्रिय जिला इकाइयाँ (बिहार)</h4>
+      <div class="area-chips">
+        <span>पटना</span><span>गया</span><span>भोजपुर</span><span>नालंदा</span>
+        <span>मुजफ्फरपुर</span><span>दरभंगा</span><span>भागलपुर</span><span>बेगूसराय</span>
+        <span>छपरा</span><span>सिवान</span><span>मुंगेर</span><span>पूर्णिया</span>
+      </div>
+      <h4 style="font-family:var(--font-h);color:var(--maroon-800);margin:22px 0 12px">सक्रिय राज्य इकाइयाँ</h4>
+      <div class="area-chips">
+        <span>बिहार</span><span>झारखंड</span><span>उत्तर प्रदेश</span><span>दिल्ली-NCR</span>
+        <span>पश्चिम बंगाल</span><span>मध्य प्रदेश</span>
+      </div>
+    </div>
+    <div>
+      <div class="map-embed" style="height:100%;min-height:340px">
+        <iframe src="https://www.google.com/maps?q=Bihar,India&output=embed" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <h4 style="font-family:var(--font-h);color:var(--maroon-800);margin:44px 0 18px;text-align:center">प्रमुख शहरों की झलक</h4>
+  <div class="city-scroll">
+    <div class="city-card"><img src="IMG-20260505-WA0025.jpg" alt="पटना"><span>पटना</span></div>
+    <div class="city-card"><img src="IMG-20260505-WA0026.jpg" alt="गया"><span>गया</span></div>
+    <div class="city-card"><img src="IMG-20260505-WA0027.jpg" alt="भोजपुर"><span>भोजपुर</span></div>
+    <div class="city-card"><img src="IMG-20260505-WA0028.jpg" alt="नालंदा"><span>नालंदा</span></div>
+    <div class="city-card"><img src="FB_IMG_1777892251819.jpg" alt="मुजफ्फरपुर"><span>मुजफ्फरपुर</span></div>
+    <div class="city-card"><img src="FB_IMG_1777892220421.jpg" alt="दरभंगा"><span>दरभंगा</span></div>
+    <div class="city-card"><img src="FB_IMG_1777892264139.jpg" alt="भागलपुर"><span>भागलपुर</span></div>
+    <div class="city-card"><img src="FB_IMG_1777892229949.jpg" alt="बेगूसराय"><span>बेगूसराय</span></div>
+  </div>
+</section>
+
+<hr class="section-div">
+
+<!-- ============ TESTIMONIALS ============ -->
+<section id="testimonials" class="fade">
+  <div class="section-eyebrow">सदस्यों की राय</div>
+  <h2>प्रशंसापत्र</h2>
+  <div class="rule-center"></div>
+  <div class="test-grid">
+    <div class="test-card">
+      <div class="test-quote">"</div>
+      <p>भूमिहार महिला समाज ने मुझे आत्मनिर्भर बनने में बहुत मदद की। यहाँ मिला सहयोग मेरी ज़िंदगी का अहम मोड़ बना।</p>
+      <div class="test-person"><img src="IMG-20260505-WA0188.jpg" alt="Member"><div><h5>मीना शर्मा</h5><span>सदस्य, पटना</span></div></div>
+    </div>
+    <div class="test-card">
+      <div class="test-quote">"</div>
+      <p>यह संगठन महिलाओं के लिए सच में एक अवसर है। सिलाई प्रशिक्षण के बाद मैंने अपना खुद का काम शुरू किया।</p>
+      <div class="test-person"><img src="IMG-20260505-WA0187.jpg" alt="Member"><div><h5>पूजा कुमारी</h5><span>सदस्य, गया</span></div></div>
+    </div>
+    <div class="test-card">
+      <div class="test-quote">"</div>
+      <p>समाज सेवा के क्षेत्र में यह संगठन बहुत सराहनीय काम कर रहा है। मैं इससे जुड़कर गर्व महसूस करती हूँ।</p>
+      <div class="test-person"><img src="IMG-20260505-WA0222.jpg" alt="Member"><div><h5>किरण सिंह</h5><span>सदस्य, भोजपुर</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOWNLOADS ============ -->
+<section id="downloads" class="alt-bg fade">
+  <div class="section-eyebrow">संसाधन</div>
+  <h2>डाउनलोड करें</h2>
+  <div class="rule-center"></div>
+  <div class="dl-row"><span>📄 सदस्यता फॉर्म (PDF)</span><a href="#" class="dl-btn">Download</a></div>
+  <div class="dl-row"><span>📄 स्वयंसेवक फॉर्म (PDF)</span><a href="#" class="dl-btn">Download</a></div>
+  <div class="dl-row"><span>📄 छात्रवृत्ति आवेदन फॉर्म (PDF)</span><a href="#" class="dl-btn">Download</a></div>
+  <div class="dl-row"><span>📄 वार्षिक रिपोर्ट 2025 (PDF)</span><a href="#" class="dl-btn">Download</a></div>
+  <div class="dl-row"><span>📄 वार्षिक कैलेंडर 2026 (PDF)</span><a href="#" class="dl-btn">Download</a></div>
+</section>
+  <!-- ============ CONTACT ============ -->
+<section id="contact" class="fade">
+  <div class="section-eyebrow">जुड़ें</div>
+  <h2>संपर्क करें</h2>
+  <div class="rule-center"></div>
+  <div class="contact-grid">
+    <div>
+      <div class="contact-info-item"><div class="ic">📍</div><div><h5>पता</h5><p>B-15, कांकड़बाग, पटना, बिहार - 800020</p></div></div>
+      <div class="contact-info-item"><div class="ic">📞</div><div><h5>फोन</h5><p>+91 99346 34400</p></div></div>
+      <div class="contact-info-item"><div class="ic">✉️</div><div><h5>ईमेल</h5><p>info@bhumiharmahilasamaj.org</p></div></div>
+      <div class="contact-info-item"><div class="ic">🌐</div><div><h5>वेबसाइट</h5><p>www.bhumiharmahilasamaj.org</p></div></div>
+      <div class="map-embed">
+        <iframe src="https://www.google.com/maps?q=Patna,Bihar&output=embed" loading="lazy"></iframe>
+      </div>
+    </div>
+    <div class="form-card">
+      <h4 style="font-family:var(--font-h);color:var(--maroon-800);margin-bottom:16px">हमें संदेश भेजें</h4>
+      <div class="form-row"><input type="text" placeholder="नाम"><input type="tel" placeholder="मोबाइल नंबर"></div>
+      <div class="form-row full"><input type="email" placeholder="ईमेल"></div>
+      <div class="form-row full"><textarea placeholder="संदेश"></textarea></div>
+      <button class="btn btn-gold" style="width:100%">भेजें</button>
+      <div class="newsletter">
+        <h4>न्यूज़लेटर सब्सक्राइब करें</h4>
+        <p>नवीनतम कार्यक्रमों और अपडेट्स की जानकारी सीधे अपने ईमेल पर पाएं।</p>
+        <form onsubmit="event.preventDefault();alert('धन्यवाद! आप सफलतापूर्वक सब्सक्राइब हो गए।')">
+          <input type="email" placeholder="अपना ईमेल दर्ज करें" required>
+          <button class="btn btn-maroon" type="submit">जुड़ें</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">
+        <img src="FB_IMG_1777997582817.jpg" alt="Logo">
+        <div class="hi">भूमिहार महिला समाज</div>
+      </div>
+      <p>महिलाओं के उत्थान, विकास, स्वावलंबन और सामाजिक सेवा हेतु समर्पित एक गैर-लाभकारी संगठन। भारत के 32+ शहरों में सक्रिय।</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/share/1CWU41fojY/?mibextid=wwXIfr" target="_blank">📘</a>
+        <a href="#">📸</a>
+        <a href="#">▶️</a>
+        <a href="#">✖️</a>
+        <a href="tel:9934634400">📞</a>
+      </div>
+    </div>
+    <div>
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#activities">Our Activities</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#membership">Membership</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Important Links</h5>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms &amp; Conditions</a></li>
+        <li><a href="#">Refund Policy</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Contact Info</h5>
+      <p>📍 B-15, कांकड़बाग, पटना, बिहार - 800020</p><br>
+      <p>📞 +91 99346 34400</p><br>
+      <p>✉️ info@bhumiharmahilasamaj.org</p><br>
+      <p>🌐 www.bhumiharmahilasamaj.org</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 Bhumihar Mahila Samaj. All Rights Reserved.</div>
+    <div>Designed with ❤️ for the Empowerment of Women · Developed by <a href="https://share.google/gUn3tnuVbrIErQx7D" target="_blank">Lyzonix Technologies</a></div>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="float-btns">
+  <button class="fab fab-top" id="topBtn" onclick="scrollTop()" title="Back to top">↑</button>
+  <a href="https://wa.me/9934634400" class="fab fab-wa" title="WhatsApp">💬</a>
+</div>
+  
+<script>
+// hero carousel
+const heroSlideEls=document.querySelectorAll('.hero-slide');
+const heroDotsWrap=document.getElementById('heroDots');
+let heroIdx=0,heroTimer;
+if(heroSlideEls.length){
+  if(heroSlideEls.length<2){
+    document.querySelectorAll('.carousel-arrow').forEach(b=>b.style.display='none');
+  }
+  heroSlideEls.forEach((s,i)=>{
+    const d=document.createElement('span');
+    if(i===0)d.classList.add('active');
+    d.onclick=()=>goHero(i);
+    heroDotsWrap.appendChild(d);
+  });
+  function renderHero(){
+    heroSlideEls.forEach((s,i)=>s.classList.toggle('active',i===heroIdx));
+    heroDotsWrap.querySelectorAll('span').forEach((d,i)=>d.classList.toggle('active',i===heroIdx));
+  }
+  function goHero(i){heroIdx=i;renderHero();resetHeroTimer()}
+  window.heroNext=()=>{heroIdx=(heroIdx+1)%heroSlideEls.length;renderHero();resetHeroTimer()};
+  window.heroPrev=()=>{heroIdx=(heroIdx-1+heroSlideEls.length)%heroSlideEls.length;renderHero();resetHeroTimer()};
+  function resetHeroTimer(){clearInterval(heroTimer);heroTimer=setInterval(window.heroNext,5000)}
+  resetHeroTimer();
+}
+
+// mobile menu
+function openMenu(){document.getElementById('mpanel').classList.add('active');document.getElementById('overlay').classList.add('active')}
+function closeMenu(){document.getElementById('mpanel').classList.remove('active');document.getElementById('overlay').classList.remove('active')}
+
+// dark mode
+function toggleDark(){document.body.classList.toggle('dark')}
+
+// back to top
+const topBtn=document.getElementById('topBtn');
+window.addEventListener('scroll',()=>{
+  topBtn.classList.toggle('show',window.scrollY>500);
+});
+function scrollTop(){window.scrollTo({top:0,behavior:'smooth'})}
+
+// fade on scroll
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');animateCounters(e.target)}});
+},{threshold:0.15});
+document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
+
+// counters
+function animateCounters(target){
+  target.querySelectorAll('.counter').forEach(el=>{
+    if(el.dataset.done) return;
+    el.dataset.done='1';
+    const goal=+el.dataset.target;
+    const suffix=el.dataset.suffix||'+';
+    let cur=0;
+    const step=Math.max(1,Math.ceil(goal/60));
+    const timer=setInterval(()=>{
+      cur+=step;
+      if(cur>=goal){cur=goal;clearInterval(timer)}
+      el.textContent=cur.toLocaleString('en-IN')+suffix;
+    },25);
+  });
+}
+
+// lightbox
+function openLightbox(img){
+  document.getElementById('lightboxImg').src=img.src;
+  document.getElementById('lightbox').classList.add('active');
+}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('active')}
+
+// payment
+function payNow(){
+  window.open("upi://pay?pa=BHUMISAFN.09@idfcbank&pn=BhumiharMahilaSamaj&cu=INR");
+}
+</script>
+</body>
+</html>
