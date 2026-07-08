@@ -139,6 +139,9 @@ header{
 .icon-btn{background:none;border:none;font-size:19px;cursor:pointer;color:var(--maroon-800)}
 .menu-toggle{display:none;font-size:24px;background:none;border:none;color:var(--maroon-800);cursor:pointer}
 
+body.lang-en .lang-hi{display:none}
+body.lang-hi .lang-en{display:none}
+  
 /* mobile nav */
 .mobile-panel{
   position:fixed;top:0;right:0;width:290px;max-width:80vw;height:100%;
@@ -1166,13 +1169,6 @@ footer ul li a:hover{color:var(--gold-lt)}
   <button type="submit" class="btn btn-gold" style="width:100%">पंजीकरण करें</button>
   <div class="form-msg"></div>
   </form>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </section>
 
 <!-- ============ PANKH HAAT FORM ============ -->
@@ -1722,8 +1718,6 @@ function compressImage(file, maxSize, quality){
 }
 
 // ---- FORM SUBMISSION (student / beautician / pankh / contact) ----
-window.submitForm = function(event, category, formEl){
-  event.preventDefault();
   const msgBox = formEl.querySelector(".form-msg");
   const data = {};
   const fileInput = formEl.querySelector('input[type="file"][name="photo"]');
@@ -1758,6 +1752,13 @@ window.submitForm = function(event, category, formEl){
   }
   return false;
 };
+  function toggleLang(){
+  const isEn = document.body.classList.contains('lang-en');
+  document.body.classList.toggle('lang-en', !isEn);
+  document.body.classList.toggle('lang-hi', isEn);
+  document.getElementById('langBtn').textContent = isEn ? 'EN' : 'हिं';
+}
+document.body.classList.add('lang-hi'); // default Hindi
 </script>
 </body>
 </html>
