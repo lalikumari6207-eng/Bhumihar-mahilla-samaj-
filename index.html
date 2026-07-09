@@ -1937,5 +1937,65 @@ function setLang(lang){
 }
 document.body.classList.add('lang-hi'); // default Hindi
 </script>
+  <!-- ===== INSTALL APP POPUP (isse </body> se pehle paste karein) ===== -->
+<style>
+#installBanner{
+  position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;
+  background:linear-gradient(135deg,#7a1533,#5c0e26);
+  color:#fff;border-radius:16px;padding:16px;
+  display:flex;align-items:center;gap:14px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.3);
+  transform:translateY(150%);transition:transform .4s ease;
+  font-family:'Hind',sans-serif;
+}
+#installBanner.show{transform:translateY(0)}
+#installBanner img{width:46px;height:46px;border-radius:10px;flex-shrink:0}
+#installBanner .ib-text{flex:1;font-size:14px;line-height:1.4}
+#installBanner .ib-text b{display:block;font-size:15px;color:#e6bd66}
+#installBanner .ib-btns{display:flex;gap:8px;align-items:center}
+#installBanner button{
+  border:none;border-radius:50px;padding:9px 16px;font-weight:700;
+  font-size:13px;cursor:pointer;white-space:nowrap;
+}
+#installBanner .ib-install{background:#cf9a3e;color:#5c0e26}
+#installBanner .ib-close{background:transparent;color:#f4dfc0;font-size:20px;padding:4px 8px}
+@media(max-width:420px){
+  #installBanner{flex-wrap:wrap}
+  #installBanner .ib-btns{width:100%;justify-content:flex-end}
+}
+</style>
+
+<div id="installBanner">
+  <img src="FB_IMG_1777997582817.jpg" alt="App Icon">
+  <div class="ib-text">
+    <b>Bhumihar Mahila Samaj App</b>
+    Apna app install karein aur website ka behtar experience payein.
+  </div>
+  <div class="ib-btns">
+    <button class="ib-install" onclick="installApp()">Install</button>
+    <button class="ib-close" onclick="closeInstallBanner()">✕</button>
+  </div>
+</div>
+
+<script>
+const APK_URL = "https://bucket.appilix.com/app-apk-072d9eeba7264113adf90383058e89eb-1783584573.apk";
+
+function installApp(){
+  window.location.href = APK_URL;
+}
+function closeInstallBanner(){
+  document.getElementById('installBanner').classList.remove('show');
+  localStorage.setItem('installBannerClosed', Date.now());
+}
+window.addEventListener('load', ()=>{
+  const closed = localStorage.getItem('installBannerClosed');
+  const oneDay = 24*60*60*1000;
+  if(!closed || (Date.now() - closed) > oneDay){
+    setTimeout(()=>{
+      document.getElementById('installBanner').classList.add('show');
+    }, 1500);
+  }
+});
+</script>
 </body>
 </html>
