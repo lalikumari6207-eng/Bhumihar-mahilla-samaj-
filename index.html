@@ -2237,5 +2237,60 @@ window.addEventListener('load', ()=>{
   }
 });
 </script>
+  <!-- ===== TOP ANNOUNCEMENT POPUP (Sthapna Diwas) ===== -->
+<style>
+#topAnnouncePopup{
+  position:fixed;
+  top:16px;
+  left:16px;
+  right:16px;
+  z-index:10000;
+  max-width:360px;
+  margin:0 auto;
+  background:#fff;
+  border-radius:16px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.35);
+  overflow:hidden;
+  transform:translateX(-150%);
+  transition:transform .5s ease;
+}
+#topAnnouncePopup.show{
+  transform:translateX(0);
+}
+#topAnnouncePopup img{
+  width:100%;
+  display:block;
+}
+#topAnnouncePopup .tap-close{
+  position:absolute;
+  top:8px;
+  right:8px;
+  background:rgba(0,0,0,0.6);
+  color:#fff;
+  border:none;
+  border-radius:50%;
+  width:30px;
+  height:30px;
+  font-size:16px;
+  cursor:pointer;
+  line-height:1;
+}
+</style>
+
+<div id="topAnnouncePopup">
+  <button class="tap-close" onclick="closeTopAnnounce()">✕</button>
+  <img src="IMG-20260710-WA0032.jpg" alt="Sthapna Diwas Samaroh">
+</div>
+
+<script>
+window.addEventListener('load', ()=>{
+  setTimeout(()=>{
+    document.getElementById('topAnnouncePopup').classList.add('show');
+  }, 800);
+});
+function closeTopAnnounce(){
+  document.getElementById('topAnnouncePopup').classList.remove('show');
+}
+</script>
 </body>
 </html>
