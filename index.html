@@ -1507,6 +1507,89 @@ footer ul li a:hover{color:var(--gold-lt)}
   </div>
 </section>
 
+  <!-- ===== FEEDBACK SECTION ===== -->
+<style>
+.feedback-sec{padding:70px 24px;max-width:1180px;margin:0 auto;text-align:center}
+.feedback-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:32px;margin-top:40px;
+}
+.feedback-card{
+  background:var(--white);
+  border-radius:18px;
+  padding:26px;
+  box-shadow:var(--shadow);
+  border:1px solid var(--line);
+  text-align:center;
+}
+.feedback-card .fb-imgwrap{
+  width:100%;
+  aspect-ratio:4/3;
+  background:var(--cream-2);
+  border-radius:14px;
+  border:3px solid var(--gold);
+  overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:18px;
+}
+.feedback-card .fb-imgwrap img{
+  width:100%;height:100%;
+  object-fit:contain;
+}
+.feedback-card h4{
+  font-family:var(--font-h);
+  font-size:18px;
+  color:var(--maroon-800);
+  margin-bottom:6px;
+}
+.feedback-card .fb-quote{
+  font-size:30px;color:var(--gold);
+  font-family:var(--font-h);
+  line-height:0.5;
+  margin-bottom:10px;
+  display:block;
+}
+.feedback-card p{
+  color:var(--muted);
+  font-size:14.5px;
+  line-height:1.8;
+  text-align:left;
+}
+@media(max-width:800px){
+  .feedback-grid{grid-template-columns:1fr}
+}
+body.dark .feedback-card{background:#2a1a1e;border-color:#452530;color:#eee}
+body.dark .feedback-card p{color:#d8c9c9}
+</style>
+
+<section class="feedback-sec fade" id="feedback">
+  <div class="section-eyebrow">प्रतिक्रिया</div>
+  <h2>लोगों की प्रतिक्रिया</h2>
+
+  <div class="feedback-grid">
+
+    <div class="feedback-card">
+      <div class="fb-imgwrap">
+        <img src="IMG-20260725-WA0000.jpg" alt="Gaurav Rai">
+      </div>
+      <span class="fb-quote">"</span>
+      <p>25 जुलाई 2026 भूमिहार महिला समाज अपना छठा स्थापना दिवस मना रहा है। मेरी शुभकामनाएं है इसकी फाउंडर श्रीमती प्रीति प्रिया जी और तमाम महिलाओं से जो इस संगठन से जुड़ी हैं। मैंने पहले भी कहा और लिखा है भूमिहार समाज के पुरुषों को बहुत कुछ सीखने की आवश्यकता है इनसे। आपके द्वारा किया गया कार्य सराहनीय तो है ही और इसका प्रभाव समाज पर बहुत गहरा पड़ा है। जब भी आप लोगों को मेरी जरूरत हो मैं हमेशा खड़ा रहा हूँ और आगे भी खड़ा रहूँगा।<br><br>मेरी हार्दिक शुभकामनाएँ आपको और आपके सभी साथियों को।</p>
+      <h4 style="margin-top:16px">गौरव राय</h4>
+      <span style="font-size:13px;color:var(--muted)">Social Worker</span>
+    </div>
+
+    <div class="feedback-card">
+      <div class="fb-imgwrap">
+        <img src="IMG-20260725-WA0002.jpg" alt="Dr Kumar Rajesh Ranjan">
+      </div>
+      <span class="fb-quote">"</span>
+      <p>Bhumihar Mahila Samaj समाज सेवा और महिला सशक्तिकरण के क्षेत्र में एक सराहनीय एवं प्रेरणादायक पहल है। संस्था द्वारा महिलाओं और समाज के विकास के लिए किए जा रहे प्रयास वास्तव में प्रशंसनीय हैं। जरूरतमंदों के सहयोग, शिक्षा, जागरूकता और सामाजिक उत्थान की दिशा में संस्था का योगदान सराहनीय है। यह संगठन समाज की महिलाओं को आगे बढ़ने और आत्मनिर्भर बनने के लिए प्रेरित करता है। ऐसे सकारात्मक और समर्पित प्रयास समाज में एक नई उम्मीद और बदलाव की भावना पैदा करते हैं। Bhumihar Mahila Samaj को भविष्य के लिए हार्दिक शुभकामनाएँ।</p>
+      <h4 style="margin-top:16px">डॉ. कुमार राजेश रंजन</h4>
+    </div>
+
+  </div>
+</section>
+  
 <!-- ============ VOLUNTEER ============ -->
 <section id="volunteer" class="fade">
   <div class="section-eyebrow">सहभागिता</div>
